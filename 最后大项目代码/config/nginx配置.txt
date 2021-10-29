@@ -1,0 +1,55 @@
+        location /IdentityService/ {
+			proxy_pass  https://localhost:44392/;
+			proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Real-PORT $remote_port;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+		}
+		
+		location /Listening.Admin/ {
+			proxy_pass https://localhost:44352/;
+			proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Real-PORT $remote_port;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            
+            #下面启用websocket支持
+			proxy_http_version 1.1;
+			proxy_set_header Upgrade $http_upgrade;
+			proxy_set_header Connection "upgrade";
+		}
+		
+		location /MediaEncoder/ {
+			proxy_pass https://localhost:44353/;
+			proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Real-PORT $remote_port;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;			
+		}
+
+		location /Listening.Main/ {
+			proxy_pass https://localhost:44375/;
+			proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Real-PORT $remote_port;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;			
+		}	
+
+		location /SearchService/ {
+			proxy_pass https://localhost:44310/;
+			proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Real-PORT $remote_port;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+		}				
+
+		location /FileService/ {
+			proxy_pass https://localhost:44374/;
+			proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Real-PORT $remote_port;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            
+            #允许上传文件的大小，默认是1MB
+            client_max_body_size 10m;
+		}

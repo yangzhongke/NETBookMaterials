@@ -1,0 +1,13 @@
+﻿@model MVCApp1.Models.Person
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>Demo1</title>
+</head>
+<body>
+    <div>姓名：@Model.Name</div>
+    <div>@(Model.IsVIP?"VIP":"普通会员")</div>
+    <div>注册时间：@Model.CreatedTime.ToShortDateString()</div>
+</body>
+</html>

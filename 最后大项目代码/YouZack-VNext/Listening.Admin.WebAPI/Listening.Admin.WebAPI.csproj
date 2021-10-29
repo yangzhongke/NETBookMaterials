@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UserSecretsId>651188fb-eb7a-4fd3-be81-a7f9c906e041</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.11.1" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\CommonInitializer\CommonInitializer.csproj" />
+		<ProjectReference Include="..\Listening.Domain\Listening.Domain.csproj" />
+		<ProjectReference Include="..\Listening.Infrastructure\Listening.Infrastructure.csproj" />
+
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Options\" />
+	</ItemGroup>
+
+</Project>

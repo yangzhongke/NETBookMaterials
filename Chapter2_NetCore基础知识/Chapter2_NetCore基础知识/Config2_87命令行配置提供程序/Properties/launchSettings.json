@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Config2_87命令行配置提供程序": {
+      "commandName": "Project",
+      "commandLineArgs": "Name=zack Proxy:Address=192.168.1.2 Proxy:Port=3688"
+    }
+  }
+}

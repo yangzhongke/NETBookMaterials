@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Config2_89环境变量配置提供程序": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "TEST_Name": "Zack"
+      }
+    }
+  }
+}

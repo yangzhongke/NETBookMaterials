@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UserSecretsId>24eee106-a9f5-4a64-b9e5-dccb33876955</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.11.1" />	  
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CommonInitializer\CommonInitializer.csproj" />
+    <ProjectReference Include="..\FileService.Infrastructure\FileService.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

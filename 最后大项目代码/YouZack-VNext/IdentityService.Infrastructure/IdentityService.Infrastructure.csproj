@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\IdentityService.Domain\IdentityService.Domain.csproj" />
+		<ProjectReference Include="..\Zack.Infrastructure\Zack.Infrastructure.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.0-rc.2.21480.10" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.0-rc.2.21480.5" />
+		<PackageReference Include="UpYun.NETCore" Version="1.1.0" />
+	</ItemGroup>
+</Project>

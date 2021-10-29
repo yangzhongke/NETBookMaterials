@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "调用邮件发送服务": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "SmtpServer": "my.mail.com"
+      }
+    }
+  }
+}

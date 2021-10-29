@@ -1,0 +1,4 @@
+Elastic Search
+Nginx
+Redis（已经安装为服务）
+RabbitMQ（已经安装为服务）

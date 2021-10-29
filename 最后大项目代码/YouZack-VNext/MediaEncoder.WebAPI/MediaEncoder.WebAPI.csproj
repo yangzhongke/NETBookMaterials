@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UserSecretsId>bf26b82b-85ab-4557-b112-cb9e8af16410</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.11.1" />
+		<PackageReference Include="xFFmpeg.NET" Version="6.0.0" />
+	</ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CommonInitializer\CommonInitializer.csproj" />
+    <ProjectReference Include="..\FileService.SDK.NETCore\FileService.SDK.NETCore.csproj" />
+    <ProjectReference Include="..\MediaEncoder.Domain\MediaEncoder.Domain.csproj" />
+    <ProjectReference Include="..\MediaEncoder.Infrastructure\MediaEncoder.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="appsettings.Development.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

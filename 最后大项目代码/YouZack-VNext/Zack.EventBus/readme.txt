@@ -1,0 +1,3 @@
+﻿本项目的代码改编自EShop的EventBus部分。
+做的主要的改动是去掉了强类型的EventHandler，因为集成事件是跨项目的，不应该引用对方的强类型的Event对象，因此我这里改造成了EventHandler中处理的是string格式的原始数据，并且通过EventNameAttribute来标注这个EventHandler处理什么消息，这样更加的松耦合
+在集群环境中，只会有一台服务器收到这个消息，这样可以避免幂等性的问题，如果希望每个服务器都收到，如何改造？

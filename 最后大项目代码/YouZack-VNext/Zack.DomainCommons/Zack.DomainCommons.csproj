@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Zack Yang</Authors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="9.0.0" />
+	<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0-rc.2.21480.5" />
+  </ItemGroup>
+
+</Project>

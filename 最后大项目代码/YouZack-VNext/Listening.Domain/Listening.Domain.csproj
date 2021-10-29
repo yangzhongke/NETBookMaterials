@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <TargetFramework>net6.0</TargetFramework>
+	  <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Opportunity.LrcParser" Version="1.0.4" />
+    <PackageReference Include="SubtitlesParser" Version="1.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Zack.Commons\Zack.Commons.csproj" />
+    <ProjectReference Include="..\Zack.DomainCommons\Zack.DomainCommons.csproj" />
+  </ItemGroup>
+
+</Project>
