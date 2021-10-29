@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Users.Domain;
 using Users.Domain.Events;
 
 namespace Users.WebAPI.Events
@@ -6,11 +7,11 @@ namespace Users.WebAPI.Events
     public class UserAccessResultEventHandler
         : INotificationHandler<UserAccessResultEvent>
     {
-        private readonly UserApplicationService appService;
+        private readonly IUserDomainRepository repository;
 
-        public UserAccessResultEventHandler(UserApplicationService appService)
+        public UserAccessResultEventHandler(IUserDomainRepository repository)
         {
-            this.appService = appService;
+            this.repository = repository;
         }
 
         public Task Handle(UserAccessResultEvent notification, CancellationToken cancellationToken)
@@ -38,7 +39,7 @@ namespace Users.WebAPI.Events
                 default:
                     throw new NotImplementedException();
             }
-            return appService.AddNewLoginHistoryAsync(phoneNum,msg);
+            return repository.AddNewLoginHistoryAsync(phoneNum,msg);
         }
     }
 }

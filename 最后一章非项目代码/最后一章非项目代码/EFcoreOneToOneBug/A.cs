@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EFcoreOneToOneBug
+﻿namespace EFcoreOneToOneBug
 {
     class A
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
         public B? B { get; set; }
+        public Guid? BId { get; set; }
     }
 }

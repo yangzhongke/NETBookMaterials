@@ -14,10 +14,8 @@
         {
             Id= Guid.NewGuid();
             PhoneNumber = phoneNumber;
-            //AccessFail不能为空，否则如果AccessFail一开始为null，
-            //当我们给AccessFail赋值后，立即修改AccessFail中的属性值
-            //那么AccessFail的状态就从Added变成Modified了，然后保存就会出错，
-            //这个应该算是EFCore的bug
+            //AccessFail不能为空，否则有bug
+            //https://github.com/dotnet/efcore/issues/26489
             this.AccessFail = new UserAccessFail(this);
         }
         public bool HasPassword()

@@ -5,15 +5,21 @@ namespace Users.Infrastructure
 {
     public class ExpressionHelper
     {
-        public static Expression<Func<TItem,bool>> MakeEqual<TItem,TProp>(Expression<Func<TItem, TProp>> propAccessor, TProp other)
+        public static Expression<Func<TItem, bool>> MakeEqual<TItem, TProp>(Expression<Func<TItem, TProp>> propAccessor, TProp? other)
+            where TItem : class
+            where TProp : class
         {
             var e1 = propAccessor.Parameters.Single();//提取出来参数
-            BinaryExpression? conditionalExpr=null;
-            foreach(var prop in typeof(TProp).GetProperties())
+            BinaryExpression? conditionalExpr = null;
+            foreach (var prop in typeof(TProp).GetProperties())
             {
                 BinaryExpression equalExpr;
                 //other的prop属性的值
-                object? otherValue = prop.GetValue(other);
+                object? otherValue = null;
+                if (other != null)
+                {
+                    otherValue = prop.GetValue(other);
+                }
                 Type propType = prop.PropertyType;
                 //访问待比较的属性
                 var memAccessProp = MakeMemberAccess(
@@ -23,16 +29,16 @@ namespace Users.Infrastructure
                 var constValue = Convert(Constant(otherValue), propType);
                 if (propType.IsPrimitive)//基本数据类型和复杂类型比较方法不一样
                 {
-                    equalExpr=Equal(memAccessProp, constValue);
+                    equalExpr = Equal(memAccessProp, constValue);
                 }
                 else
                 {
                     equalExpr = MakeBinary(ExpressionType.Equal,
-                        memAccessProp,constValue, false,
+                        memAccessProp, constValue, false,
                         prop.PropertyType.GetMethod("op_Equality")
                     );
                 }
-                if(conditionalExpr==null)
+                if (conditionalExpr == null)
                 {
                     conditionalExpr = equalExpr;
                 }
@@ -41,7 +47,7 @@ namespace Users.Infrastructure
                     conditionalExpr = AndAlso(conditionalExpr, equalExpr);
                 }
             }
-            if(conditionalExpr==null)
+            if (conditionalExpr == null)
             {
                 throw new ArgumentException("There should be at least one property.");
             }

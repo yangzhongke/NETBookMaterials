@@ -1,6 +1,6 @@
 ﻿using Users.Domain;
 
-namespace Users.Infrastructure
+namespace Users.Domain
 {
     public interface ISmsCodeSender
     {

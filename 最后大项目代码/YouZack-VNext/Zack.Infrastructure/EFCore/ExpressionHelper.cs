@@ -15,7 +15,9 @@ public class ExpressionHelper
     /// <param name="other"></param>
     /// <returns></returns>
     /// <exception cref="ArgumentException"></exception>
-    public static Expression<Func<TItem, bool>> MakeEqual<TItem, TProp>(Expression<Func<TItem, TProp>> propAccessor, TProp other)
+    public static Expression<Func<TItem, bool>> MakeEqual<TItem, TProp>(Expression<Func<TItem, TProp>> propAccessor, TProp? other)
+        where TItem:class 
+        where TProp:class
     {
         var e1 = propAccessor.Parameters.Single();//提取出来参数
         BinaryExpression? conditionalExpr = null;
@@ -23,7 +25,11 @@ public class ExpressionHelper
         {
             BinaryExpression equalExpr;
             //other的prop属性的值
-            object? otherValue = prop.GetValue(other);
+            object? otherValue = null;
+            if(other!=null)
+            {
+                otherValue=prop.GetValue(other);
+            }            
             Type propType = prop.PropertyType;
             //访问待比较的属性
             var memAccessProp = MakeMemberAccess(

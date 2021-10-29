@@ -1,7 +1,6 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 using Users.Domain;
 using Users.Infrastructure;
@@ -30,7 +29,7 @@ builder.Services.Configure<MvcOptions>(opt => {
 });
 builder.Services.AddScoped<UserDomainService>();
 builder.Services.AddScoped<ISmsCodeSender,MockSmsCodeSender>();
-builder.Services.AddScoped<UserApplicationService>();
+builder.Services.AddScoped<IUserDomainRepository, UserDomainRepository>();
 builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
 var app = builder.Build();
 // Configure the HTTP request pipeline.

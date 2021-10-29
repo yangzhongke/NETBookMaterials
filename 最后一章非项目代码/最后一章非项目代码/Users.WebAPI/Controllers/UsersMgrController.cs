@@ -12,19 +12,19 @@ namespace Users.WebAPI.Controllers
     {
         private readonly UserDbContext dbCtx;
         private readonly UserDomainService domainService;
-        private readonly UserApplicationService appService;
+        private readonly IUserDomainRepository repository;
 
-        public UsersMgrController(UserDbContext dbCtx, UserDomainService domainService, UserApplicationService appService)
+        public UsersMgrController(UserDbContext dbCtx, UserDomainService domainService, IUserDomainRepository repository)
         {
             this.dbCtx = dbCtx;
             this.domainService = domainService;
-            this.appService = appService;
+            this.repository = repository;
         }
 
         [HttpPost]
         public async Task<IActionResult> AddNew(PhoneNumber req)
         {
-            if ((await appService.FindOneAsync(req))!=null)
+            if ((await repository.FindOneAsync(req))!=null)
             {
                 return BadRequest("手机号已经存在");
             }
@@ -36,7 +36,7 @@ namespace Users.WebAPI.Controllers
         [HttpPut]
         public async Task<IActionResult> ChangePassword(ChangePasswordRequest req)
         {
-            var user = await appService.FindOneAsync(req.Id);
+            var user = await repository.FindOneAsync(req.Id);
             if(user == null)
             {
                 return NotFound();
@@ -49,7 +49,7 @@ namespace Users.WebAPI.Controllers
         [Route("{id}")]
         public async Task<IActionResult> Unlock(Guid id)
         {
-            var user = await appService.FindOneAsync(id);
+            var user = await repository.FindOneAsync(id);
             if (user == null)
             {
                 return NotFound();
