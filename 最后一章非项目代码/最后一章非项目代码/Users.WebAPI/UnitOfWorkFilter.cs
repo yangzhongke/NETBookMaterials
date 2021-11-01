@@ -9,12 +9,6 @@ namespace Users.WebAPI
 {    
     public class UnitOfWorkFilter: IAsyncActionFilter
     {
-        //private IServiceProvider serviceProvider;
-        /*
-        public UnitOfWorkFilter(IServiceProvider serviceProvider)
-        {
-            this.serviceProvider = serviceProvider;
-        }*/
         private static UnitOfWorkAttribute? GetUoWAttr(ActionDescriptor actionDesc)
         {
             var caDesc = actionDesc as ControllerActionDescriptor;
@@ -50,6 +44,8 @@ namespace Users.WebAPI
             List<DbContext> dbCtxs = new List<DbContext>();
             foreach (var dbCtxType in uowAttr.DbContextTypes)
             {
+                //用HttpContext的RequestServices
+                //确保获取的是和请求相关的Scope实例
                 var sp = context.HttpContext.RequestServices;
                 DbContext dbCtx = (DbContext)sp.GetRequiredService(dbCtxType);
                 dbCtxs.Add(dbCtx);

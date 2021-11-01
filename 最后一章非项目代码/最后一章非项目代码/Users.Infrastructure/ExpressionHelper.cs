@@ -22,19 +22,19 @@ namespace Users.Infrastructure
                 }
                 Type propType = prop.PropertyType;
                 //访问待比较的属性
-                var memAccessProp = MakeMemberAccess(
+                var leftExpr = MakeMemberAccess(
                     propAccessor.Body,//要取出来Body部分，不能带参数
                     prop
                 );
-                var constValue = Convert(Constant(otherValue), propType);
+                Expression rightExpr = Convert(Constant(otherValue), propType);
                 if (propType.IsPrimitive)//基本数据类型和复杂类型比较方法不一样
                 {
-                    equalExpr = Equal(memAccessProp, constValue);
+                    equalExpr = Equal(leftExpr, rightExpr);
                 }
                 else
                 {
                     equalExpr = MakeBinary(ExpressionType.Equal,
-                        memAccessProp, constValue, false,
+                        leftExpr, rightExpr, false,
                         prop.PropertyType.GetMethod("op_Equality")
                     );
                 }
