@@ -171,7 +171,7 @@ class RabbitMQEventBus : IEventBus, IDisposable
         catch (Exception ex)
         {
             //requeue：表示如何处理这条消息，如果值为true，则重新放入RabbitMQ的发送队列，如果值为false，则通知RabbitMQ销毁这条消息
-            _consumerChannel.BasicReject(eventArgs.DeliveryTag, true);
+            //_consumerChannel.BasicReject(eventArgs.DeliveryTag, true);
             Debug.Fail(ex.ToString());
         }
     }
@@ -212,7 +212,10 @@ class RabbitMQEventBus : IEventBus, IDisposable
             var subscriptions = _subsManager.GetHandlersForEvent(eventName);
             foreach (var subscription in subscriptions)
             {
-                IIntegrationEventHandler? handler = this._serviceProvider.GetService(subscription) as IIntegrationEventHandler;
+                //各自在不同的Scope中，避免DbContext等的共享造成如下问题：
+                //The instance of entity type cannot be tracked because another instance
+                using var scope = this._serviceProvider.CreateScope();                
+                IIntegrationEventHandler? handler = scope.ServiceProvider.GetService(subscription) as IIntegrationEventHandler;
                 if (handler == null)
                 {
                     throw new ApplicationException($"无法创建{subscription}类型的服务");

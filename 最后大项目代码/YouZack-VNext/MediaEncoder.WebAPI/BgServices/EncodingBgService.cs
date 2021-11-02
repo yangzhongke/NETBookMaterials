@@ -31,23 +31,22 @@ public class EncodingBgService : BackgroundService
     private readonly IOptionsSnapshot<JWTOptions> optionJWT;
     private readonly ITokenService tokenService;
 
-    public EncodingBgService(IServiceProvider sp)
+    public EncodingBgService(IServiceScopeFactory spf)
     {
         //MEDbContext等是Scoped，而BackgroundService是Singleton，所以不能直接注入，需要手动开启一个新的Scope
-        this.serviceScope = sp.CreateScope();
-        var newSP = serviceScope.ServiceProvider;
-
-        this.dbContext = newSP.GetRequiredService<MEDbContext>(); ;
+        this.serviceScope = spf.CreateScope();
+        var sp = serviceScope.ServiceProvider;
+        this.dbContext = sp.GetRequiredService<MEDbContext>(); ;
         //生产环境中，RedLock需要五台服务器才能体现价值，测试环境无所谓
-        IConnectionMultiplexer connectionMultiplexer = newSP.GetRequiredService<IConnectionMultiplexer>();
+        IConnectionMultiplexer connectionMultiplexer = sp.GetRequiredService<IConnectionMultiplexer>();
         this.redLockMultiplexerList = new List<RedLockMultiplexer> { new RedLockMultiplexer(connectionMultiplexer) };
-        this.logger = newSP.GetRequiredService<ILogger<EncodingBgService>>();
-        this.httpClientFactory = newSP.GetRequiredService<IHttpClientFactory>();
-        this.encoderFactory = newSP.GetRequiredService<MediaEncoderFactory>();
-        this.optionFileService = newSP.GetRequiredService<IOptionsSnapshot<FileServiceOptions>>();
-        this.eventBus = newSP.GetRequiredService<IEventBus>();
-        this.optionJWT = newSP.GetRequiredService<IOptionsSnapshot<JWTOptions>>();
-        this.tokenService = newSP.GetRequiredService<ITokenService>();
+        this.logger = sp.GetRequiredService<ILogger<EncodingBgService>>();
+        this.httpClientFactory = sp.GetRequiredService<IHttpClientFactory>();
+        this.encoderFactory = sp.GetRequiredService<MediaEncoderFactory>();
+        this.optionFileService = sp.GetRequiredService<IOptionsSnapshot<FileServiceOptions>>();
+        this.eventBus = sp.GetRequiredService<IEventBus>();
+        this.optionJWT = sp.GetRequiredService<IOptionsSnapshot<JWTOptions>>();
+        this.tokenService = sp.GetRequiredService<ITokenService>();
     }
 
     private async Task ProcessItemAsync(EncodingItem readyItem, CancellationToken stoppingToken)

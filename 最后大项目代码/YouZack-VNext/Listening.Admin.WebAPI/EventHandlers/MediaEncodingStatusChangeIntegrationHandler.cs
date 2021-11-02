@@ -44,6 +44,9 @@ class MediaEncodingStatusChangeIntegrationHandler : DynamicIntegrationEventHandl
                 await hubContext.Clients.All.SendAsync("OnMediaEncodingFailed", id);
                 break;
             case "MediaEncoding.Duplicated":
+                await encodingEpisodeHelper.UpdateEpisodeStatusAsync(id, "Completed");
+                await hubContext.Clients.All.SendAsync("OnMediaEncodingCompleted", id);//通知前端刷新
+                break;
             case "MediaEncoding.Completed":
                 await encodingEpisodeHelper.UpdateEpisodeStatusAsync(id, "Completed");
                 Uri outputUrl = new Uri(eventData.OutputUrl);
