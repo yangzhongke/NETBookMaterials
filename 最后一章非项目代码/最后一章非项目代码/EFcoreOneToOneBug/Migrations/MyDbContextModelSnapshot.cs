@@ -37,7 +37,7 @@ namespace EFcoreOneToOneBug.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("A");
+                    b.ToTable("A", (string)null);
                 });
 
             modelBuilder.Entity("EFcoreOneToOneBug.B", b =>
@@ -57,7 +57,7 @@ namespace EFcoreOneToOneBug.Migrations
                     b.HasIndex("AId")
                         .IsUnique();
 
-                    b.ToTable("B");
+                    b.ToTable("B", (string)null);
                 });
 
             modelBuilder.Entity("EFcoreOneToOneBug.B", b =>

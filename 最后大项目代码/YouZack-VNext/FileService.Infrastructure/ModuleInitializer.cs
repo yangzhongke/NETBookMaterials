@@ -9,8 +9,11 @@ namespace FileService.Infrastructure
     {
         public void Initialize(IServiceCollection services)
         {
+            services.AddHttpContextAccessor();
             services.AddScoped<IStorageClient, SMBStorageClient>();
-            services.AddScoped<IStorageClient, UpYunStorageClient>();
+            //services.AddScoped<IStorageClient, UpYunStorageClient>();
+            services.AddScoped<IStorageClient, MockCloudStorageClient>();
+            
             services.AddHttpClient();
         }
     }

@@ -1,7 +1,11 @@
 ﻿using FluentValidation.AspNetCore;
 using MediatR;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Serilog;
 using StackExchange.Redis;
 using Swashbuckle.AspNetCore.SwaggerGen;
@@ -102,6 +106,11 @@ namespace CommonInitializer
             string redisConnStr = configuration.GetValue<string>("Redis:ConnStr");
             IConnectionMultiplexer redisConnMultiplexer = ConnectionMultiplexer.Connect(redisConnStr);
             services.AddSingleton(typeof(IConnectionMultiplexer), redisConnMultiplexer);
+            services.Configure<ForwardedHeadersOptions>(options =>
+            {
+                options.ForwardedHeaders =
+                    ForwardedHeaders.All;
+            });
         }
     }
 }

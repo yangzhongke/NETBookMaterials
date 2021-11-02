@@ -9,7 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.11.1" />
-    <PackageReference Include="NEST" Version="7.15.0" />
+    <PackageReference Include="NEST" Version="7.15.2" />
   </ItemGroup>
 
   <ItemGroup>
