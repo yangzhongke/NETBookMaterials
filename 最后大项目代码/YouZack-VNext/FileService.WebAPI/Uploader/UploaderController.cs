@@ -2,12 +2,14 @@
 using FileService.Domain.Services;
 using FileService.Infrastructure;
 using Microsoft.AspNetCore.Authorization;
+using Zack.ASPNETCore;
 using Zack.Commons;
 
 namespace FileService.WebAPI.Uploader;
 [Route("[controller]/[action]")]
 [ApiController]
 [Authorize(Roles = "Admin")]
+[UnitOfWork(typeof(FSDbContext))]
 //todo：要做权限控制，这个接口即对内部系统开放、又对前端用户开放。
 public class UploaderController : ControllerBase
 {
@@ -79,7 +81,6 @@ public class UploaderController : ControllerBase
         Guid id = Guid.NewGuid();
         UploadedItem upItem = UploadedItem.Create(id, fileSize, fileName, hash, backupUrl, remoteUrl);
         ctx.Add(upItem);
-        await ctx.SaveChangesAsync();
         return remoteUrl;
     }
 }

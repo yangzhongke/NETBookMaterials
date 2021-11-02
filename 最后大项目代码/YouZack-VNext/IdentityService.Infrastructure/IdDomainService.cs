@@ -1,21 +1,28 @@
 ﻿using IdentityService.Domain;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
+using System.Security.Claims;
+using Zack.JWT;
 
 namespace IdentityService.Infrastructure
 {
-    public class UserServiceImpl : IUserService
+    public class IdDomainService : IIdDomainService
     {
         private readonly IdUserManager userManager;
-        private readonly ILogger<UserServiceImpl> logger;
+        private readonly ILogger<IdDomainService> logger;
         private readonly RoleManager<Role> roleManager;
+        private readonly ITokenService tokenService;
+        private readonly IOptions<JWTOptions> optJWT;
 
-        public UserServiceImpl(IdUserManager userManager,
-            ILogger<UserServiceImpl> logger, RoleManager<Role> roleManager)
+        public IdDomainService(IdUserManager userManager,
+            ILogger<IdDomainService> logger, RoleManager<Role> roleManager, IOptions<JWTOptions> optJWT, ITokenService tokenService)
         {
             this.userManager = userManager;
             this.logger = logger;
             this.roleManager = roleManager;
+            this.optJWT = optJWT;
+            this.tokenService = tokenService;
         }
         public async Task<User> FindByPhoneNumberAsync(string phoneNum)
         {
@@ -124,6 +131,48 @@ namespace IdentityService.Infrastructure
         public Task<User> FindByNameAsync(string userName)
         {
             return userManager.FindByNameAsync(userName);
+        }
+
+        public async Task<(SignInResult Result, string? Token)> LoginByPhoneAndPwdAsync(string phoneNum, string password)
+        {
+            var checkResult = await CheckPhoneNumAndPwdAsync(phoneNum, password);
+            if (checkResult.Succeeded)
+            {
+                var user = await FindByPhoneNumberAsync(phoneNum);
+                string token = await BuildTokenAsync(user);
+                return (SignInResult.Success,token);
+            }
+            else
+            {
+                return (checkResult, null);
+            }
+        }
+
+        public async Task<(SignInResult Result, string? Token)> LoginByUserNameAndPwdAsync(string userName, string password)
+        {
+            var checkResult = await CheckUserNameAndPwdAsync(userName, password);
+            if (checkResult.Succeeded)
+            {
+                var user = await FindByNameAsync(userName);
+                string token = await BuildTokenAsync(user);
+                return (SignInResult.Success, token);
+            }
+            else
+            {
+                return (checkResult, null);
+            }
+        }
+
+        private async Task<string> BuildTokenAsync(User user)
+        {
+            var roles = await GetRolesAsync(user);
+            List<Claim> claims = new List<Claim>();
+            claims.Add(new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()));
+            foreach (string role in roles)
+            {
+                claims.Add(new Claim(ClaimTypes.Role, role));
+            }
+            return tokenService.BuildToken(claims, optJWT.Value);
         }
     }
 }

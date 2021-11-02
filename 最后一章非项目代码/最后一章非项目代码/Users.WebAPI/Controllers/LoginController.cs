@@ -19,6 +19,10 @@ namespace Users.WebAPI.Controllers.Login
         [HttpPut]
         public async Task<IActionResult> LoginByPhoneAndPwd(LoginByPhoneAndPwdRequest req)
         {
+            if(req.Password.Length<3)
+            {
+                return BadRequest("密码的长度不能小于3");
+            }
             var phoneNum = req.PhoneNumber;
             var result = await domainService.CheckLoginAsync(phoneNum, req.Password);
             switch(result)

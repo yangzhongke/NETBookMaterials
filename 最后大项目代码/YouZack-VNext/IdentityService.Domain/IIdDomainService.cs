@@ -2,7 +2,7 @@
 
 namespace IdentityService.Domain
 {
-    public interface IUserService
+    public interface IIdDomainService
     {
         Task<User> FindByIdAsync(Guid userId);
         Task<User> FindByNameAsync(string userName);
@@ -26,5 +26,8 @@ namespace IdentityService.Domain
 
         Task<IList<string>> GetRolesAsync(User user);
         Task<IdentityResult> AddToRoleAsync(User user, string role);
+
+        Task<(SignInResult Result, string? Token)> LoginByPhoneAndPwdAsync(string phoneNum, string password);
+        Task<(SignInResult Result, string? Token)> LoginByUserNameAndPwdAsync(string phoneNum, string password);
     }
 }

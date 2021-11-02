@@ -6,7 +6,6 @@ namespace Users.Infrastructure
     public class UserDbContext:DbContext
     {
         public DbSet<User> Users { get; private set; }
-        public DbSet<UserAccessFail> _accessFail { get; set; }
         public DbSet<UserLoginHistory> LoginHistories { get; private set; }
 
         public UserDbContext(DbContextOptions<UserDbContext> options)

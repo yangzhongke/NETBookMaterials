@@ -40,7 +40,6 @@ namespace Users.WebAPI
                 await next();
                 return;
             }
-            using TransactionScope txScope = new(TransactionScopeAsyncFlowOption.Enabled);
             List<DbContext> dbCtxs = new List<DbContext>();
             foreach (var dbCtxType in uowAttr.DbContextTypes)
             {
@@ -57,7 +56,6 @@ namespace Users.WebAPI
                 {
                     await dbCtx.SaveChangesAsync();
                 }
-                txScope.Complete();
             }
         }
     }

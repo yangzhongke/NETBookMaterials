@@ -4,13 +4,16 @@ namespace Listening.Admin.WebAPI.Categories;
 [Route("[controller]/[action]")]
 [Authorize(Roles = "Admin")]
 [ApiController]
+[UnitOfWork(typeof(ListeningDbContext))]
 //供后台用的增删改查接口不用缓存
 public class CategoryController : ControllerBase
 {
     private readonly ListeningDbContext dbContext;
-    public CategoryController(ListeningDbContext dbContext)
+    private readonly ListeningDomainService domainService;
+    public CategoryController(ListeningDbContext dbContext, ListeningDomainService domainService)
     {
         this.dbContext = dbContext;
+        this.domainService = domainService;
     }
 
     [HttpGet]
@@ -38,16 +41,9 @@ public class CategoryController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<Guid>> Add(CategoryAddRequest req)
     {
-        //获取最大序号，把序号+1作为新增加的序号
-        //后台操作，不会有并发的问题
-        //MaxAsync(c => (int?)c.SequenceNumber) 这样可以处理一条数据都没有的问题
-        int? maxSeq = await dbContext.Query<Category>().MaxAsync(c => (int?)c.SequenceNumber);
-        maxSeq = maxSeq ?? 0;
-        var id = Guid.NewGuid();
-        Category category = Category.Create(id, maxSeq.Value + 1, req.Name, req.CoverUrl);
+        var category = await domainService.AddCategoryAsync(req.Name, req.CoverUrl);
         dbContext.Add(category);
-        await dbContext.SaveChangesAsync();
-        return id;
+        return category.Id;
     }
 
     [HttpPut]
@@ -55,9 +51,12 @@ public class CategoryController : ControllerBase
     public async Task<ActionResult> Update([RequiredGuid] Guid id, CategoryUpdateRequest request)
     {
         var cat = await dbContext.FindAsync<Category>(id);
+        if(cat==null)
+        {
+            return NotFound("id不存在");
+        }
         cat.ChangeName(request.Name);
         cat.ChangeCoverUrl(request.CoverUrl);
-        await dbContext.SaveChangesAsync();
         return Ok();
     }
 
@@ -72,31 +71,13 @@ public class CategoryController : ControllerBase
             return NotFound($"没有Id={id}的Category");
         }
         cat.SoftDelete();//软删除
-        await dbContext.SaveChangesAsync();
         return Ok();
     }
 
     [HttpPut]
     public async Task<ActionResult> Sort(CategoriesSortRequest req)
     {
-        Guid[] idsInDB = await dbContext.Query<Category>().Select(a => a.Id).ToArrayAsync();
-        if (!idsInDB.SequenceIgnoredEqual(req.SortedCategoryIds))
-        {
-            return this.APIError(1, $"提交的待排序Id中必须是所有的分类Id");
-        }
-        int seqNum = 1;
-        //一个in语句一次性取出来更快，不过在非性能关键节点，业务语言比性能更重要
-        foreach (Guid catId in req.SortedCategoryIds)
-        {
-            var cat = await dbContext.FindAsync<Category>(catId);
-            if (cat == null)
-            {
-                return NotFound($"categoryId={catId}不存在");
-            }
-            cat.ChangeSequenceNumber(seqNum);//顺序改序号
-            seqNum++;
-        }
-        await dbContext.SaveChangesAsync();
+        await domainService.SortCategoriesAsync(req.SortedCategoryIds);
         return Ok();
     }
 }

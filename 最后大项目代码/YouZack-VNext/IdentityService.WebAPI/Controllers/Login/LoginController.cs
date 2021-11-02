@@ -20,20 +20,20 @@ namespace IdentityService.WebAPI.Controllers.Login;
 [ApiController]
 public class LoginController : ControllerBase
 {
-    private readonly IUserService idService;
+    private readonly IIdDomainService idService;
     private readonly ILogger<LoginController> logger;
     private readonly IConnectionMultiplexer redisConnMultiplexer;
     private readonly IOptions<JWTOptions> optJWT;
-    private readonly ITokenService tokenService;
+    //private readonly ITokenService tokenService;
 
-    public LoginController(IUserService idService,
+    public LoginController(IIdDomainService idService,
         IConnectionMultiplexer redisConnMultiplexer,
-        IOptions<JWTOptions> optJWT, ITokenService tokenService)
+        IOptions<JWTOptions> optJWT)//, ITokenService tokenService)
     {
         this.idService = idService;
         this.redisConnMultiplexer = redisConnMultiplexer;
         this.optJWT = optJWT;
-        this.tokenService = tokenService;
+        //this.tokenService = tokenService;
     }
 
     [HttpPost]
@@ -131,11 +131,10 @@ public class LoginController : ControllerBase
         {
             return BadRequest("验证码错误");
         }
-        var checkResult = await idService.CheckPhoneNumAndPwdAsync(req.PhoneNum, req.Password);
-        if (checkResult.Succeeded)
+        (var checkResult, string? token) = await idService.LoginByPhoneAndPwdAsync(req.PhoneNum, req.Password);
+        if(checkResult.Succeeded)
         {
-            var user = await idService.FindByPhoneNumberAsync(req.PhoneNum);
-            return await BuildTokenAsync(user);
+            return token!;
         }
         else if (checkResult.IsLockedOut)
         {
@@ -149,94 +148,6 @@ public class LoginController : ControllerBase
         }
     }
 
-    /*
-[AllowAnonymous]
-[HttpPost]
-public async Task<ActionResult<string>> LoginByPhoneAndCode(LoginByPhoneAndCodeRequest req)
-{
-    if (!await ValidateCaptchaAsync(req.TicketId, req.Captcha))
-    {
-        return BadRequest("验证码错误");
-    }
-    //如果手机号不存在，SendVCodeViaPhoneNum中已经创建用户了，所以这里可以直接取
-    var user = await idService.FindByPhoneNumberAsync(req.PhoneNum);
-    if(user == null)//如果仍然找不到，就可能是有bug了。
-    {
-        logger.LogError("LoginByPhoneAndCode中没有找到手机号，可能操作步骤不对");
-        return BadRequest("没有找到手机号，可能操作步骤不对");
-    }
-
-    var checkResult = await idService.ChangePhoneNumAsync(user.Id, req.PhoneNum, req.Code);
-    if (checkResult.Succeeded)
-    {
-        return await BuildTokenAsync(user);
-    }
-    else if (checkResult.IsLockedOut)
-    {
-        //尝试登录次数太多
-        return StatusCode((int)HttpStatusCode.Locked,"用户已经被锁定");
-    }
-    else
-    {
-        string msg = checkResult.ToString();
-        return BadRequest("登录失败"+msg);
-    }
-}
-*/
-    /*
-    [AllowAnonymous]
-    [HttpPost]
-    public async Task<ActionResult> SendVCodeViaPhoneNum(SendCodeByPhoneRequest req)
-    {
-        var phoneNumber = req.PhoneNumber;
-        var ticketId = req.TicketId;
-        var captcha = req.Captcha;
-        if (!await ValidateCaptchaAsync(ticketId, captcha))
-        {
-            return BadRequest("验证码验证失败");
-        }
-        var user = await this.idService.FindByPhoneNumberAsync(phoneNumber);
-        //不存在则新建
-        if (user == null)
-        {
-            string password = Guid.NewGuid().ToString("N");//生成随机的密码
-            string userName = Guid.NewGuid().ToString("N");//生成随机用户名（数字用户一样的由来，哈哈）
-            user = new User(userName);//username是必须的
-            user.PhoneNumber = phoneNumber;
-            var createResult = await this.idService.CreateAsync(user, password);
-            if (!createResult.Succeeded)
-            {
-                string msg = createResult.Errors.SumErrors();
-                logger.LogError($"创建用户失败:{msg}");
-                return BadRequest($"创建用户失败，phoneNum={phoneNumber},password={password}");
-            }
-        }
-        var vCode = await this.idService.GenerateChangePhoneNumberTokenAsync(user, phoneNumber);
-        logger.LogDebug($"向{phoneNumber}发送验证码{vCode}");
-        try
-        {
-            await this.smsSender.SendAsync(phoneNumber, vCode);
-        }
-        catch (Exception ex)
-        {
-            logger.LogError(ex, $"短信发送失败，手机号{phoneNumber}，验证码{vCode}");
-            return StatusCode((int)HttpStatusCode.InternalServerError, "短信发送失败");
-        }
-        return Ok();
-    }
-    */
-    private async Task<string> BuildTokenAsync(User user)
-    {
-        var roles = await idService.GetRolesAsync(user);
-        List<Claim> claims = new List<Claim>();
-        claims.Add(new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()));
-        foreach (string role in roles)
-        {
-            claims.Add(new Claim(ClaimTypes.Role, role));
-        }
-        return tokenService.BuildToken(claims, optJWT.Value);
-    }
-
     [AllowAnonymous]
     [HttpPost]
     public async Task<ActionResult<string>> LoginByUserNameAndPwd(LoginByUserNameAndPwdRequest req)
@@ -245,17 +156,10 @@ public async Task<ActionResult<string>> LoginByPhoneAndCode(LoginByPhoneAndCodeR
         {
             return BadRequest("验证码错误");
         }
-        //如果手机号不存在，SendVCodeViaPhoneNum中已经创建用户了，所以这里可以直接取
-        var user = await idService.FindByNameAsync(req.UserName);
-        if (user == null)//如果仍然找不到，就可能是有bug了。
-        {
-            return BadRequest("没有找到用户名");
-        }
-
-        var checkResult = await idService.CheckUserNameAndPwdAsync(user.UserName, req.Password);
+        (var checkResult,var token) = await idService.LoginByUserNameAndPwdAsync(req.UserName, req.Password);
         if (checkResult.Succeeded)
         {
-            return await BuildTokenAsync(user);
+            return token!;
         }
         else if (checkResult.IsLockedOut)
         {

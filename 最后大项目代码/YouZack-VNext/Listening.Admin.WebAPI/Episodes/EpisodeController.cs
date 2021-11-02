@@ -5,17 +5,21 @@ namespace Listening.Admin.WebAPI.Episodes;
 [Route("[controller]/[action]")]
 [ApiController]
 [Authorize(Roles = "Admin")]
+[UnitOfWork(typeof(ListeningDbContext))]
 public class EpisodeController : ControllerBase
 {
     private readonly ListeningDbContext dbContext;
     private readonly EncodingEpisodeHelper encodingEpisodeHelper;
     private readonly IEventBus eventBus;
+    private readonly ListeningDomainService domainService;
     public EpisodeController(ListeningDbContext dbContext,
-            EncodingEpisodeHelper encodingEpisodeHelper, IEventBus eventBus)
+            EncodingEpisodeHelper encodingEpisodeHelper, 
+            IEventBus eventBus, ListeningDomainService domainService)
     {
         this.dbContext = dbContext;
         this.encodingEpisodeHelper = encodingEpisodeHelper;
         this.eventBus = eventBus;
+        this.domainService = domainService;
     }
 
     [HttpPost]
@@ -24,15 +28,10 @@ public class EpisodeController : ControllerBase
         //如果上传的是m4a，不用转码，直接存到数据库
         if (req.AudioUrl.ToString().EndsWith("m4a", StringComparison.OrdinalIgnoreCase))
         {
-            int? maxSeq = await dbContext.Query<Episode>().Where(e => e.AlbumId == req.AlbumId)
-            .MaxAsync(e => (int?)e.SequenceNumber);
-            maxSeq = maxSeq ?? 0;
-            var id = Guid.NewGuid();
-            Episode episode = Episode.Create(id, maxSeq.Value + 1, req.Name, req.AlbumId, req.AudioUrl,
-                req.DurationInSecond, req.SubtitleType, req.Subtitle);
+            Episode episode = await domainService.AddEpisodeAsync(req.Name,req.AlbumId,
+                req.AudioUrl,req.DurationInSecond,req.SubtitleType,req.Subtitle);
             dbContext.Add(episode);
-            await dbContext.SaveChangesAsync();
-            return id;
+            return episode.Id;
         }
         else
         {
@@ -53,9 +52,12 @@ public class EpisodeController : ControllerBase
     public async Task<ActionResult> Update([RequiredGuid] Guid id, EpisodeUpdateRequest request)
     {
         var episode = await dbContext.FindAsync<Episode>(id);
+        if(episode==null)
+        {
+            return NotFound("id没找到");
+        }
         episode.ChangeName(request.Name);
         episode.ChangeSubtitle(request.SubtitleType, request.Subtitle);
-        await dbContext.SaveChangesAsync();
         return Ok();
     }
 
@@ -70,7 +72,6 @@ public class EpisodeController : ControllerBase
             return NotFound($"没有Id={id}的Episode");
         }
         album.SoftDelete();//软删除
-        await dbContext.SaveChangesAsync();
         return Ok();
     }
 
@@ -124,7 +125,6 @@ public class EpisodeController : ControllerBase
             return NotFound($"没有Id={id}的Category");
         }
         episode.Hide();
-        await dbContext.SaveChangesAsync();
         return Ok();
     }
 
@@ -138,7 +138,6 @@ public class EpisodeController : ControllerBase
             return NotFound($"没有Id={id}的Category");
         }
         episode.Show();
-        await dbContext.SaveChangesAsync();
         return Ok();
     }
 
@@ -146,25 +145,7 @@ public class EpisodeController : ControllerBase
     [Route("{albumId}")]
     public async Task<ActionResult> Sort([RequiredGuid] Guid albumId, EpisodesSortRequest req)
     {
-        Guid[] idsInDB = await dbContext.Query<Episode>().Where(a => a.AlbumId == albumId)
-            .Select(a => a.Id).ToArrayAsync();
-        if (!idsInDB.SequenceIgnoredEqual(req.SortedEpisodeIds))
-        {
-            return this.APIError(1, $"提交的待排序Id中必须是albumId={albumId}专辑下所有的Id");
-        }
-
-        int seqNum = 1;
-        foreach (Guid episodeId in req.SortedEpisodeIds)
-        {
-            var episode = await dbContext.FindAsync<Episode>(episodeId);
-            if (episode == null)
-            {
-                return this.APIError(2, $"episodeId={episodeId}不存在");
-            }
-            episode.ChangeSequenceNumber(seqNum);//顺序改序号
-            seqNum++;
-        }
-        await dbContext.SaveChangesAsync();
+        await domainService.SortEpisodesAsync(albumId, req.SortedEpisodeIds);
         return Ok();
     }
 }

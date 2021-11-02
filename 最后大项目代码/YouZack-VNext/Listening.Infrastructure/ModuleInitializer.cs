@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Listening.Infrastructure;
+using Microsoft.Extensions.DependencyInjection;
 using Zack.Commons;
 
 namespace Listening.Domain
@@ -7,6 +8,7 @@ namespace Listening.Domain
     {
         public void Initialize(IServiceCollection services)
         {
+            services.AddScoped<IListeningRepository, ListeningRepository>();
         }
     }
 }

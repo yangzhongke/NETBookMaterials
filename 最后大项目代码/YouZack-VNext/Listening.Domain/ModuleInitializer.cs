@@ -7,6 +7,7 @@ namespace Listening.Domain
     {
         public void Initialize(IServiceCollection services)
         {
+            services.AddScoped<ListeningDomainService>();
         }
     }
 }

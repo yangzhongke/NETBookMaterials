@@ -17,23 +17,23 @@ namespace Users.Domain
         {
             User? user = await repository.FindOneAsync(phoneNum);
             UserAccessResult result;
-            if (user == null)
+            if (user == null)//找不到用户
             {
                 result = UserAccessResult.PhoneNumberNotFound;
             }
-            else if (IsLockOut(user))
+            else if (IsLockOut(user))//用户被锁定
             {
                 result = UserAccessResult.Lockout;
             }
-            else if(user.HasPassword()==false)
+            else if(user.HasPassword()==false)//没设密码
             {
                 result = UserAccessResult.NoPassword;
             }
-            else if(user.CheckPassword(password))
+            else if(user.CheckPassword(password))//密码正确
             {
                 result = UserAccessResult.OK;
             }
-            else
+            else//密码错误
             {
                 result = UserAccessResult.PasswordError;
             }
@@ -41,11 +41,11 @@ namespace Users.Domain
             {
                 if (result == UserAccessResult.OK)
                 {
-                    this.ResetAccessFail(user);
+                    this.ResetAccessFail(user);//重置
                 }
                 else
                 {
-                    this.AccessFail(user);
+                    this.AccessFail(user);//处理登录失败
                 }
             }            
             UserAccessResultEvent eventItem = new(phoneNum, result);

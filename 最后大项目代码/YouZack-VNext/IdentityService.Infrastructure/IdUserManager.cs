@@ -96,7 +96,57 @@ public class IdUserManager : UserManager<User>
         return result;
     }
 
-    public string GeneratePassword()
+    private static IdentityResult ErrorResult(string msg)
+    {
+        IdentityError idError = new IdentityError { Description=msg};
+        return IdentityResult.Failed(idError);
+    }
+
+    public async Task<(IdentityResult,User?,string? password)> AddAdminUserAsync(string userName, string phoneNum)
+    {
+        if (await FindByNameAsync(userName) != null)
+        {
+            return (ErrorResult($"已经存在用户名{userName}"),null, null);
+        }
+        if (await FindByPhoneNumberAsync(phoneNum) != null)
+        {
+            return (ErrorResult($"已经存在手机号{phoneNum}"), null, null);
+        }
+        User user = new User(userName);
+        user.PhoneNumber = phoneNum;
+        user.PhoneNumberConfirmed = true;
+        string password = GeneratePassword();
+        var result = await CreateAsync(user, password);
+        if (!result.Succeeded)
+        {
+            return (result, null, null);
+        }
+        result = await AddToRoleAsync(user, "Admin");
+        if (!result.Succeeded)
+        {
+            return (result, null, null);
+        }
+        return (IdentityResult.Success, user,password);
+    }
+
+    public async Task<(IdentityResult, User?, string? password)> ResetPasswordAsync(Guid id)
+    {
+        var user = await FindByIdAsync(id.ToString());
+        if (user == null)
+        {
+            return (ErrorResult("用户没找到"),null,null);
+        }
+        string password = GeneratePassword();
+        string token = await GeneratePasswordResetTokenAsync(user);
+        var result = await ResetPasswordAsync(user, token, password);
+        if (!result.Succeeded)
+        {
+            return (result, null, null);
+        }
+        return (IdentityResult.Success, user, password);
+    }
+
+    private string GeneratePassword()
     {
         var options = Options.Password;
         int length = options.RequiredLength;

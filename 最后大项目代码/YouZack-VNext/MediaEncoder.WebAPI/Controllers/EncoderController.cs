@@ -2,6 +2,7 @@
 using MediaEncoder.Infrastructure;
 using Microsoft.AspNetCore.Authorization;
 using System.Net.Http;
+using Zack.ASPNETCore;
 
 namespace MediaEncoder.WebAPI.Controllers;
 
@@ -9,6 +10,7 @@ namespace MediaEncoder.WebAPI.Controllers;
 [Route("[controller]/[action]")]
 [ApiController]
 [Authorize(Roles = "Admin")]
+[UnitOfWork(typeof(MEDbContext))]
 public class EncoderController : ControllerBase
 {
     private readonly IHttpClientFactory httpClientFactory;
@@ -41,6 +43,5 @@ public class EncoderController : ControllerBase
         Guid id = request.MediaId;//直接用另一端传来的MediaId作为EncodingItem的主键
         var encodeItem = EncodingItem.Create(id, srcFileName, sourceUrl, outputFormat, sourceSystem);
         dbContext.Add(encodeItem);
-        await dbContext.SaveChangesAsync();
     }
 }
