@@ -2,6 +2,7 @@
   <div v-if="state.episode">
     <div>
       <el-button type="primary" style="width:100vw" v-on:click="addToSelectedSentences">这句听不懂</el-button>
+      <div>{{state.currentSentence.value}}</div>
     </div>
     <div>
       <audio :src="state.episode.audioUrl" style="width:100vw" controls ref="mainPlayer" autoplay

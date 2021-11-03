@@ -8,7 +8,8 @@
   <el-table row-key='id' :data="state.encodingEpisodes"  v-if="state.encodingEpisodes.length>0" style="width: 100%">
     <el-table-column prop="name.chinese" label="中文标题"></el-table-column>
     <el-table-column prop="name.english" label="英文标题"></el-table-column>
-    <el-table-column prop="durationInSecond" label="秒数"></el-table-column>     
+    <el-table-column prop="durationInSecond" label="秒数"> 
+    </el-table-column>     
     <el-table-column label="转码状态">
        <template #default="scope">
         {{renderEncodingStatus(scope.row.status)}}
@@ -30,7 +31,11 @@
     <el-table-column prop="name.chinese" label="中文标题"></el-table-column>
     <el-table-column prop="name.english" label="英文标题"></el-table-column>
     <el-table-column prop="creationTime" label="创建时间"></el-table-column>
-    <el-table-column prop="durationInSecond" label="秒数"></el-table-column>     
+    <el-table-column label="秒数">
+		<template #default="scope">
+		  <span>{{parseInt(scope.row.durationInSecond)}}</span>
+		</template>        
+    </el-table-column>     
     <el-table-column fixed="right" label="操作">
       <template #default="scope">
         <el-button type="text" size="small">

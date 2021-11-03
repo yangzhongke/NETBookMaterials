@@ -53,7 +53,7 @@ namespace Listening.Infrastructure
 
         public async Task<Episode?> GetEpisodeByIdAsync(Guid episodeId)
         {
-            return await dbCtx.Episodes.FindAsync(episodeId.ToString());
+            return await dbCtx.Episodes.SingleOrDefaultAsync(e=>e.Id== episodeId);
         }
 
         public async Task<int> GetMaxSeqOfEpisodesAsync(Guid albumId)

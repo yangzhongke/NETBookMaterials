@@ -6,7 +6,6 @@
   <el-table row-key='id'
     :data="state.users"
     style="width: 100%">  
-    <el-table-column prop="id" label="Id"></el-table-column>
     <el-table-column prop="userName" label="用户名"></el-table-column>
     <el-table-column prop="phoneNumber" label="手机号"></el-table-column>
     <el-table-column prop="creationTime" label="创建时间"></el-table-column>

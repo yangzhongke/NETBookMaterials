@@ -10,7 +10,7 @@
     <audio id="player" @durationchange="playerDurationChange" style="display:none" :src="state.audioUrl" controls></audio>
     <ZackUploader v-model="state.audioUrl"></ZackUploader>
   </el-form-item>   
-  <el-form-item label="音频长度(秒数)">
+  <el-form-item label="音频秒数">
     <el-input v-model="state.durationInSecond"></el-input>
   </el-form-item>  
   <el-form-item label="字幕类型">
@@ -22,7 +22,7 @@
     </el-select>
   </el-form-item> 
   <el-form-item label="字幕">
-    <el-input type="textarea" v-model="state.subtitle" rows="10"></el-input>
+    <el-input type="textarea" v-model="state.subtitle" rows="5"></el-input>
   </el-form-item>  
   <el-form-item>
     <el-button type="primary" @click="save">保存</el-button>
