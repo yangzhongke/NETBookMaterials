@@ -4,6 +4,10 @@ using Microsoft.AspNetCore.Http;
 
 namespace FileService.Infrastructure.Services
 {
+    /// <summary>
+    /// 把文件服务器当成一个云存储服务器。文件保存在wwwroot文件夹下。
+    /// 这仅供开发、演示阶段使用，在生产环境中，一定要用专门的云存储服务器来代替。
+    /// </summary>
     class MockCloudStorageClient : IStorageClient
     {
         public StorageType StorageType => StorageType.Public;

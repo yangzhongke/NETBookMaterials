@@ -11,7 +11,6 @@ namespace FileService.Infrastructure.Configs
             builder.HasKey(e => e.Id).IsClustered(false);
             builder.Property(e => e.FileName).IsUnicode().HasMaxLength(1024);
             builder.Property(e => e.FileSHA256Hash).IsUnicode(false).HasMaxLength(64);
-            //builder.Property(e => e.BackupUrl);
             builder.HasIndex(e => new { e.FileSHA256Hash, e.FileSizeInBytes });//经常要按照
         }
     }

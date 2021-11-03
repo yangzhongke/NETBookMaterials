@@ -1,4 +1,5 @@
-﻿using IdentityService.Infrastructure;
+﻿using IdentityService.Domain;
+using IdentityService.Infrastructure;
 using IdentityService.WebAPI.Events;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -16,12 +17,14 @@ namespace IdentityService.WebAPI.Controllers.UserAdmin;
 public class UserAdminController : ControllerBase
 {
     private readonly IdUserManager userManager;
+    private readonly IIdRepository repository;
     private readonly IEventBus eventBus;
 
-    public UserAdminController(IdUserManager userManager, IEventBus eventBus)
+    public UserAdminController(IdUserManager userManager, IEventBus eventBus, IIdRepository repository)
     {
         this.userManager = userManager;
         this.eventBus = eventBus;
+        this.repository = repository;
     }
 
     [HttpGet]
@@ -42,7 +45,7 @@ public class UserAdminController : ControllerBase
     [HttpPost]
     public async Task<ActionResult> AddAdminUser(AddAdminUserRequest req)
     {
-        (var result,var user,var password) = await userManager
+        (var result,var user,var password) = await repository
             .AddAdminUserAsync(req.UserName, req.PhoneNum);
         if (!result.Succeeded)
         {
@@ -58,7 +61,7 @@ public class UserAdminController : ControllerBase
     [Route("{id}")]
     public async Task<ActionResult> DeleteAdminUser(Guid id)
     {
-        var user = await userManager.FindByIdAsync(id.ToString());
+        var user = await repository.FindByIdAsync(id);
         if (user == null)
         {
             return NotFound("用户没找到");
@@ -72,7 +75,7 @@ public class UserAdminController : ControllerBase
     [Route("{id}")]
     public async Task<ActionResult> UpdateAdminUser(Guid id, EditAdminUserRequest req)
     {
-        var user = await userManager.FindByIdAsync(id.ToString());
+        var user = await repository.FindByIdAsync(id);
         if (user == null)
         {
             return NotFound("用户没找到");
@@ -86,7 +89,7 @@ public class UserAdminController : ControllerBase
     [Route("{id}")]
     public async Task<ActionResult> ResetAdminUserPassword(Guid id)
     {
-        (var result, var user, var password) = await userManager.ResetPasswordAsync(id);
+        (var result, var user, var password) = await repository.ResetPasswordAsync(id);
         if (!result.Succeeded)
         {
             return BadRequest(result.Errors.SumErrors());

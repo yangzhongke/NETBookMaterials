@@ -10,5 +10,6 @@
   </ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\Zack.DomainCommons\Zack.DomainCommons.csproj" />
+		<ProjectReference Include="..\Zack.JWT\Zack.JWT.csproj" />
 	</ItemGroup>
 </Project>

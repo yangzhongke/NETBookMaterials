@@ -1,9 +1,7 @@
 ﻿using IdentityService.Domain;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using System.Text;
 
 namespace IdentityService.Infrastructure;
 public class IdUserManager : UserManager<User>
@@ -13,171 +11,11 @@ public class IdUserManager : UserManager<User>
     {
     }
 
-    /// <summary>
-    /// 尝试登录，如果lockoutOnFailure为true，则登录失败还会自动进行lockout计数
-    /// </summary>
-    /// <param name="user"></param>
-    /// <param name="password"></param>
-    /// <param name="lockoutOnFailure"></param>
-    /// <returns></returns>
-    /// <exception cref="ApplicationException"></exception>
-    public async Task<SignInResult> CheckForSignInAsync(User user, string password, bool lockoutOnFailure)
+    public IUserLoginStore<User> UserLoginStore
     {
-        if(await IsLockedOutAsync(user))
+        get
         {
-            return SignInResult.LockedOut;
+            return (IUserLoginStore<User>)this.Store;
         }
-        var success = await CheckPasswordAsync(user, password);
-        if(success)
-        {
-            return SignInResult.Success;
-        }
-        else
-        {
-            if(lockoutOnFailure)
-            {
-                var r = await AccessFailedAsync(user);
-                if (!r.Succeeded)
-                {
-                    throw new ApplicationException("AccessFailed failed");
-                }
-            }            
-            return SignInResult.Failed;
-        }
-    }
-
-    public Task<User?> FindByPhoneNumberAsync(string phoneNumber)
-    {
-        return this.Users.FirstOrDefaultAsync(u => u.PhoneNumber == phoneNumber);
-    }
-
-    public async Task ConfirmPhoneNumberAsync(Guid id)
-    {
-        var user = await this.Users.FirstOrDefaultAsync(u => u.Id == id);
-        if (user == null)
-        {
-            throw new ArgumentException($"用户找不到，id={id}", nameof(id));
-        }
-        user.PhoneNumberConfirmed = true;
-        await this.UpdateAsync(user);
-    }
-
-    public async Task UpdatePhoneNumberAsync(Guid id, string phoneNum)
-    {
-        var user = await this.Users.FirstOrDefaultAsync(u => u.Id == id);
-        if (user == null)
-        {
-            throw new ArgumentException($"用户找不到，id={id}", nameof(id));
-        }
-        user.PhoneNumber = phoneNum;
-        await this.UpdateAsync(user);
-    }
-
-    /// <summary>
-    /// 软删除
-    /// </summary>
-    /// <param name="id"></param>
-    /// <returns></returns>
-    public async Task<IdentityResult> RemoveUserAsync(Guid id)
-    {
-        User user = await FindByIdAsync(id.ToString());
-        var userLoginStore = (IUserLoginStore<User>)Store;
-        var noneCT = default(CancellationToken);
-        //一定要删除aspnetuserlogins表中的数据，否则再次用这个外部登录登录的话
-        //就会报错：The instance of entity type 'IdentityUserLogin<Guid>' cannot be tracked because another instance with the same key value for {'LoginProvider', 'ProviderKey'} is already being tracked.
-        //而且要先删除aspnetuserlogins数据，再软删除User
-        var logins = await userLoginStore.GetLoginsAsync(user, noneCT);
-        foreach (var login in logins)
-        {
-            await userLoginStore.RemoveLoginAsync(user, login.LoginProvider, login.ProviderKey, noneCT);
-        }
-        user.SoftDelete();
-        var result = await UpdateAsync(user);
-        return result;
-    }
-
-    private static IdentityResult ErrorResult(string msg)
-    {
-        IdentityError idError = new IdentityError { Description=msg};
-        return IdentityResult.Failed(idError);
-    }
-
-    public async Task<(IdentityResult,User?,string? password)> AddAdminUserAsync(string userName, string phoneNum)
-    {
-        if (await FindByNameAsync(userName) != null)
-        {
-            return (ErrorResult($"已经存在用户名{userName}"),null, null);
-        }
-        if (await FindByPhoneNumberAsync(phoneNum) != null)
-        {
-            return (ErrorResult($"已经存在手机号{phoneNum}"), null, null);
-        }
-        User user = new User(userName);
-        user.PhoneNumber = phoneNum;
-        user.PhoneNumberConfirmed = true;
-        string password = GeneratePassword();
-        var result = await CreateAsync(user, password);
-        if (!result.Succeeded)
-        {
-            return (result, null, null);
-        }
-        result = await AddToRoleAsync(user, "Admin");
-        if (!result.Succeeded)
-        {
-            return (result, null, null);
-        }
-        return (IdentityResult.Success, user,password);
-    }
-
-    public async Task<(IdentityResult, User?, string? password)> ResetPasswordAsync(Guid id)
-    {
-        var user = await FindByIdAsync(id.ToString());
-        if (user == null)
-        {
-            return (ErrorResult("用户没找到"),null,null);
-        }
-        string password = GeneratePassword();
-        string token = await GeneratePasswordResetTokenAsync(user);
-        var result = await ResetPasswordAsync(user, token, password);
-        if (!result.Succeeded)
-        {
-            return (result, null, null);
-        }
-        return (IdentityResult.Success, user, password);
-    }
-
-    private string GeneratePassword()
-    {
-        var options = Options.Password;
-        int length = options.RequiredLength;
-        bool nonAlphanumeric = options.RequireNonAlphanumeric;
-        bool digit = options.RequireDigit;
-        bool lowercase = options.RequireLowercase;
-        bool uppercase = options.RequireUppercase;
-        StringBuilder password = new StringBuilder();
-        Random random = new Random();
-        while (password.Length < length)
-        {
-            char c = (char)random.Next(32, 126);
-            password.Append(c);
-            if (char.IsDigit(c))
-                digit = false;
-            else if (char.IsLower(c))
-                lowercase = false;
-            else if (char.IsUpper(c))
-                uppercase = false;
-            else if (!char.IsLetterOrDigit(c))
-                nonAlphanumeric = false;
-        }
-
-        if (nonAlphanumeric)
-            password.Append((char)random.Next(33, 48));
-        if (digit)
-            password.Append((char)random.Next(48, 58));
-        if (lowercase)
-            password.Append((char)random.Next(97, 123));
-        if (uppercase)
-            password.Append((char)random.Next(65, 91));
-        return password.ToString();
     }
 }

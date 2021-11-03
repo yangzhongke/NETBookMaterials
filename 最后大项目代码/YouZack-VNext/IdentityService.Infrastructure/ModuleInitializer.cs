@@ -8,7 +8,8 @@ namespace IdentityService.Infrastructure
     {
         public void Initialize(IServiceCollection services)
         {
-            services.AddScoped<IIdDomainService, IdDomainService>();
+            services.AddScoped<IdDomainService>();
+            services.AddScoped<IIdRepository, IdRepository>();
         }
     }
 }

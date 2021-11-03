@@ -1,14 +1,11 @@
 ﻿using IdentityService.Domain;
+using IdentityService.Infrastructure;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-using StackExchange.Redis;
 using System.Diagnostics;
 using System.Net;
 using System.Security.Claims;
-using Zack.JWT;
 
 namespace IdentityService.WebAPI.Controllers.Login;
 
@@ -16,37 +13,32 @@ namespace IdentityService.WebAPI.Controllers.Login;
 [ApiController]
 public class LoginController : ControllerBase
 {
-    private readonly IIdDomainService idService;
-    private readonly ILogger<LoginController> logger;
-    private readonly IConnectionMultiplexer redisConnMultiplexer;
-    private readonly IOptions<JWTOptions> optJWT;
+    private readonly IIdRepository repository;
+    private readonly IdDomainService idService;
 
-    public LoginController(IIdDomainService idService,
-        IConnectionMultiplexer redisConnMultiplexer,
-        IOptions<JWTOptions> optJWT)
+    public LoginController(IdDomainService idService,IIdRepository repository)
     {
         this.idService = idService;
-        this.redisConnMultiplexer = redisConnMultiplexer;
-        this.optJWT = optJWT;
+        this.repository = repository;
     }
 
     [HttpPost]
     [AllowAnonymous]
     public async Task<ActionResult> CreateWorld()
     {
-        if (await idService.FindByNameAsync("admin") != null)
+        if (await repository.FindByNameAsync("admin") != null)
         {
             return StatusCode((int)HttpStatusCode.Conflict, "已经初始化过了");
         }
         User user = new User("admin");
-        var r = await idService.CreateAsync(user, "123456");
+        var r = await repository.CreateAsync(user, "123456");
         Debug.Assert(r.Succeeded);
-        var token = await idService.GenerateChangePhoneNumberTokenAsync(user, "18918999999");
-        var cr = await idService.ChangePhoneNumAsync(user.Id, "18918999999", token);
+        var token = await repository.GenerateChangePhoneNumberTokenAsync(user, "18918999999");
+        var cr = await repository.ChangePhoneNumAsync(user.Id, "18918999999", token);
         Debug.Assert(cr.Succeeded);
-        r = await idService.AddToRoleAsync(user, "User");
+        r = await repository.AddToRoleAsync(user, "User");
         Debug.Assert(r.Succeeded);
-        r = await idService.AddToRoleAsync(user, "Admin");
+        r = await repository.AddToRoleAsync(user, "Admin");
         Debug.Assert(r.Succeeded);
         return Ok();
     }
@@ -56,7 +48,7 @@ public class LoginController : ControllerBase
     public async Task<ActionResult<UserResponse>> GetUserInfo()
     {
         string userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
-        var user = await idService.FindByIdAsync(Guid.Parse(userId));
+        var user = await repository.FindByIdAsync(Guid.Parse(userId));
         if (user == null)//可能用户注销了
         {
             return NotFound();
@@ -115,7 +107,7 @@ public class LoginController : ControllerBase
     public async Task<ActionResult> ChangeMyPassword(ChangeMyPasswordRequest req)
     {
         Guid userId = Guid.Parse(this.User.FindFirstValue(ClaimTypes.NameIdentifier));
-        var resetPwdResult = await idService.ChangePasswordAsync(userId, req.Password);
+        var resetPwdResult = await repository.ChangePasswordAsync(userId, req.Password);
         if (resetPwdResult.Succeeded)
         {
             return Ok();

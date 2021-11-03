@@ -2,16 +2,14 @@
 
 namespace IdentityService.Domain
 {
-    public interface IIdDomainService
+    public interface IIdRepository
     {
-        Task<User> FindByIdAsync(Guid userId);
-        Task<User> FindByNameAsync(string userName);
+        Task<User?> FindByIdAsync(Guid userId);
+        Task<User?> FindByNameAsync(string userName);
         Task<IdentityResult> CreateAsync(User user, string password);
         Task<IdentityResult> AccessFailedAsync(User user);
 
-        Task<User> FindByPhoneNumberAsync(string phoneNum);
-        Task<SignInResult> CheckPhoneNumAndPwdAsync(string phoneNum, string password);
-        Task<SignInResult> CheckUserNameAndPwdAsync(string userName, string password);
+        Task<User?> FindByPhoneNumberAsync(string phoneNum);
 
         Task<string> GenerateChangePhoneNumberTokenAsync(User user, string phoneNumber);
         /// <summary>
@@ -26,8 +24,11 @@ namespace IdentityService.Domain
 
         Task<IList<string>> GetRolesAsync(User user);
         Task<IdentityResult> AddToRoleAsync(User user, string role);
-
-        Task<(SignInResult Result, string? Token)> LoginByPhoneAndPwdAsync(string phoneNum, string password);
-        Task<(SignInResult Result, string? Token)> LoginByUserNameAndPwdAsync(string phoneNum, string password);
+        public Task<SignInResult> CheckForSignInAsync(User user, string password, bool lockoutOnFailure);
+        public Task ConfirmPhoneNumberAsync(Guid id);
+        public Task UpdatePhoneNumberAsync(Guid id, string phoneNum);
+        public Task<IdentityResult> RemoveUserAsync(Guid id);
+        public Task<(IdentityResult, User?, string? password)> AddAdminUserAsync(string userName, string phoneNum);
+        public Task<(IdentityResult, User?, string? password)> ResetPasswordAsync(Guid id);
     }
 }
