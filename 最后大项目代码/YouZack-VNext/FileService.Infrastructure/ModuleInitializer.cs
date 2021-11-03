@@ -1,4 +1,4 @@
-﻿using FileService.Domain.Services;
+﻿using FileService.Domain;
 using FileService.Infrastructure.Services;
 using Microsoft.Extensions.DependencyInjection;
 using Zack.Commons;
@@ -13,7 +13,8 @@ namespace FileService.Infrastructure
             services.AddScoped<IStorageClient, SMBStorageClient>();
             //services.AddScoped<IStorageClient, UpYunStorageClient>();
             services.AddScoped<IStorageClient, MockCloudStorageClient>();
-            
+            services.AddScoped<IFSRepository, FSRepository>();
+            services.AddScoped<FSDomainService>();
             services.AddHttpClient();
         }
     }

@@ -1,4 +1,4 @@
-﻿using FileService.Domain.Services;
+﻿using FileService.Domain;
 using Microsoft.Extensions.Options;
 
 namespace FileService.Infrastructure.Services

@@ -3,7 +3,7 @@ using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace FileService.Domain.Services
+namespace FileService.Domain
 {
     public interface IStorageClient
     {

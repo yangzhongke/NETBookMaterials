@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Zack.Commons\Zack.Commons.csproj" />
     <ProjectReference Include="..\Zack.DomainCommons\Zack.DomainCommons.csproj" />
   </ItemGroup>
 

@@ -1,4 +1,4 @@
-﻿namespace FileService.Domain.Services
+﻿namespace FileService.Domain
 {
     public enum StorageType
     {
