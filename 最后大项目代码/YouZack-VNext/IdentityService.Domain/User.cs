@@ -4,8 +4,6 @@ using Zack.DomainCommons.Models;
 namespace IdentityService.Domain;
 public class User : IdentityUser<Guid>, IHasCreationTime, IHasDeletionTime, ISoftDelete
 {
-    //IdentityUser不是完全按照领域对象原则设计的
-
     public DateTime CreationTime { get; init; }
 
     public DateTime? DeletionTime { get; private set; }
