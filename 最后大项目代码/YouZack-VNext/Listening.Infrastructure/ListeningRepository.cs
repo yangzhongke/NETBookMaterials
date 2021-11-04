@@ -23,7 +23,7 @@ namespace Listening.Infrastructure
 
         public Task<Category[]> GetCategoriesAsync()
         {
-            return dbCtx.Categories.ToArrayAsync();
+            return dbCtx.Categories.OrderBy(e => e.SequenceNumber).ToArrayAsync();
         }
 
         public async Task<Album?> GetAlbumByIdAsync(Guid albumId)
@@ -42,7 +42,7 @@ namespace Listening.Infrastructure
 
         public Task<Album[]> GetAlbumsByCategoryIdAsync(Guid categoryId)
         {
-            return dbCtx.Albums.Where(a => a.CategoryId == categoryId).ToArrayAsync();
+            return dbCtx.Albums.OrderBy(e => e.SequenceNumber).Where(a => a.CategoryId == categoryId).ToArrayAsync();
         }
 
         public async Task<int> GetMaxSeqOfCategoriesAsync()
@@ -65,7 +65,7 @@ namespace Listening.Infrastructure
 
         public Task<Episode[]> GetEpisodesByAlbumIdAsync(Guid albumId)
         {
-            return dbCtx.Episodes.Where(a => a.AlbumId == albumId).ToArrayAsync();
+            return dbCtx.Episodes.OrderBy(e=>e.SequenceNumber).Where(a => a.AlbumId == albumId).ToArrayAsync();
         }
     }
 }

@@ -7,11 +7,11 @@ namespace Listening.Main.WebAPI.Controllers;
 [ApiController]
 public class AlbumController : ControllerBase
 {
-    private readonly ListeningDbContext dbCtx;
+    private readonly IListeningRepository repository;
     private readonly IMemoryCacheHelper cacheHelper;
-    public AlbumController(ListeningDbContext dbCtx, IMemoryCacheHelper cacheHelper)
+    public AlbumController(IListeningRepository repository, IMemoryCacheHelper cacheHelper)
     {
-        this.dbCtx = dbCtx;
+        this.repository = repository;
         this.cacheHelper = cacheHelper;
     }
 
@@ -20,7 +20,7 @@ public class AlbumController : ControllerBase
     public async Task<ActionResult<AlbumVM>> FindById([RequiredGuid] Guid id)
     {
         var album = await cacheHelper.GetOrCreateAsync($"AlbumController.FindById.{id}",
-           async (e) => AlbumVM.Create(await dbCtx.FindAsync<Album>(id)));
+           async (e) => AlbumVM.Create(await repository.GetAlbumByIdAsync(id)));
         if (album == null)
         {
             return NotFound();
@@ -35,7 +35,7 @@ public class AlbumController : ControllerBase
         //写到单独的local函数的好处是避免回调中代码太复杂
         Task<Album[]> FindDataAsync()
         {
-            return dbCtx.Query<Album>().OrderBy(a => a.SequenceNumber).Where(a => a.CategoryId == categoryId).ToArrayAsync();
+            return repository.GetAlbumsByCategoryIdAsync(categoryId);
         }
         var task = cacheHelper.GetOrCreateAsync($"AlbumController.FindByCategoryId.{categoryId}",
             async (e) => AlbumVM.Create(await FindDataAsync()));

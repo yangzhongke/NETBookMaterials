@@ -5,13 +5,13 @@ namespace Listening.Main.WebAPI.Controllers;
 [ApiController]
 public class EpisodeController : ControllerBase
 {
-    private readonly ListeningDbContext dbContext;
+    private readonly IListeningRepository repository;
     private readonly IMemoryCacheHelper cacheHelper;
 
-    public EpisodeController(ListeningDbContext dbContext, IMemoryCacheHelper cacheHelper)
+    public EpisodeController(IMemoryCacheHelper cacheHelper, IListeningRepository repository)
     {
-        this.dbContext = dbContext;
         this.cacheHelper = cacheHelper;
+        this.repository = repository;
     }
 
     [HttpGet]
@@ -19,7 +19,7 @@ public class EpisodeController : ControllerBase
     public async Task<ActionResult<EpisodeVM>> FindById([RequiredGuid] Guid id)
     {
         var episode = await cacheHelper.GetOrCreateAsync($"EpisodeController.FindById.{id}",
-            async (e) => EpisodeVM.Create(await this.dbContext.FindAsync<Episode>(id), true));
+            async (e) => EpisodeVM.Create(await repository.GetEpisodeByIdAsync(id), true));
         if (episode == null)
         {
             return NotFound($"没有Id={id}的Episode");
@@ -33,8 +33,7 @@ public class EpisodeController : ControllerBase
     {
         Task<Episode[]> FindData()
         {
-            return this.dbContext.Query<Episode>().OrderBy(e => e.SequenceNumber)
-            .Where(e => e.AlbumId == albumId).ToArrayAsync();
+            return repository.GetEpisodesByAlbumIdAsync(albumId);
         }
         //加载Episode列表的，默认不加载Subtitle，这样降低流量大小
         var task = cacheHelper.GetOrCreateAsync($"EpisodeController.FindByAlbumId.{albumId}",

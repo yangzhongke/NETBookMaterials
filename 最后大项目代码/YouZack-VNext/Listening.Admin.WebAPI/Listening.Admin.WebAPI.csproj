@@ -20,8 +20,5 @@
 		<ProjectReference Include="..\Listening.Infrastructure\Listening.Infrastructure.csproj" />
 
 	</ItemGroup>
-	<ItemGroup>
-	  <Folder Include="Options\" />
-	</ItemGroup>
 
 </Project>

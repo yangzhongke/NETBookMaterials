@@ -8,18 +8,20 @@ namespace Listening.Admin.WebAPI.Categories;
 //供后台用的增删改查接口不用缓存
 public class CategoryController : ControllerBase
 {
+    private IListeningRepository repository;
     private readonly ListeningDbContext dbContext;
     private readonly ListeningDomainService domainService;
-    public CategoryController(ListeningDbContext dbContext, ListeningDomainService domainService)
+    public CategoryController(ListeningDbContext dbContext, ListeningDomainService domainService, IListeningRepository repository)
     {
         this.dbContext = dbContext;
         this.domainService = domainService;
+        this.repository = repository;
     }
 
     [HttpGet]
-    public ActionResult<Category[]> FindAll()
+    public Task<Category[]> FindAll()
     {
-        return dbContext.Query<Category>().OrderBy(c => c.SequenceNumber).ToArray();
+        return repository.GetCategoriesAsync();
     }
 
     [HttpGet]
@@ -27,7 +29,7 @@ public class CategoryController : ControllerBase
     public async Task<ActionResult<Category?>> FindById([RequiredGuid] Guid id)
     {
         //返回ValueTask的需要await的一下
-        var cat = await dbContext.FindAsync<Category>(id);
+        var cat = await repository.GetCategoryByIdAsync(id);
         if (cat == null)
         {
             return NotFound($"没有Id={id}的Category");
@@ -50,7 +52,7 @@ public class CategoryController : ControllerBase
     [Route("{id}")]
     public async Task<ActionResult> Update([RequiredGuid] Guid id, CategoryUpdateRequest request)
     {
-        var cat = await dbContext.FindAsync<Category>(id);
+        var cat = await repository.GetCategoryByIdAsync(id);
         if(cat==null)
         {
             return NotFound("id不存在");
@@ -64,7 +66,7 @@ public class CategoryController : ControllerBase
     [Route("{id}")]
     public async Task<ActionResult> DeleteById([RequiredGuid] Guid id)
     {
-        var cat = await dbContext.FindAsync<Category>(id);
+        var cat = await repository.GetCategoryByIdAsync(id);
         if (cat == null)
         {
             //这样做仍然是幂等的，因为“调用N次，确保服务器处于与第一次调用相同的状态。”与响应无关

@@ -1,5 +1,4 @@
-﻿
-using FileService.SDK.NETCore;
+﻿using FileService.SDK.NETCore;
 using MediaEncoder.Domain;
 using MediaEncoder.Domain.Entities;
 using MediaEncoder.Infrastructure;
@@ -21,6 +20,7 @@ namespace MediaEncoder.WebAPI.BgServices;
 public class EncodingBgService : BackgroundService
 {
     private readonly MEDbContext dbContext;
+    private readonly IMediaEncoderRepository repository;
     private readonly List<RedLockMultiplexer> redLockMultiplexerList;
     private readonly ILogger<EncodingBgService> logger;
     private readonly IHttpClientFactory httpClientFactory;
@@ -47,6 +47,7 @@ public class EncodingBgService : BackgroundService
         this.eventBus = sp.GetRequiredService<IEventBus>();
         this.optionJWT = sp.GetRequiredService<IOptionsSnapshot<JWTOptions>>();
         this.tokenService = sp.GetRequiredService<ITokenService>();
+        this.repository = sp.GetRequiredService<IMediaEncoderRepository>();
     }
 
     private async Task ProcessItemAsync(EncodingItem readyItem, CancellationToken stoppingToken)
@@ -95,8 +96,7 @@ public class EncodingBgService : BackgroundService
                 sourceFileHash = HashHelper.ComputeSha256Hash(streamSrc);
             }
             //如果之前存在过和这个文件大小、hash一样的文件，就认为重复了
-            var prevInstance = dbContext.EncodingItems.FirstOrDefault(e => e.FileSHA256Hash == sourceFileHash
-                    && e.FileSizeInBytes == fileSize && e.Status == ItemStatus.Completed);
+            var prevInstance = await repository.FindCompletedOneAsync(sourceFileHash,fileSize);
             if (prevInstance != null)
             {
                 logger.LogInterpolatedInformation($"检查Id={id}Hash值成功，发现已经存在相同大小和Hash值的旧任务Id={prevInstance.Id}，返回！");
@@ -146,7 +146,7 @@ public class EncodingBgService : BackgroundService
         {
             //获取所有处于Ready状态的任务
             //ToListAsync()可以避免在循环中再用DbContext去查询数据导致的“There is already an open DataReader associated with this Connection which must be closed first.”
-            var readyItems = await dbContext.EncodingItems.Where(e => e.Status == ItemStatus.Ready).ToListAsync();
+            var readyItems = await repository.FindAsync(ItemStatus.Ready);
             foreach (EncodingItem readyItem in readyItems)
             {
                 try

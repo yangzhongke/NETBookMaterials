@@ -7,7 +7,7 @@ namespace Listening.Domain
     {
         public Task<Category?> GetCategoryByIdAsync(Guid categoryId);
         public Task<Category[]> GetCategoriesAsync();
-        public Task<int> GetMaxSeqOfCategoriesAsync();
+        public Task<int> GetMaxSeqOfCategoriesAsync();//获取最大序号
         public Task<Album?> GetAlbumByIdAsync(Guid albumId);
         public Task<int> GetMaxSeqOfAlbumsAsync(Guid categoryId);
         public Task<Album[]> GetAlbumsByCategoryIdAsync(Guid categoryId);

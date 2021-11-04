@@ -8,18 +8,20 @@ namespace Listening.Admin.WebAPI.Episodes;
 [UnitOfWork(typeof(ListeningDbContext))]
 public class EpisodeController : ControllerBase
 {
+    private IListeningRepository repository;
     private readonly ListeningDbContext dbContext;
     private readonly EncodingEpisodeHelper encodingEpisodeHelper;
     private readonly IEventBus eventBus;
     private readonly ListeningDomainService domainService;
     public EpisodeController(ListeningDbContext dbContext,
-            EncodingEpisodeHelper encodingEpisodeHelper, 
-            IEventBus eventBus, ListeningDomainService domainService)
+            EncodingEpisodeHelper encodingEpisodeHelper,
+            IEventBus eventBus, ListeningDomainService domainService, IListeningRepository repository)
     {
         this.dbContext = dbContext;
         this.encodingEpisodeHelper = encodingEpisodeHelper;
         this.eventBus = eventBus;
         this.domainService = domainService;
+        this.repository = repository;
     }
 
     [HttpPost]
@@ -51,7 +53,7 @@ public class EpisodeController : ControllerBase
     [Route("{id}")]
     public async Task<ActionResult> Update([RequiredGuid] Guid id, EpisodeUpdateRequest request)
     {
-        var episode = await dbContext.FindAsync<Episode>(id);
+        var episode = await repository.GetEpisodeByIdAsync(id);
         if(episode==null)
         {
             return NotFound("id没找到");
@@ -65,7 +67,7 @@ public class EpisodeController : ControllerBase
     [Route("{id}")]
     public async Task<ActionResult> DeleteById([RequiredGuid] Guid id)
     {
-        var album = await dbContext.FindAsync<Episode>(id);
+        var album = await repository.GetEpisodeByIdAsync(id);
         if (album == null)
         {
             //这样做仍然是幂等的，因为“调用N次，确保服务器处于与第一次调用相同的状态。”与响应无关
@@ -80,7 +82,7 @@ public class EpisodeController : ControllerBase
     public async Task<ActionResult<Episode>> FindById([RequiredGuid] Guid id)
     {
         //因为这是后台系统，所以不在乎把 Episode全部内容返回给客户端的问题，以后如果开放给外部系统再定义ViewModel
-        var episode = await this.dbContext.FindAsync<Episode>(id);
+        var episode = await repository.GetEpisodeByIdAsync(id);
         if (episode == null)
         {
             return NotFound($"没有Id={id}的Episode");
@@ -90,11 +92,9 @@ public class EpisodeController : ControllerBase
 
     [HttpGet]
     [Route("{albumId}")]
-    public async Task<ActionResult<Episode[]>> FindByAlbumId([RequiredGuid] Guid albumId)
+    public Task<Episode[]> FindByAlbumId([RequiredGuid] Guid albumId)
     {
-        var items = await this.dbContext.Query<Episode>().OrderBy(e => e.SequenceNumber)
-            .Where(e => e.AlbumId == albumId).ToArrayAsync();
-        return items;
+        return repository.GetEpisodesByAlbumIdAsync(albumId);
     }
 
     //获取albumId下所有的转码任务
@@ -119,7 +119,7 @@ public class EpisodeController : ControllerBase
     [Route("{id}")]
     public async Task<ActionResult> Hide([RequiredGuid] Guid id)
     {
-        var episode = await dbContext.FindAsync<Episode>(id);
+        var episode = await repository.GetEpisodeByIdAsync(id);
         if (episode == null)
         {
             return NotFound($"没有Id={id}的Category");
@@ -132,7 +132,7 @@ public class EpisodeController : ControllerBase
     [Route("{id}")]
     public async Task<ActionResult> Show([RequiredGuid] Guid id)
     {
-        var episode = await dbContext.FindAsync<Episode>(id);
+        var episode = await repository.GetEpisodeByIdAsync(id);
         if (episode == null)
         {
             return NotFound($"没有Id={id}的Category");
