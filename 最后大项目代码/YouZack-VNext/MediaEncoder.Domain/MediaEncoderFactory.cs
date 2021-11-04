@@ -8,7 +8,7 @@
             this.encoders = encoders;
         }
 
-        public IMediaEncoder Create(string outputFormat)
+        public IMediaEncoder? Create(string outputFormat)
         {
             foreach (var encoder in encoders)
             {

@@ -22,6 +22,7 @@ namespace Zack.Commons
         {
             //todo：这里有bug：如果一个程序集被引用了，但是没有使用其中的类，
             ////则这里asms里拿不到那个程序集
+            ///可能的解决思路：用AppContext.BaseDirectory再扫描一遍dll，再补偿获取一遍
             var asms = ReflectionHelper.GetAllReferencedAssemblies(rootAssembly);
             return RunModuleInitializers(services, asms);
         }

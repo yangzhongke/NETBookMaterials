@@ -1,4 +1,6 @@
-﻿namespace MediaEncoder.Domain
+﻿using System.IO;
+
+namespace MediaEncoder.Domain
 {
     public interface IMediaEncoder
     {
@@ -12,11 +14,11 @@
         /// <summary>
         /// 进行转换
         /// </summary>
-        /// <param name="sourceFileName"></param>
-        /// <param name="destFileName"></param>
+        /// <param name="sourceFile"></param>
+        /// <param name="destFile"></param>
         /// <param name="destFormat"></param>
         /// <param name="args"></param>
         /// <returns></returns>
-        Task EncodeAsync(string sourceFileName, string destFileName, string destFormat, string[]? args = null, CancellationToken cancellationToken = default);
+        Task EncodeAsync(FileInfo sourceFile, FileInfo destFile, string destFormat, string[]? args, CancellationToken ct);
     }
 }

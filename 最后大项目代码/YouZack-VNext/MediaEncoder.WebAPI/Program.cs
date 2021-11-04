@@ -1,8 +1,6 @@
 using CommonInitializer;
-using MediaEncoder.Domain;
 using MediaEncoder.WebAPI.BgServices;
 using MediaEncoder.WebAPI.Controllers;
-using MediaEncoder.WebAPI.Encoders;
 using MediaEncoder.WebAPI.Options;
 using MediaEncoder.WebAPI.Services;
 using Microsoft.AspNetCore.Builder;
@@ -21,8 +19,7 @@ builder.ConfigureExtraServices(new InitializerOptions
 builder.Services.Configure<FileServiceOptions>(builder.Configuration.GetSection("FileService:Endpoint"));
 builder.Services.Configure<JWTOptions>(builder.Configuration.GetSection("JWT"));
 builder.Services.AddHttpClient();
-builder.Services.AddScoped<IMediaEncoder, ToM4AEncoder>();
-builder.Services.AddScoped<EncoderService, EncoderService>();
+builder.Services.AddScoped<EncoderService>();
 builder.Services.AddHostedService<EncodingBgService>();//后台转码服务
 
 builder.Services.AddControllers();

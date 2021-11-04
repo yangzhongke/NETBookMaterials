@@ -6,6 +6,6 @@ public class ModuleInitializer : IModuleInitializer
 {
     public void Initialize(IServiceCollection services)
     {
-        services.AddScoped<MediaEncoderFactory, MediaEncoderFactory>();
+        services.AddScoped<MediaEncoderFactory>();
     }
 }

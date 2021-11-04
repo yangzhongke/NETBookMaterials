@@ -38,21 +38,16 @@ namespace FileService.SDK.NETCore
             return tokenService.BuildToken(new Claim[] { claim }, optionsSnapshot);
         }
 
-        public async Task<Uri> UploadAsync(string fileFullPath, CancellationToken stoppingToken = default)
+        public async Task<Uri> UploadAsync(FileInfo file, CancellationToken stoppingToken = default)
         {
             string token = BuildToken();
             using MultipartFormDataContent content = new MultipartFormDataContent();
-
-            using var fileContent = new StreamContent(File.Open(fileFullPath, FileMode.Open));
-            string fileName = Path.GetFileName(fileFullPath);
-            content.Add(fileContent, "file", fileName);
-
+            using var fileContent = new StreamContent(file.OpenRead());
+            content.Add(fileContent, "file", file.Name);
             var httpClient = httpClientFactory.CreateClient();
-
             Uri requestUri = new Uri(serverRoot + "/Uploader/Upload");
             httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
             var respMsg = await httpClient.PostAsync(requestUri, content, stoppingToken);
-
             if (!respMsg.IsSuccessStatusCode)
             {
                 string respString = await respMsg.Content.ReadAsStringAsync(stoppingToken);
