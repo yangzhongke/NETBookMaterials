@@ -1,8 +1,6 @@
 using CommonInitializer;
 using MediaEncoder.WebAPI.BgServices;
-using MediaEncoder.WebAPI.Controllers;
 using MediaEncoder.WebAPI.Options;
-using MediaEncoder.WebAPI.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -14,14 +12,12 @@ builder.ConfigureDbConfiguration();
 builder.ConfigureExtraServices(new InitializerOptions
 {
     LogFilePath = "e:/temp/MediaEncoder.log",
-    StartupType = typeof(EncoderController)
+    StartupType = typeof(EncodingBgService)
 });
 builder.Services.Configure<FileServiceOptions>(builder.Configuration.GetSection("FileService:Endpoint"));
 builder.Services.Configure<JWTOptions>(builder.Configuration.GetSection("JWT"));
 builder.Services.AddHttpClient();
-builder.Services.AddScoped<EncoderService>();
 builder.Services.AddHostedService<EncodingBgService>();//后台转码服务
-
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen(c =>
 {

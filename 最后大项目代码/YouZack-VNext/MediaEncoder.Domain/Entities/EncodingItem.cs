@@ -3,10 +3,9 @@ using Zack.DomainCommons.Models;
 
 namespace MediaEncoder.Domain.Entities
 {
-    public class EncodingItem : BaseEntity, IAggregateRoot, IHasCreationTime, IHasModificationTime
+    public class EncodingItem : BaseEntity, IAggregateRoot, IHasCreationTime
     {
         public DateTime CreationTime { get; private set; }
-        public DateTime? LastModificationTime { get; private set; }
         public string SourceSystem { get; private set; }
 
 
@@ -26,7 +25,7 @@ namespace MediaEncoder.Domain.Entities
         public string? FileSHA256Hash { get; private set; }
 
         /// <summary>
-        /// 一般用本地Backup文件，这样省得再从remote下载。
+        /// 待转码的文件
         /// </summary>
         public Uri SourceUrl { get; private set; }
 
