@@ -1,0 +1,148 @@
+﻿1
+00:00:01,760 --> 00:00:04,090
+9 A Library Tour.
+
+2
+00:00:05,140 --> 00:00:09,946
+Listen to the guided tour commentary and label the places marked .
+
+3
+00:00:10,906 --> 00:00:16,260
+Choose from the box below . Write the appropriate letters in the diagram.
+
+4
+00:00:17,420 --> 00:00:22,813
+Welcome to the library tour.  You can see our library is a 4-storey building .
+
+5
+00:00:23,560 --> 00:00:27,870
+We'll begin our tour of the first level of library here at the entrance.
+
+6
+00:00:29,270 --> 00:00:34,890
+We'll go in a clockwise direction . Here is a map of the library that may help you.
+
+7
+00:00:35,950 --> 00:00:38,906
+The room facing us is the Catalogue section .
+
+8
+00:00:39,720 --> 00:00:45,700
+As you can see ,it's a computerized catalogue system and it's very easy to use.
+
+9
+00:00:46,870 --> 00:00:49,870
+On our left is the Loans and Return section.
+
+10
+00:00:50,770 --> 00:00:54,520
+There is a Circulation desk for borrowing and returning books.
+
+11
+00:00:55,770 --> 00:01:01,560
+Next to the Loans and Return section , you will see the section for newspapers and magazines.
+
+12
+00:01:02,670 --> 00:01:09,410
+The library has an extensive collection of local and international English language newspapers and magazines.
+
+13
+00:01:10,990 --> 00:01:15,420
+They are kept on those shelves for one month and then stored elsewhere.
+
+14
+00:01:17,020 --> 00:01:22,280
+As we continue our tour , in the far left corner, you will see a large room.
+
+15
+00:01:23,140 --> 00:01:25,173
+That is our Reference section .
+
+16
+00:01:25,170 --> 00:01:31,493
+As we know , reference texts cannot be borrowed for use outside the library ;
+
+17
+00:01:32,026 --> 00:01:40,140
+they must be used within the library , so you will say some nice seating area for you to read the books in this section.
+
+18
+00:01:41,350 --> 00:01:44,693
+In the far right corner is the photocopy room.
+
+19
+00:01:45,440 --> 00:01:52,840
+There are ten copies for student use in the photocopy room and we've recently added two color copiers.
+
+20
+00:01:54,160 --> 00:01:57,790
+The system for copying uses cards, not coins.
+
+21
+00:01:59,210 --> 00:02:04,240
+You can buy a photocopy card from the technician in charge of the photocopying room.
+
+22
+00:02:05,360 --> 00:02:10,610
+The Audio-Visual Resource is between the Reference section and the photocopy room.
+
+23
+00:02:12,060 --> 00:02:17,340
+You can come in here if you wish to listen to a tape or watch one of the library's videos.
+
+24
+00:02:18,350 --> 00:02:22,100
+We have a large collection of movies in different languages here.
+
+25
+00:02:23,250 --> 00:02:27,830
+Next to the photocopy room, you will see the stairs to Level 2.
+
+26
+00:02:29,020 --> 00:02:32,306
+Beside the stairs are the restrooms for this floor .
+
+27
+00:02:33,013 --> 00:02:37,040
+To go up to the other levels of the library you have to use the lifts.
+
+28
+00:02:38,890 --> 00:02:45,213
+In the center of this level, behind the Catalog section ,you can see two conference rooms.
+
+29
+00:02:45,986 --> 00:02:54,390
+You can work on group projects in the conference room without disturbing anyone , so there's a conference room on each level of the library.
+
+30
+00:02:55,470 --> 00:02:59,450
+Next to the restrooms, we come to our Closed Reserve room.
+
+31
+00:03:00,550 --> 00:03:08,400
+As most of you probably know , it is a collection of books that are in high demand so they are on restricted circulation.
+
+32
+00:03:10,090 --> 00:03:17,570
+If a book is on Closed Reserves section ,you can only borrow it to use within the library for three hours at a time.
+
+33
+00:03:18,750 --> 00:03:23,580
+Next to our Closed Reserve room is a small study room for teachers only.
+
+34
+00:03:25,493 --> 00:03:28,866
+The lift is between the entrance and the student lockers .
+
+35
+00:03:29,560 --> 00:03:33,760
+Okay , that's the end of the tour of this level of the library.
+
+36
+00:03:34,720 --> 00:03:36,826
+I'll leave you to look around yourselves .
+
+37
+00:03:37,586 --> 00:03:45,100
+Now you can go up to the other levels of the library and if you need any further help please ask the librarians.
+

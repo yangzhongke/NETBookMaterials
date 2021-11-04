@@ -1,0 +1,769 @@
+﻿1
+00:00:00,830 --> 00:00:01,680
+PART 3
+
+2
+00:00:02,320 --> 00:00:03,200
+Directions:
+
+3
+00:00:03,780 --> 00:00:07,760
+You will hear some conversations between two or more people.
+
+4
+00:00:08,460 --> 00:00:14,370
+You will be asked to answer three questions about what the speakers say in each conversation.
+
+5
+00:00:14,910 --> 00:00:23,530
+Select the best response to each question and mark the letter (A), (B), (C), or (D) on your answer sheet.
+
+6
+00:00:24,090 --> 00:00:30,030
+The conversations will not be printed in your test book and will be spoken only one time.
+
+7
+00:00:37,982 --> 00:00:42,631
+(M-Cn) Ms. Chin, Ms. Frankel, I'm sorry that the gallery hasn't been looking very tidy lately. 
+
+8
+00:00:42,986 --> 00:00:48,328
+I've been so busy with all the artwork that we've been receiving that I have't had time to focus on cleaning.
+
+9
+00:00:48,773 --> 00:00:56,106
+(W-Br) Oh, I know. The gallery's been so busy that it's hard to keep up with sweeping and dusting the main display area.
+
+10
+00:00:56,497 --> 00:00:58,471
+(W-Am) Why don't we hire a cleaning service?
+
+11
+00:00:58,782 --> 00:01:02,871
+(M-Cn) Sure. I can call a few local cleaning services to get some prices.
+
+12
+00:01:03,022 --> 00:01:05,546
+(W-Am) That'd be great. Thanks for bringing this up.
+  
+
+13
+00:01:09,822 --> 00:01:12,231
+Where do the speakers most likely work?
+(A) At a movie theater
+(B) At a construction firm
+(C) At an art gallery
+(D) At a furniture store
+
+14
+00:01:22,400 --> 00:01:24,817
+What problem are the speakers discussing?
+(A) A display area is not clean.
+(B) An appliance is broken.
+(C) Some bills are not paid.
+(D) Some materials are missing.
+
+15
+00:01:34,968 --> 00:01:37,457
+What will the man most likely do next?
+(A) Request a recommendation
+(B) Reserve a rental car
+(C) Look for some replacement parts
+(D) Contact some local companies
+
+16
+00:01:51,120 --> 00:01:55,617
+(W-Am) Excuse me. I don't live in the city, but I'm here for a conference.
+
+17
+00:01:56,044 --> 00:02:01,164
+Can you tell me which bus goes to the conference center at forty-first and Stockton Street?
+
+18
+00:02:01,635 --> 00:02:05,822
+ (M-Au) That's the number eight bus. The conference center is just two stops down.
+
+19
+00:02:06,062 --> 00:02:07,813
+(W-Am) Oh good, thanks.
+
+20
+00:02:08,186 --> 00:02:11,715
+I'm a little concerned about arriving late for the opening ceremony.
+
+21
+00:02:12,071 --> 00:02:14,480
+(M-Au) Oh, it shouldn't take long at all to get there.
+
+22
+00:02:14,897 --> 00:02:19,297
+And if you're going to be here for a few days, I suggest buying a weekly pass.
+
+23
+00:02:19,671 --> 00:02:22,080
+It's good for unlimited travel around the city.
+
+24
+00:02:26,231 --> 00:02:29,111
+Why does the woman say she is visiting the city?
+(A) To see a museum exhibit
+(B) To attend a conference
+(C) To receive an award
+(D) To look at some real estate
+
+25
+00:02:39,377 --> 00:02:42,044
+What does the woman say she is concerned about?
+(A) Being unable to get a ticket
+(B) Booking a hotel room
+(C) Having a wrong address
+(D) Arriving late for an event
+
+26
+00:02:52,186 --> 00:02:54,337
+What does the man recommend doing?
+(A) Looking at a map
+(B) Checking an online site
+(C) Buying a weekly pass
+(D) Calling a friend
+
+27
+00:03:08,880 --> 00:03:13,822
+(W-Br) I'm glad we chose this restaurant for lunch. The food is absolutely delicious.
+
+28
+00:03:13,964 --> 00:03:17,120
+(W-Am) I agree. My whole meal was excellent.
+
+29
+00:03:17,591 --> 00:03:21,564
+(W-Br) You know, this might be a good place to have George's retirement dinner.
+
+30
+00:03:21,920 --> 00:03:27,217
+(W-Am) Why don't we ask the server if we can make a reservation for a large group? Here he comes now.
+
+31
+00:03:27,866 --> 00:03:29,760
+(M-Au) Can I get you two anything else?
+
+32
+00:03:29,848 --> 00:03:31,893
+(W-Am) Actually, we have a question.
+
+33
+00:03:32,382 --> 00:03:36,426
+A colleague is retiring, and we're interested in having his dinner here.
+
+34
+00:03:36,880 --> 00:03:39,057
+Do you have space for an event like that?
+
+35
+00:03:39,244 --> 00:03:42,480
+(M-Au) Of course! We have a large private dining room. 
+
+36
+00:03:42,986 --> 00:03:47,342
+And for your convenience, you can order your food online ahead of time.
+
+37
+00:03:51,368 --> 00:03:53,795
+What do the women like about the restaurant?
+(A) The food
+(B) The atmosphere
+(C) The service
+(D) The prices  
+
+38
+00:04:03,911 --> 00:04:06,977
+What event do the women want to have at the restaurant?
+(A) A client meeting
+(B) A department luncheon
+(C) A birthday party
+(D) A retirement celebration  
+
+39
+00:04:16,720 --> 00:04:18,968
+What convenience does the man mention?
+(A) Wireless Internet access
+(B) Free delivery
+(C) Advance ordering
+(D) Party-planning consultations
+
+40
+00:04:32,560 --> 00:04:35,493
+(W-Am) Hello, Daniel? It's Kumiko calling.
+
+41
+00:04:35,937 --> 00:04:42,044
+ I'm still on my way to the office, so I'm afraid I won't be able to go over our presentation materials with you.
+
+42
+00:04:42,275 --> 00:04:44,568
+(M-Au) Oh—The meeting starts soon.
+
+43
+00:04:44,906 --> 00:04:47,262
+(W-Am) Well, the train I'm on has been delayed.
+
+44
+00:04:47,715 --> 00:04:50,293
+I'm sure you could lead the presentation without me.
+
+45
+00:04:50,755 --> 00:04:53,333
+(M-Au) Sure, I can do that if I have the handouts. 
+
+46
+00:04:53,822 --> 00:04:54,800
+Where can I find them?
+
+47
+00:04:55,120 --> 00:04:59,626
+(W-Am) They're printed out, and I put them in a blue folder in my top desk drawer.
+
+48
+00:04:59,733 --> 00:05:01,546
+(M-Au) Great. I'll go get them now.
+
+49
+00:05:05,710 --> 00:05:09,413
+Why does the man say, “The meeting starts soon”?
+(A) To refuse an offer
+(B) To ask that participants be seated
+(C) To announce a schedule change
+(D) To express a concern 
+
+50
+00:05:19,475 --> 00:05:22,186
+What does the woman suggest that the man do?
+(A) Arrange some transportation
+(B) Purchase some supplies
+(C) Set up a video call
+(D) Take over a presentation 
+
+51
+00:05:32,204 --> 00:05:34,097
+What does the man ask about?
+(A) How long a meeting will be
+(B) Where to find some documents
+(C) How to contact a colleague
+(D) When a train will depart
+
+52
+00:05:54,533 --> 00:05:56,533
+(M-Cn) Hi, welcome to Gold Pyramid Clothing.
+
+53
+00:05:56,737 --> 00:05:59,662
+(W-Br) Hi, I bought a shirt here for my son,
+
+54
+00:05:59,857 --> 00:06:02,275
+but unfortunately, he doesn't like the color.
+
+55
+00:06:02,595 --> 00:06:04,151
+What's your return policy?
+
+56
+00:06:04,613 --> 00:06:08,168
+(M-Cn) As long as it hasn't been more than 30 days since you purchased the item,
+
+57
+00:06:08,435 --> 00:06:11,448
+and you have a receipt, you can receive a full refund.
+
+58
+00:06:11,822 --> 00:06:14,995
+(W-Br) Hmm, actually, I seem to have lost my receipt.
+
+59
+00:06:15,333 --> 00:06:20,062
+ (M-Cn) Well, then I can't give you a refund. But, you can exchange it for a different color.
+
+60
+00:06:20,462 --> 00:06:22,266
+(W-Br) OK, I'll do that then.
+
+61
+00:06:22,560 --> 00:06:26,444
+(M-Cn) Sure! I think we have that shirt in stock in black and green.
+
+62
+00:06:30,497 --> 00:06:32,711
+Where most likely are the speakers?
+(A) At a bookstore
+(B) At an art supply store
+(C) At a clothing retailer
+(D) At a supermarket  
+
+63
+00:06:42,817 --> 00:06:45,688
+Why is the woman unable to receive a refund?
+(A) She purchased a discounted item.
+(B) She has lost a receipt.
+(C) A store has changed a policy.
+(D) A product has been damaged.
+
+64
+00:06:55,857 --> 00:06:57,662
+What does the man suggest?
+(A) Exchanging an item
+(B) Speaking with a manager
+(C) Returning at a later time
+(D) Applying for a rewards program
+
+65
+00:07:11,502 --> 00:07:14,524
+(M-Cn) Hey, Amanda. How was the Business Technology Seminar?
+
+66
+00:07:14,746 --> 00:07:16,382
+(W-Am) Oh, it was great!
+
+67
+00:07:16,720 --> 00:07:21,520
+I saw a software application for corporate accounting that was really interesting.
+
+68
+00:07:21,946 --> 00:07:24,702
+Instead of using many different spreadsheets,
+
+69
+00:07:24,942 --> 00:07:30,595
+ this application integrates invoices, online payments, and expense tracking, all in one.
+
+70
+00:07:30,755 --> 00:07:34,337
+(M-Cn) Hmm, we'd really benefit from switching to a system like that.
+
+71
+00:07:34,711 --> 00:07:41,102
+(W-Am) I agree. I'm preparing a demonstration of the application to present at the management meeting on Wednesday.
+
+72
+00:07:41,431 --> 00:07:44,222
+I think we should seriously consider using it.
+
+73
+00:07:48,337 --> 00:07:50,773
+What event did the woman recently attend?
+(A) A technology seminar
+(B) A client dinner
+(C) A department celebration
+(D) An employee orientation  
+
+74
+00:08:00,693 --> 00:08:03,564
+What did the woman find interesting at the event?
+(A) A volunteer opportunity
+(B) A building layout
+(C) An accounting application
+(D) A guest speaker's profile 
+
+75
+00:08:13,600 --> 00:08:15,813
+What will the woman do on Wednesday?
+(A) Take some time off
+(B) Give a demonstration
+(C) Present an award
+(D) Participate in a training session
+
+76
+00:08:29,200 --> 00:08:33,822
+(W-Br) I just heard about the company's plan to open a second housewares store.
+
+77
+00:08:34,320 --> 00:08:36,613
+They want to put it in the Centerville Mall,
+
+78
+00:08:36,853 --> 00:08:40,631
+but I don't think we'd get enough business selling household items there.
+
+79
+00:08:40,986 --> 00:08:43,662
+(M-Au) Well, the marketing team has done the research.
+
+80
+00:08:44,195 --> 00:08:49,902
+(W-Br) I thought people mostly shopped for electronics at that mall, not decorative items for the home.
+
+81
+00:08:50,213 --> 00:08:51,084
+(M-Au) That's a good point.
+
+82
+00:08:51,573 --> 00:08:56,328
+But we'll just have to wait and see what the board of directors decides at their meeting in January.
+
+83
+00:09:00,115 --> 00:09:02,364
+What plan is the company considering?
+(A) Expanding its inventory
+(B) Updating its filing system
+(C) Hiring a new marketing director
+(D) Opening another location  
+
+84
+00:09:12,510 --> 00:09:17,804
+What does the man imply when he says, “the marketing team has done the research”?
+(A) He is happy to not be assigned a task.
+(B) He disagrees with a colleague.
+(C) He does not want to hire more staff members.
+(D) He hopes an advertising campaign will begin soon.  
+
+85
+00:09:27,822 --> 00:09:29,920
+What will take place in January?
+(A) A job interview
+(B) A board of directors meeting
+(C) A storewide sale
+(D) A focus group test
+
+86
+00:09:43,688 --> 00:09:45,777
+(M-Cn) Hello, are you checking in for an appointment?
+
+87
+00:09:46,248 --> 00:09:50,657
+(W-Am) Actually, I had my annual physical with Dr. Perez here last Thursday,
+
+88
+00:09:51,022 --> 00:09:52,951
+but I need to have him sign this form.
+
+89
+00:09:53,182 --> 00:09:54,773
+(M-Cn) That's right, I remember you.
+
+90
+00:09:55,182 --> 00:09:56,604
+What do you need the form for?
+
+91
+00:09:56,844 --> 00:10:01,920
+(W-Am) Well, I'm starting a new job next month, and I need to give this form to my new employer.
+
+92
+00:10:02,284 --> 00:10:05,226
+(M-Cn) OK. Dr. Perez is currently with a patient.
+
+93
+00:10:05,706 --> 00:10:10,035
+I can give him the form to sign when he's finished. Would you like to have a seat while you wait?
+
+94
+00:10:10,500 --> 00:10:14,622
+(W-Am) Could I come back for it later? I need to pick up a friend from the airport.
+
+95
+00:10:14,622 --> 00:10:15,333
+(M-Cn) Sure.
+
+96
+00:10:19,404 --> 00:10:21,777
+Why is the woman at the doctor’s office?
+(A) To get a prescription
+(B) To have a form signed
+(C) To review some test results
+(D) To make an appointment 
+
+97
+00:10:31,902 --> 00:10:34,675
+What does the woman say she will do next month?
+(A) Start a new job
+(B) Cancel a subscription
+(C) Join a fitness center
+(D) Take a vacation  
+
+98
+00:10:44,844 --> 00:10:48,088
+Why does the woman say she cannot wait for the doctor?
+(A) She has a lunch reservation.
+(B) She has to take a phone call.
+(C) She is late for a presentation.
+(D) She needs to pick up a friend.
+
+99
+00:11:01,662 --> 00:11:07,964
+(W-Br) Hello. I'm interested in purchasing software that can improve photographs I've uploaded to my computer.
+
+100
+00:11:08,444 --> 00:11:11,173
+But I don't want to spend more than fifteen euros.
+
+101
+00:11:11,440 --> 00:11:15,288
+(M-Cn) OK—we have lots of photo-enhancing software here you might like.
+
+102
+00:11:15,724 --> 00:11:17,928
+What exactly are you looking to do with it?
+
+103
+00:11:18,240 --> 00:11:22,462
+(W-Br) Hmm… well, most of the pictures I've taken aren't very clear.
+
+104
+00:11:22,791 --> 00:11:27,955
+I really want software that can sharpen the lines of each image so they're easier to see.
+
+105
+00:11:28,266 --> 00:11:31,315
+(M-Cn) Certainly, let's take a look at a few options over here.
+
+106
+00:11:31,857 --> 00:11:38,302
+I'm sorry… You'll probably have to spend more than fifteen euros, but these products will help you get the job done.
+
+107
+00:11:42,337 --> 00:11:44,417
+What does the woman want to purchase?
+(A) A camera
+(B) A computer
+(C) Some software
+(D) Some art supplies
+
+108
+00:11:54,480 --> 00:11:56,737
+What would the woman like to improve?
+(A) The speed of her Internet
+(B) The quality of some photos
+(C) The price of a service
+(D) The design of a product  
+
+109
+00:12:06,577 --> 00:12:09,751
+According to the man, what will the woman have to do?
+(A) Visit a different store
+(B) Spend more than expected
+(C) Speak with a technician
+(D) Keep a receipt
+
+110
+00:12:23,395 --> 00:12:25,662
+(M-Au) Kondo Landscaping, how can I help you?
+
+111
+00:12:26,186 --> 00:12:32,053
+(W-Br) Hi. I'm calling because my company wants to have a patio area built behind our office. 
+
+112
+00:12:32,435 --> 00:12:37,875
+Could you build a space where about 25 employees could sit outside during their lunch break?
+
+113
+00:12:38,320 --> 00:12:39,955
+(M-Au) Yes, we build patios.
+
+114
+00:12:40,400 --> 00:12:42,942
+We usually start outdoor projects in the spring.
+
+115
+00:12:43,297 --> 00:12:48,142
+We don't build patios in the winter because the cold weather can damage the materials we use.
+
+116
+00:12:48,648 --> 00:12:52,515
+(W-Br) OK, let me go over this with my manager. Thanks.
+
+117
+00:12:56,595 --> 00:12:58,844
+What does the woman ask the man about?
+(A) Building a patio
+(B) Renovating a lobby
+(C) Installing a light fixture
+(D) Constructing a parking garage
+
+118
+00:13:08,720 --> 00:13:11,760
+Why does the man recommend delaying a project?
+(A) His company is very busy.
+(B) Materials could be damaged.
+(C) Equipment costs may decrease.
+(D) A building permit is needed.
+
+119
+00:13:21,928 --> 00:13:24,408
+What will the woman most likely do next?
+(A) Call another company
+(B) Consult with a manager
+(C) Read some online reviews
+(D) Send photographs
+
+120
+00:13:39,022 --> 00:13:42,195
+(W-Am) Welcome to the Department of Motor Vehicles. How can I help you?
+
+121
+00:13:42,524 --> 00:13:45,688
+(M-Cn) Hi, I want to sign up to take a driver's license test.
+
+122
+00:13:46,124 --> 00:13:48,000
+(W-Am) To register is 30 dollars.
+
+123
+00:13:48,000 --> 00:13:51,342
+(M-Cn) Wow, that much? I thought it'd be less expensive… 
+
+124
+00:13:51,697 --> 00:13:53,457
+Uh… when can I take it?
+
+125
+00:13:53,955 --> 00:14:00,773
+(W-Am) We give the driver's license tests every week, but they're all booked until… July twelfth.
+
+126
+00:14:01,137 --> 00:14:03,555
+(M-Cn) Oh, I'll be on vacation in July.
+
+127
+00:14:04,000 --> 00:14:05,875
+(W-Am) We have an opening on August third.
+
+128
+00:14:06,311 --> 00:14:07,982
+(M-Cn) Good. I'll register for that.
+
+129
+00:14:08,488 --> 00:14:14,755
+(W-Am) OK, I'll just take your information for your driver's license, but you'll need to go pay at the next window.
+
+130
+00:14:18,817 --> 00:14:20,808
+What is the man surprised about?
+(A) The size of an office
+(B) The length of a line
+(C) A course requirement
+(D) A registration fee  
+
+131
+00:14:30,915 --> 00:14:33,786
+What does the man say he will do in July?
+(A) Take a vacation
+(B) Start a training course
+(C) Buy a new car
+(D) Move to another city  
+
+132
+00:14:43,893 --> 00:14:48,213
+Look at the graphic. Which window does the woman send the man to?
+(A) Vehicle Inspections
+(B) Driver's Licenses
+(C)Cashier
+(D)Insurance Information
+
+133
+00:15:13,297 --> 00:15:18,311
+ (W-Br) Have you seen the logo Mark created? I think it's perfect for our restaurant.
+
+134
+00:15:18,800 --> 00:15:23,262
+(M-Au) He sent me a picture of it this morning. It'll look great on our employee T-shirts.
+
+135
+00:15:23,582 --> 00:15:27,813
+(W-Br) Speaking of the T-shirts… have we decided where to have them printed?
+
+136
+00:15:28,293 --> 00:15:32,666
+(M-Au) I've already called a few companies. Most won't print fewer than 50 shirts,
+
+137
+00:15:33,040 --> 00:15:36,737
+but there's one place that doesn't require so many to be ordered at once.
+
+138
+00:15:37,111 --> 00:15:41,386
+(W-Br) Great. Let's go with that one. We only need twenty to start out.
+
+139
+00:15:41,884 --> 00:15:43,973
+(M-Au) OK. I'll order them right away.
+
+140
+00:15:44,337 --> 00:15:48,506
+That way we'll get them in time for our restaurant's grand opening on May fifth.
+
+141
+00:15:52,675 --> 00:15:54,426
+What did Mark send the man?
+(A) A logo
+(B) An invoice
+(C) A contract
+(D) A menu  
+
+142
+00:16:04,577 --> 00:16:09,644
+Look at the graphic. Which printing company will the speakers most likely choose?
+(A) Klinton Apparel $6.25 minimum order 55
+(B) Elwan Tees $6.10 75
+(C) Meecher Designs $6.50 20
+(D) Pheeps Prints $6.35 50
+
+143
+00:16:23,742 --> 00:16:27,173
+According to the man, what will happen on May 5 ?
+(A) A corporation will host a dinner.
+(B) A restaurant will hold a contest.
+(C) A clothing sale will take place.
+(D) A new business will open.
+
+144
+00:16:41,066 --> 00:16:44,871
+(M-Cn) Hi, Caroline. Did you see the chart that was posted in the break room?
+
+145
+00:16:45,146 --> 00:16:48,977
+I really like the nutritional program that Human Resources is promoting.
+
+146
+00:16:49,520 --> 00:16:57,048
+(W-Br) Me too. I think eating certain foods is important not just for our health; it also makes us more productive.
+
+147
+00:16:57,182 --> 00:17:01,120
+(M-Cn) I agree. For example, I've been told that I need more vitamin A,
+
+148
+00:17:01,324 --> 00:17:04,257
+and the chart shows me one fruit that is rich in vitamin A.
+
+149
+00:17:04,746 --> 00:17:08,791
+(W-Br) Of course, it would also help if the cafeteria offered healthier options…
+
+150
+00:17:09,182 --> 00:17:14,008
+ (M-Cn) Isn't there a suggestion box at the cafeteria? Maybe we could submit some ideas.
+
+151
+00:17:18,044 --> 00:17:20,266
+What do the speakers mainly discuss?
+(A) Break-room renovations
+(B) Updated cafeteria hours
+(C) A healthy-eating program
+(D) Results of an employee survey
+
+152
+00:17:30,435 --> 00:17:35,262
+Look at the graphic. Which fruit will the man most likely add to his diet?
+(A) Watermelon vitamin A
+(B) Banana vitamin B6
+(C) Orange vitamin E
+(D) Papaya vitamin C
+
+153
+00:17:49,111 --> 00:17:51,093
+What does the man suggest doing?
+(A) Ordering some lunch
+(B) Providing feedback
+(C) Attending a seminar
+(D) Seeing a health-care provider
+

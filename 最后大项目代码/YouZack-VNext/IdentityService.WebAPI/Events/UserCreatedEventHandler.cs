@@ -7,12 +7,10 @@ namespace IdentityService.WebAPI.Events
     [EventName("IdentityService.User.Created")]
     public class UserCreatedEventHandler : JsonIntegrationEventHandler<UserCreatedEvent>
     {
-        private readonly ILogger<UserCreatedEventHandler> logger;
         private readonly ISmsSender smsSender;
 
-        public UserCreatedEventHandler(ILogger<UserCreatedEventHandler> logger, ISmsSender smsSender)
+        public UserCreatedEventHandler(ISmsSender smsSender)
         {
-            this.logger = logger;
             this.smsSender = smsSender;
         }
 

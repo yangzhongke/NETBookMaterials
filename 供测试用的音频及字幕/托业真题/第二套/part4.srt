@@ -1,0 +1,564 @@
+﻿1
+00:00:01,010 --> 00:00:01,880
+PART 4
+
+2
+00:00:02,540 --> 00:00:03,420
+Directions:
+
+3
+00:00:04,200 --> 00:00:07,470
+You will hear some talks given by a single speaker.
+
+4
+00:00:08,040 --> 00:00:13,430
+You will be asked to answer three questions about what the speaker says in each talk.
+
+5
+00:00:14,210 --> 00:00:22,730
+Select the best response to each question and mark the letter (A), (B), (C), or (D) on your answer sheet
+
+6
+00:00:23,500 --> 00:00:28,970
+The talks will not be printed in your test book and will be spoken only one time.
+
+7
+00:00:36,311 --> 00:00:42,666
+(W-Am) Now, I'd like to discuss the next issue of our travel magazine, which will focus on traveling on a budget.
+
+8
+00:00:43,128 --> 00:00:49,217
+One of the articles will be about free mobile applications that make vacationing easier and cheaper.
+
+9
+00:00:49,697 --> 00:00:55,733
+So, your first research assignment is to look into the latest free apps that provide travel information
+
+10
+00:00:56,195 --> 00:00:59,866
+things like local accommodations or public transportation.
+
+11
+00:01:00,391 --> 00:01:03,902
+Please send me the names of the apps you find by the end of the day.
+
+12
+00:01:04,444 --> 00:01:11,671
+Tomorrow morning I'll be assigning each of you at least two apps, and I expect you to spend the morning writing a short report on them.
+
+13
+00:01:15,715 --> 00:01:17,804
+Who most likely is the speaker?
+(A) A software developer
+(B) A magazine editor
+(C) A hotel manager
+(D) A travel agent 
+
+14
+00:01:27,928 --> 00:01:29,911
+What is the talk mainly about?
+(A) A travel itinerary
+(B) A corporate merger
+(C) Computer upgrades
+(D) Work assignments
+
+15
+00:01:40,062 --> 00:01:43,751
+What does the speaker want the listeners to do tomorrow morning?
+(A) Write some reports
+(B) Buy airline tickets
+(C) Fill out some time sheets
+(D) Visit some local attractions
+
+16
+00:01:57,866 --> 00:02:02,453
+(M-Cn) Hi, Katrina! It’s Steven, the coach of the Greentown Lions basketball team. 
+
+17
+00:02:02,871 --> 00:02:07,591
+Listen, I just took a look at the schedule for basketball court reservations for next month.
+
+18
+00:02:08,071 --> 00:02:11,208
+We’re scheduled to use the courts from four to five P.M.
+
+19
+00:02:11,724 --> 00:02:17,848
+The thing is… many of my players work in the afternoon, so they can’t get to the courts until quarter to five.
+
+20
+00:02:18,124 --> 00:02:20,906
+You’ve got the courts reserved from five to six… 
+
+21
+00:02:21,395 --> 00:02:24,088
+Could you call me back when you have the chance? Thanks!
+
+22
+00:02:28,213 --> 00:02:30,666
+What kind of team does the speaker coach?
+(A) Tennis
+(B) Basketball
+(C) Volleyball
+(D) Badminton
+
+23
+00:02:40,897 --> 00:02:43,608
+What does the speaker say about his players?
+(A) They practice every day.
+(B) They will play in a competition.
+(C) Most of them live far away.
+(D) Many of them have jobs.  
+
+24
+00:02:53,831 --> 00:02:58,800
+Why does the speaker say, “You’ve got the courts reserved from five to six”?
+(A) To confirm an appointment
+(B) To express surprise
+(C) To request a change
+(D) To congratulate a colleague
+
+25
+00:03:12,284 --> 00:03:19,208
+(W-Br) Gather round, crew! I have an important announcement to make before we continue our work on the building project today.
+
+26
+00:03:19,715 --> 00:03:22,746
+The clients have asked us to speed up construction.
+
+27
+00:03:23,386 --> 00:03:29,502
+The only way we can finish by April twelfth is by having half the crew work on Sundays.
+
+28
+00:03:29,920 --> 00:03:33,022
+Tell me if you’re available. You know the procedure…
+
+29
+00:03:33,342 --> 00:03:36,391
+you can sign up for overtime shifts in my office.
+
+30
+00:03:37,120 --> 00:03:42,906
+I need to update the clients on this by the end of the day. Thanks for all your hard work.
+
+31
+00:03:43,360 --> 00:03:47,742
+And for those of you who agree to work on Sundays, lunch will be provided. 
+
+32
+00:03:48,266 --> 00:03:51,040
+That’s the company’s way of showing our appreciation!
+
+33
+00:03:55,173 --> 00:03:58,240
+What field does the speaker most likely work in?
+(A) Catering
+(B) Construction
+(C) Manufacturing
+(D) Real Estate
+
+34
+00:04:08,204 --> 00:04:14,906
+What does the speaker imply when she says, “I need to update the clients on this by the end of the day”?
+(A) She is unable to attend an event.
+(B) She needs more current data.
+(C) She disagrees with a supervisor's suggestion.
+(D) She wants employees to decide quickly. 
+
+35
+00:04:25,031 --> 00:04:27,715
+What will the company do for some employees?
+(A) Provide a meal
+(B) Sign a certificate
+(C) Arrange transportation
+(D) Schedule extra days off
+
+36
+00:04:40,924 --> 00:04:46,017
+(W-Am) Good evening. Tonight I’ll be talking about a new initiative by GS Incorporated,
+
+37
+00:04:46,222 --> 00:04:50,355
+a leading manufacturer of mobile phones and electronic accessories.
+
+38
+00:04:50,871 --> 00:04:53,413
+As part of its commitment to sustainability,
+
+39
+00:04:53,742 --> 00:05:00,817
+GS Incorporated announced today that it has started to package its products in a more environmentally friendly way.
+
+40
+00:05:01,280 --> 00:05:05,715
+Now, they come in boxes made entirely of recycled materials.
+
+41
+00:05:06,204 --> 00:05:13,280
+After a short commercial break, I’ll be interviewing a representative from GS Incorporated about what inspired these changes.
+
+42
+00:05:16,960 --> 00:05:19,902
+What does GS Incorporated manufacture?
+(A) Commercial vehicles
+(B) Cleaning supplies
+(C) Fashion accessories
+(D) Electronic devices
+
+43
+00:05:30,071 --> 00:05:33,511
+What has GS Incorporated recently started to do?
+(A) Use environmentally friendly packaging
+(B) Sell some products internationally
+(C) Collaborate with another company
+(D) Donate to charitable organizations
+
+44
+00:05:43,671 --> 00:05:46,800
+What will the listeners hear after the commercial break?
+(A) A song
+(B) A weather forecast
+(C) An interview
+(D) A traffic update
+
+45
+00:06:07,528 --> 00:06:10,346
+(M-Cn) Welcome to our new-employee information session.
+
+46
+00:06:10,760 --> 00:06:14,800
+Today’s session will be about important company policies you need to be aware of.
+
+47
+00:06:15,360 --> 00:06:17,740
+Let’s start with reporting missed workdays.
+
+48
+00:06:18,240 --> 00:06:23,884
+You’ll need your ID number from your badge to log in to the Attendance Plus online application.
+
+49
+00:06:24,320 --> 00:06:26,133
+There, you can report your absence.
+
+50
+00:06:26,613 --> 00:06:32,675
+If the online application isn’t working for some reason and you can’t report your absence by eight-thirty A.M.,
+
+51
+00:06:32,986 --> 00:06:39,306
+you need to leave a message for your supervisor at 555-0123. Any questions?
+
+52
+00:06:43,431 --> 00:06:45,813
+What is the speaker mainly talking about?
+(A) A new project
+(B) A company policy
+(C) Employee performance targets
+(D) Advantages of teamwork
+
+53
+00:06:55,813 --> 00:07:00,844
+According to the speaker, why do the listeners need to use an online application?
+(A) To view a list of clients
+(B) To manage group work
+(C) To report an absence
+(D) To upload an identification photo  
+
+54
+00:07:11,022 --> 00:07:15,262
+What should the listeners do if an online application is not working?
+(A) Leave a message for a supervisor
+(B) Call technical support
+(C) Ask a colleague for assistance
+(D) Reboot a computer
+
+55
+00:07:28,586 --> 00:07:31,288
+(W-Am) Thanks for tuning in to today’s health show.
+
+56
+00:07:31,804 --> 00:07:33,857
+ I have a question for my listeners.
+
+57
+00:07:34,320 --> 00:07:41,182
+Have you been wanting to lower your sugar intake but just can’t resist that sweet snack at the local café?
+
+58
+00:07:41,688 --> 00:07:46,897
+Today, I’ll teach you about an eating program that will stop your cravings permanently.
+
+59
+00:07:47,422 --> 00:07:51,164
+I used this program to lower my sugar intake, and it worked!
+
+60
+00:07:51,644 --> 00:07:59,075
+In fact, this program could help you change any eating behavior in one month. That’s not a lot of time!
+
+61
+00:07:59,626 --> 00:08:01,822
+The first step is setting goals.
+
+62
+00:08:02,044 --> 00:08:07,351
+So take out a piece of paper and write down three eating habits you’d like to change.
+
+63
+00:08:11,404 --> 00:08:13,928
+What is the main topic of the broadcast?
+(A) Eating habits
+(B) Stress management
+(C) Exercise routines
+(D) Sleep issues  
+
+64
+00:08:24,071 --> 00:08:28,302
+Why does the speaker say, “That’s not a lot of time”?
+(A) To express concern about a deadline
+(B) To complain that a broadcast is too short
+(C) To emphasize the benefit of a program
+(D) To compliment some coworke
+
+65
+00:08:38,284 --> 00:08:41,786
+According to the speaker, what should the listeners do first?
+(A) Ask a friend for help
+(B) Make a list of goals
+(C) Create a timeline
+(D) Purchase a handbook
+
+66
+00:08:55,333 --> 00:08:57,288
+(M-Cn) Welcome to Newport News at Seven.
+
+67
+00:08:57,884 --> 00:09:03,751
+Don’t forget that next Saturday, the Newport Technology Museum will open its new interactive Robotics exhibit.
+
+68
+00:09:04,293 --> 00:09:11,280
+This exhibit will feature many different robots, and visitors will be able to talk to them, play with them, and even learn from them.
+
+69
+00:09:11,795 --> 00:09:17,342
+Students from the Robotics department at nearby Newport University will be at the museum on Saturday
+
+70
+00:09:17,582 --> 00:09:21,075
+to show you how to interact with robots and explain how they work.
+
+71
+00:09:21,724 --> 00:09:27,253
+But make sure to buy your tickets in advance from the museum’s Web site. This event will be packed!
+
+72
+00:09:31,333 --> 00:09:34,524
+What will happen at the Newport Museum on Saturday?
+(A) A parking area will be unavailable.
+(B) An award will be presented.
+(C) A gift shop will give discounts.
+(D) An interactive exhibit will open.
+
+73
+00:09:44,391 --> 00:09:48,346
+What does the speaker say about some Newport University students?
+(A) They raised money for some equipment.
+(B) They published a research paper.
+(C) They will give demonstrations at the museum.
+(D) They should submit job applications to the museum.
+
+74
+00:09:58,426 --> 00:10:02,302
+According to the speaker, what should the listeners do in advance?
+(A) Read about robots
+(B) Download a mobile app
+(C) Register for a class
+(D) Buy tickets
+
+75
+00:10:16,035 --> 00:10:20,871
+(M-Au) Hello, Mr. Kanno. This is Scott Jansen calling from KR Investors Group.
+
+76
+00:10:21,440 --> 00:10:25,084
+Thanks for coming in last week for an interview for the market analyst position.
+
+77
+00:10:25,324 --> 00:10:27,946
+ We were very impressed with your past work experience,
+
+78
+00:10:28,231 --> 00:10:30,240
+and we’d like to offer you the job.
+
+79
+00:10:30,720 --> 00:10:35,004
+Now, as I’d mentioned, you’ll have to relocate from Chicago to Vancouver.
+
+80
+00:10:35,493 --> 00:10:40,008
+I’m confident you’ll like living there. It’s a great city, with a lot to do and see.
+
+81
+00:10:40,497 --> 00:10:44,008
+So congratulations, I’m looking forward to speaking with you again.
+
+82
+00:10:44,213 --> 00:10:48,560
+Oh, and please keep in mind that KR Investors Group won’t be open next week.
+
+83
+00:10:52,720 --> 00:10:54,408
+Why is the speaker calling?
+(A) To set up an interview
+(B) To finalize travel arrangements
+(C) To offer employment
+(D) To discuss an upcoming workshop
+
+84
+00:11:04,568 --> 00:11:08,088
+What does the speaker say the listener will be required to do?
+(A) Apply for a passport
+(B) Revise a document
+(C) Provide letters of recommendation
+(D) Move to another city
+
+85
+00:11:18,302 --> 00:11:21,102
+What does the speaker say will happen next week?
+(A) His company will be closed.
+(B) A holiday party will be held.
+(C) Registration will begin.
+(D) Some prices will be lowered.
+
+86
+00:11:35,902 --> 00:11:41,484
+(W-Br) I’d like to start our meeting by discussing our advertising efforts for our new running shoes.
+
+87
+00:11:41,973 --> 00:11:47,173
+The company president has asked our department to focus on online advertising.
+
+88
+00:11:47,680 --> 00:11:50,426
+So, take a look at the chart I passed out.
+
+89
+00:11:50,880 --> 00:11:55,537
+It shows popular types of Web sites with advertising space for sale.
+
+90
+00:11:56,053 --> 00:11:59,200
+Although social media sites get the most visits,
+
+91
+00:11:59,502 --> 00:12:03,208
+I think we should go with the type that attracts our target audience.
+
+92
+00:12:03,697 --> 00:12:07,555
+Although these sites only have about 3,000 users per day,
+
+93
+00:12:07,848 --> 00:12:12,222
+the people who visit those sites will likely be interested in our product
+
+94
+00:12:12,728 --> 00:12:16,586
+So our next step is to plan the designs for those advertisements.
+
+95
+00:12:17,102 --> 00:12:19,386
+Let’s break into groups to discuss that.
+
+96
+00:12:23,573 --> 00:12:26,613
+In what department does the speaker most likely work?
+(A) Technology
+(B) Advertising
+(C) Customer service
+(D) Training  
+
+97
+00:12:36,675 --> 00:12:41,244
+Look at the graphic. Which type of Web site does the speaker recommend?
+(A) Finance
+(B) Travel
+(C) Fitness
+(D) Social Media  
+
+98
+00:12:55,368 --> 00:12:58,044
+What will the listeners most likely do next?
+(A) Review a policy
+(B) Research competitors
+(C) Visit a Web site
+(D) Discuss some designs
+
+99
+00:13:12,311 --> 00:13:16,186
+(M-Au) Hi, this is a message for the manager of H.W.’s Sandwiches.
+
+100
+00:13:16,640 --> 00:13:20,915
+I’m standing outside your store— it’s seven-thirty, and it’s closed.
+
+101
+00:13:21,253 --> 00:13:27,680
+I don’t see a sign on the door, but I’m looking at your Web site on my phone, and it says that you should be open tonight. 
+
+102
+00:13:28,071 --> 00:13:29,333
+I’m disappointed…
+
+103
+00:13:29,840 --> 00:13:35,297
+I’ve made a special trip to your restaurant this evening to try the new spicy chicken sandwich for dinner,
+
+104
+00:13:35,546 --> 00:13:39,271
+and I even have a ten percent off coupon that expires today.
+
+105
+00:13:39,786 --> 00:13:42,160
+Will you still accept it if I come back tomorrow?
+
+106
+00:13:42,746 --> 00:13:45,680
+I have some time and I’d really like to use the coupon.
+
+107
+00:13:46,204 --> 00:13:48,524
+Please let me know. This is John,
+
+108
+00:13:48,728 --> 00:13:51,697
+at 555-0179.
+
+109
+00:13:55,706 --> 00:13:59,422
+Look at the graphic. When is the speaker leaving the message?
+(A) On Monday
+(B) On Wednesday
+(C) On Thursday
+(D) On Sunday 
+
+110
+00:14:13,555 --> 00:14:15,751
+Why does the speaker leave the message?
+(A) To apologize for a mistake
+(B) To express disappointment
+(C) To show appreciation
+(D) To communicate a decision  
+
+111
+00:14:25,768 --> 00:14:27,608
+What does the speaker request?
+(A) An updated menu
+(B) A job application
+(C) A flexible delivery time
+(D) An extension to use a coupon
+

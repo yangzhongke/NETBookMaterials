@@ -30,7 +30,6 @@ namespace Listening.Domain.Entities
 
         public static Album Create(Guid id, int sequenceNumber, MultilingualString name, Guid categoryId)
         {
-
             Album album = new Album();
             album.Id = id;
             album.SequenceNumber = sequenceNumber;

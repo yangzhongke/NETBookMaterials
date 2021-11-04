@@ -1,0 +1,421 @@
+﻿1
+00:00:00,940 --> 00:00:01,860
+PART 2
+
+2
+00:00:02,410 --> 00:00:03,280
+Directions:
+
+3
+00:00:03,930 --> 00:00:09,040
+You will hear a question or statement and three responses spoken in English.
+
+4
+00:00:09,560 --> 00:00:14,260
+They will not be printed in your test book and will be spoken only one time.
+
+5
+00:00:14,940 --> 00:00:23,170
+Select the best response to the question or statement and mark the letter (A), (B), or (C) on your answer sheet.
+
+6
+00:00:30,320 --> 00:00:31,760
+(M-Au) Who’s the new accountant?
+
+7
+00:00:33,550 --> 00:00:35,120
+(W-Br) 
+(A) Her name is Jee-Soo.
+
+8
+00:00:36,910 --> 00:00:38,260
+(B) We’re behind schedule.
+
+9
+00:00:40,020 --> 00:00:41,840
+(C) Yes, they’re from last month
+
+10
+00:00:48,420 --> 00:00:50,420
+(M-Cn) You already booked your flight, didn’t you?
+
+11
+00:00:52,230 --> 00:00:53,770
+(M-Au)(A) No, I’ll do it tonight.
+
+12
+00:00:55,550 --> 00:00:56,360
+(B) I read that.
+
+13
+00:00:58,130 --> 00:00:59,300
+(C) Just a suitcase.
+
+14
+00:01:06,230 --> 00:01:09,040
+(W-Am) What still needs to be done before the grand opening?
+
+15
+00:01:10,910 --> 00:01:12,260
+(W-Br) (A) Outside the store.
+
+16
+00:01:14,100 --> 00:01:15,860
+(B) Yes, it’s still on Friday.
+
+17
+00:01:17,640 --> 00:01:18,940
+(C) I have a checklist.
+
+18
+00:01:25,830 --> 00:01:27,990
+(M-Cn) When will you hear back about your interview?
+
+19
+00:01:29,870 --> 00:01:31,310
+(W-Br) (A) Yes, I agree.
+
+20
+00:01:33,050 --> 00:01:34,110
+(B) By telephone.
+
+21
+00:01:35,820 --> 00:01:37,020
+(C) In a week or so.
+
+22
+00:01:43,830 --> 00:01:46,680
+(M-Au) Do you want to walk in the park or at the indoor track?
+
+23
+00:01:48,510 --> 00:01:50,240
+(W-Am) (A) It’s a bit hot today.
+
+24
+00:01:52,120 --> 00:01:53,200
+(B) I’ll keep track of it.
+
+25
+00:01:55,090 --> 00:01:56,800
+(C) My favorite pair of shoes.
+
+26
+00:02:03,730 --> 00:02:06,970
+(M-Au) Which supplier do you use for fruits and vegetables?
+
+27
+00:02:08,760 --> 00:02:10,010
+(M-Cn) (A) Every once in a while.
+
+28
+00:02:11,860 --> 00:02:13,100
+(B) In the supply closet.
+
+29
+00:02:14,880 --> 00:02:16,480
+(C) The one on Edgewood Street.
+
+30
+00:02:23,540 --> 00:02:26,640
+(W-Br) Where can I find an employee-referral form?
+
+31
+00:02:28,500 --> 00:02:30,640
+(W-Am) (A) I think they’re in Jan’s office.
+
+32
+00:02:32,440 --> 00:02:34,100
+(B) Seven job candidates.
+
+33
+00:02:35,890 --> 00:02:37,210
+(C) Thanks for letting me know.
+
+34
+00:02:44,320 --> 00:02:46,530
+(W-Br) Who’s managing the bookstore tomorrow?
+
+35
+00:02:48,400 --> 00:02:50,390
+(M-Cn) (A) Mostly history and art books.
+
+36
+00:02:52,160 --> 00:02:53,170
+(B) At ten A.M.
+
+37
+00:02:54,920 --> 00:02:56,750
+(C) I just posted the staff schedule.
+
+38
+00:03:03,780 --> 00:03:06,400
+(M-Au) Should we ask the waiter to bring us some water?
+
+39
+00:03:08,280 --> 00:03:09,600
+(W-Am) (A) For about an hour.
+
+40
+00:03:11,410 --> 00:03:13,040
+(B) Sure, when he comes back.
+
+41
+00:03:14,920 --> 00:03:16,100
+(C) No, I haven’t.
+
+42
+00:03:23,380 --> 00:03:26,400
+(W-Br) Why did you rearrange the tables in the boardroom?
+
+43
+00:03:28,240 --> 00:03:29,370
+(M-Au) (A) Eighteen chairs.
+
+44
+00:03:31,160 --> 00:03:32,760
+(B) I’ll have some coffee, thanks.
+
+45
+00:03:34,480 --> 00:03:36,490
+(C) Because I had to make more space
+
+46
+00:03:43,710 --> 00:03:47,160
+(W-Am) I’d like to move to the city, but it’s really noisy.
+
+47
+00:03:48,940 --> 00:03:50,250
+(M-Au) (A) The bus’ll be here soon.
+
+48
+00:03:52,150 --> 00:03:53,770
+(B) OK, I’ll turn them off.
+
+49
+00:03:55,680 --> 00:03:57,430
+(C) My neighborhood is pretty quiet.
+
+50
+00:04:04,530 --> 00:04:06,390
+(W-Am) Who came up with our new slogan?
+
+51
+00:04:08,080 --> 00:04:09,470
+(W-Br)(A) It went pretty well.
+
+52
+00:04:11,280 --> 00:04:13,100
+(B) This escalator goes down.
+
+53
+00:04:14,870 --> 00:04:16,600
+(C) Someone on the marketing team.
+
+54
+00:04:23,690 --> 00:04:26,180
+(M-Cn) Excuse me, do you have this shirt in red?
+
+55
+00:04:28,060 --> 00:04:29,510
+(W-Am)(A) What size do you wear?
+
+56
+00:04:31,390 --> 00:04:32,930
+(B) She went to that store, too.
+
+57
+00:04:34,790 --> 00:04:36,750
+(C) A thirty-day return policy
+
+58
+00:04:43,430 --> 00:04:46,290
+(W-Br) This is the best Italian restaurant in town.
+
+59
+00:04:48,080 --> 00:04:50,220
+(M-Cn)(A) Satoko is traveling in September.
+
+60
+00:04:51,950 --> 00:04:53,900
+(B) It’s where I take all of my clients.
+
+61
+00:04:55,640 --> 00:04:56,950
+(C) Pasta and a salad.
+
+62
+00:05:04,020 --> 00:05:06,460
+(M-Au) How far along are you on the quarterly report?
+
+63
+00:05:08,180 --> 00:05:09,820
+(W-Am)(A) I’m almost finished with it.
+
+64
+00:05:11,660 --> 00:05:12,950
+(B) That’s a good idea.
+
+65
+00:05:14,650 --> 00:05:16,360
+(C) It’s not very far from here
+
+66
+00:05:23,470 --> 00:05:26,560
+(M-Cn) Aren’t you attending the employee awards ceremony tomorrow?
+
+67
+00:05:28,390 --> 00:05:29,940
+(M-Au) (A) The position has been filled.
+
+68
+00:05:31,780 --> 00:05:33,210
+(B) That event’s next week.
+
+69
+00:05:35,030 --> 00:05:36,530
+(C) Two hundred people attended.
+
+70
+00:05:43,540 --> 00:05:46,470
+(W-Br) That photocopy machine is broken, isn’t it?
+
+71
+00:05:48,270 --> 00:05:49,600
+(M-Au)(A) He’s a member of the board.
+
+72
+00:05:51,400 --> 00:05:53,630
+(B) You’re right—it needs to be replaced.
+
+73
+00:05:55,340 --> 00:05:57,200
+(C) I prefer working in the mornings.
+
+74
+00:06:04,580 --> 00:06:08,100
+(W-Br) Some of us are going out for dinner after we finish this paperwork.
+
+75
+00:06:09,910 --> 00:06:11,840
+(W-Am)(A) Can we get this to go, please?
+
+76
+00:06:13,660 --> 00:06:16,010
+(B) Sorry, I have some other work to do.
+
+77
+00:06:17,840 --> 00:06:19,450
+(C) The newspaper’s on my desk.
+
+78
+00:06:26,791 --> 00:06:29,493
+(M-Cn) Don’t we have to review Joshua’s presentation? 
+
+79
+00:06:31,244 --> 00:06:32,986
+(M-Au)(A) Yes, we were introduced.
+
+80
+00:06:34,773 --> 00:06:36,293
+(B) It’s a fantastic view.
+
+81
+00:06:38,151 --> 00:06:40,088
+(C) He’s given that presentation before.
+
+82
+00:06:47,324 --> 00:06:49,964
+(W-Am) Did Marcus create this advertisement?
+
+83
+00:06:51,848 --> 00:06:53,351
+(M-Cn)(A) They give financial advice.
+
+84
+00:06:55,235 --> 00:06:56,737
+(B) No, it’s Frieda’s design.
+
+85
+00:06:58,586 --> 00:07:00,408
+(C) I’ll be in a meeting all afternoon.
+
+86
+00:07:07,475 --> 00:07:10,577
+(W-Br) How do you change your password on the new system?
+
+87
+00:07:12,337 --> 00:07:14,222
+(M-Cn) (A) Unfortunately, they didn’t pass.
+
+88
+00:07:16,035 --> 00:07:18,008
+(B) I haven’t used the new system yet.
+
+89
+00:07:19,777 --> 00:07:21,466
+(C) Let’s change the ink in the printer.
+
+90
+00:07:28,586 --> 00:07:31,955
+(M-Au) Do you want to hire one or two interns for the summer?
+
+91
+00:07:33,840 --> 00:07:35,795
+(W-Br)(A) The second-floor conference room.
+
+92
+00:07:37,608 --> 00:07:39,000
+(B) They both are, I think.
+
+93
+00:07:40,808 --> 00:07:42,666
+(C) The budget’s quite small this year.
+
+94
+00:07:49,848 --> 00:07:52,604
+(M-Cn) Didn’t we select an image for the newsletter already?
+
+95
+00:07:54,453 --> 00:07:56,168
+(W-Br)(A) We did, but I don’t like it.
+
+96
+00:07:58,017 --> 00:07:59,457
+(B) A few pages long.
+
+97
+00:08:01,288 --> 00:08:02,791
+(C) What type of compute
+
+98
+00:08:09,440 --> 00:08:12,426
+(M-Au) I really enjoyed the jazz festival last weekend.
+
+99
+00:08:14,248 --> 00:08:16,408
+(W-Am)(A) Tickets will be available online.
+
+100
+00:08:18,231 --> 00:08:20,711
+(B) There were so many great musicians.
+
+101
+00:08:22,506 --> 00:08:24,248
+(C) We probably won’t be able to.
+
+102
+00:08:31,448 --> 00:08:35,440
+(W-Br) Are you going to the lawyer’s office for a meeting, or for something else?
+
+103
+00:08:37,315 --> 00:08:38,817
+(M-Cn)(A) Yes, the door on your right.
+
+104
+00:08:40,693 --> 00:08:42,293
+(B) Just dropping off some forms.
+
+105
+00:08:44,035 --> 00:08:45,226
+(C) It’s a good law firm.
+

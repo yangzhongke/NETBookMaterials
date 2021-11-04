@@ -78,9 +78,14 @@ namespace Listening.Domain
         {
             int maxSeq = await repository.GetMaxSeqOfEpisodesAsync(albumId);
             var id = Guid.NewGuid();
+            /*
             Episode episode = Episode.Create(id, maxSeq + 1, name, albumId,
-                audioUrl,durationInSecond, subtitleType, subtitle);
-            return episode;
+                audioUrl,durationInSecond, subtitleType, subtitle);*/
+            var builder = new Episode.Builder();
+            builder.Id(id).SequenceNumber(maxSeq + 1).Name(name).AlbumId(albumId)
+                .AudioUrl(audioUrl).DurationInSecond(durationInSecond)
+                .SubtitleType(subtitleType).Subtitle(subtitle);
+            return builder.Build();
         }
 
         public async Task SortEpisodesAsync(Guid albumId, Guid[] sortedEpisodeIds)

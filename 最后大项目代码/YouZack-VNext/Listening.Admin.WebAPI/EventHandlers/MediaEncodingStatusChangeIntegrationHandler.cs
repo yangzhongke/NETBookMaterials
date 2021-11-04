@@ -1,5 +1,4 @@
-﻿
-using Listening.Admin.WebAPI.Hubs;
+﻿using Listening.Admin.WebAPI.Hubs;
 using Microsoft.AspNetCore.SignalR;
 using Zack.EventBus;
 
@@ -50,15 +49,21 @@ class MediaEncodingStatusChangeIntegrationHandler : DynamicIntegrationEventHandl
             case "MediaEncoding.Completed":
                 await encodingEpisodeHelper.UpdateEpisodeStatusAsync(id, "Completed");
                 Uri outputUrl = new Uri(eventData.OutputUrl);
-                var encodingEpisode = await encodingEpisodeHelper.GetEncodingEpisodeAsync(id);
+                var encItem = await encodingEpisodeHelper.GetEncodingEpisodeAsync(id);
 
-                Guid albumId = encodingEpisode.AlbumId;
+                Guid albumId = encItem.AlbumId;
                 int? maxSeq = await dbContext.Query<Episode>().Where(e => e.AlbumId == albumId)
                         .MaxAsync(e => (int?)e.SequenceNumber);
                 maxSeq = maxSeq ?? 0;
+                /*
                 Episode episode = Episode.Create(id, maxSeq.Value + 1, encodingEpisode.Name, albumId, outputUrl,
-                    encodingEpisode.DurationInSecond, encodingEpisode.SubtitleType, encodingEpisode.Subtitle);
-                dbContext.Add(episode);
+                    encodingEpisode.DurationInSecond, encodingEpisode.SubtitleType, encodingEpisode.Subtitle);*/
+                var builder = new Episode.Builder();
+                builder.Id(id).SequenceNumber(maxSeq.Value + 1).Name(encItem.Name)
+                    .AlbumId(albumId).AudioUrl(outputUrl)
+                    .DurationInSecond(encItem.DurationInSecond)
+                    .SubtitleType(encItem.SubtitleType).Subtitle(encItem.Subtitle);
+                dbContext.Add(builder.Build());
                 await dbContext.SaveChangesAsync();
                 await hubContext.Clients.All.SendAsync("OnMediaEncodingCompleted", id);//通知前端刷新
                 break;

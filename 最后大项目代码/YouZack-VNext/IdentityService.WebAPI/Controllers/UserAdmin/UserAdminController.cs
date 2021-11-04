@@ -61,13 +61,7 @@ public class UserAdminController : ControllerBase
     [Route("{id}")]
     public async Task<ActionResult> DeleteAdminUser(Guid id)
     {
-        var user = await repository.FindByIdAsync(id);
-        if (user == null)
-        {
-            return NotFound("用户没找到");
-        }
-        user.SoftDelete();
-        await userManager.UpdateAsync(user);
+        await repository.RemoveUserAsync(id);
         return Ok();
     }
 

@@ -20,7 +20,7 @@ namespace IdentityService.Infrastructure
             this.optJWT = optJWT;
         }
 
-        public async Task<SignInResult> CheckUserNameAndPwdAsync(string userName, string password)
+        private async Task<SignInResult> CheckUserNameAndPwdAsync(string userName, string password)
         {
             var user = await repository.FindByNameAsync(userName);
             if (user == null)
@@ -31,7 +31,7 @@ namespace IdentityService.Infrastructure
             var result = await repository.CheckForSignInAsync(user, password, true);
             return result;
         }
-        public async Task<SignInResult> CheckPhoneNumAndPwdAsync(string phoneNum, string password)
+        private async Task<SignInResult> CheckPhoneNumAndPwdAsync(string phoneNum, string password)
         {
             var user = await repository.FindByPhoneNumberAsync(phoneNum);
             if (user == null)

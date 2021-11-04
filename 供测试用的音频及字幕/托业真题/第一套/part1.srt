@@ -1,0 +1,132 @@
+﻿1
+00:00:24,923 --> 00:00:25,772
+PART 1
+
+2
+00:00:26,221 --> 00:00:27,120
+Directions:
+
+3
+00:00:27,858 --> 00:00:33,329
+For each question in this part, you will hear four statements about a picture in your test book.
+
+4
+00:00:34,116 --> 00:00:40,818
+When you hear the statements, you must select the one statement that best describes what you see in the picture.
+
+5
+00:00:41,513 --> 00:00:46,400
+Then find the number of the question on your answer sheet and mark your answer. 
+
+6
+00:00:47,009 --> 00:00:52,584
+The statements will not be printed in your test book and will be spoken only one time.
+
+7
+00:01:16,652 --> 00:01:20,098
+Statement(C),"They're sitting at a table,"
+
+8
+00:01:20,455 --> 00:01:22,683
+is the best description of the picture,
+
+9
+00:01:23,033 --> 00:01:27,218
+so you should select answer(C)and mark it on your answer sheet.
+
+10
+00:01:37,580 --> 00:01:40,320
+(A)she's wearing headphones.
+
+11
+00:01:41,052 --> 00:01:43,827
+(B)She's opening a drawer.
+
+12
+00:01:44,560 --> 00:01:47,618
+(C)She's holding a microphone.
+
+13
+00:01:48,307 --> 00:01:50,935
+(D)She's pushing a button.
+
+14
+00:02:01,796 --> 00:02:05,120
+(A)They're using laptop computers.
+
+15
+00:02:05,876 --> 00:02:08,972
+(B)They' re exchanging business cards.
+
+16
+00:02:09,716 --> 00:02:12,898
+(C)One of the men is putting on a sweater.
+
+17
+00:02:13,643 --> 00:02:16,621
+(D)One of the men is moving a chair.
+
+18
+00:02:27,938 --> 00:02:31,076
+(A)She's pointing toward a building
+
+19
+00:02:31,852 --> 00:02:34,916
+B)She's handing the man an umbrella
+
+20
+00:02:35,680 --> 00:02:38,264
+C They're greeting each other
+
+21
+00:02:39,040 --> 00:02:42,123
+D)They re walking side by side
+
+22
+00:02:52,812 --> 00:02:55,981
+A)A chalkboard is being erased
+
+23
+00:02:56,775 --> 00:03:00,443
+B)Some people are attending a presentation
+
+24
+00:03:01,132 --> 00:03:04,646
+C) A man is leaning against a doorway
+
+25
+00:03:05,440 --> 00:03:08,486
+D)All of the seats are occupied
+
+26
+00:03:19,538 --> 00:03:23,403
+A)Passengers are exiting an airport terminal
+
+27
+00:03:24,166 --> 00:03:27,932
+(B)An aircraft is taking off from a runway
+
+28
+00:03:28,744 --> 00:03:32,344
+(C)Pieces of luggage are lined up on the  pavement
+
+29
+00:03:33,046 --> 00:03:37,476
+D)A staircase has been positioned next to an  airplane
+
+30
+00:03:48,480 --> 00:03:52,141
+A) Fresh vegetables are being chopped on a  cutting board.
+
+31
+00:03:52,929 --> 00:03:56,073
+B)Food is being cleared from a counter.
+
+32
+00:03:56,830 --> 00:04:00,301
+C) Bowls have been stacked on a kitchen shelf.
+
+33
+00:04:01,033 --> 00:04:04,153
+D)Some cookware has been left on a stove.
+

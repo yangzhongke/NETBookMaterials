@@ -61,13 +61,13 @@ public class LoginController : ControllerBase
 
     [AllowAnonymous]
     [HttpPost]
-    public async Task<ActionResult<string>> LoginByPhoneAndPwd(LoginByPhoneAndPwdRequest req)
+    public async Task<ActionResult<string?>> LoginByPhoneAndPwd(LoginByPhoneAndPwdRequest req)
     {
         //todo：要通过行为验证码、图形验证码等形式来防止暴力破解
         (var checkResult, string? token) = await idService.LoginByPhoneAndPwdAsync(req.PhoneNum, req.Password);
         if(checkResult.Succeeded)
         {
-            return token!;
+            return token;
         }
         else if (checkResult.IsLockedOut)
         {
@@ -76,7 +76,7 @@ public class LoginController : ControllerBase
         }
         else
         {
-            string msg = checkResult.ToString();
+            string msg = "登录失败";
             return StatusCode((int)HttpStatusCode.BadRequest, msg);
         }
     }

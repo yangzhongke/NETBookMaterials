@@ -1,0 +1,184 @@
+﻿1
+00:00:01,500 --> 00:00:04,120
+10 A  Story of Galileo.
+
+2
+00:00:05,450 --> 00:00:08,426
+You are going to hear a story about Galileo .
+
+3
+00:00:08,800 --> 00:00:15,120
+Listen to the story and choose the correct letter A- C . Now listen to the story.
+
+4
+00:00:16,530 --> 00:00:21,980
+Good morning, everyone . Today I'd like to tell a story about Galileo.
+
+5
+00:00:22,950 --> 00:00:25,813
+Galileo was a famous Italian astronomer.
+
+6
+00:00:26,520 --> 00:00:30,280
+He was born on February 15 , 1564.
+
+7
+00:00:31,026 --> 00:00:36,306
+He went to school at Vallombrosa , which is a place near Florence, Italy.
+
+8
+00:00:37,146 --> 00:00:40,400
+He tried to learn science there, but he did not like it.
+
+9
+00:00:41,173 --> 00:00:44,773
+He went to the University of Pisa to continue  his studies.
+
+10
+00:00:45,440 --> 00:00:50,340
+He became a professor of mathematics when he was at the age of 25.
+
+11
+00:00:51,340 --> 00:00:57,586
+His free expressions of opinion won him such unpopularity that he had to resign.
+
+12
+00:00:58,253 --> 00:01:05,640
+In 1592 he went to Padua as a professor of mathematics, where he made a series of discoveries.
+
+13
+00:01:06,780 --> 00:01:13,266
+Most of the scientists believed Aristotle said that heavy things fall faster than light things.
+
+14
+00:01:13,960 --> 00:01:16,986
+This remained true until the time of Galileo.
+
+15
+00:01:17,640 --> 00:01:19,613
+Galileo did not believe it.
+
+16
+00:01:20,160 --> 00:01:21,586
+He made an experiment.
+
+17
+00:01:22,200 --> 00:01:24,213
+There is a famous tower at Pisa.
+
+18
+00:01:24,626 --> 00:01:28,706
+It does not stand straight up , but leans a little more each year .
+
+19
+00:01:29,426 --> 00:01:32,560
+Some scientists believe that it will soon fall down.
+
+20
+00:01:33,600 --> 00:01:39,466
+Galileo climbed to the top of the leaning tower , and from there he dropped two weights.
+
+21
+00:01:40,026 --> 00:01:44,960
+One of them was heavier than the other, but they reached the ground at the same moment.
+
+22
+00:01:46,320 --> 00:01:52,810
+The scientists who were watching were very surprised -- this did not agree with Aristotle's rule.
+
+23
+00:01:53,680 --> 00:01:58,253
+ Galileo believed that scientists ought always to make  experiments .
+
+24
+00:01:58,920 --> 00:02:05,160
+He said that they ought not only to   sit in   university and talk ; they ought to do something .
+
+25
+00:02:05,853 --> 00:02:10,693
+They ought to watch  the result of their experiments , and   describe them honestly .
+
+26
+00:02:11,426 --> 00:02:14,106
+Then they could learn more about science .
+
+27
+00:02:14,980 --> 00:02:18,560
+Many people of that time believed that the earth never moved .
+
+28
+00:02:19,253 --> 00:02:26,893
+The other planets and the sun appeared to move around the earth , and they believed that the earth was the center of the universe.
+
+29
+00:02:27,890 --> 00:02:32,360
+Ptolemy had taught this many years before , and it appeared to be true.
+
+30
+00:02:33,360 --> 00:02:36,710
+Nobody knew that the earth was an unimportant planet.
+
+31
+00:02:38,080 --> 00:02:43,906
+Copernicus was an astronomer and a scientist who had studied the planets and the stars .
+
+32
+00:02:44,506 --> 00:02:45,906
+His ideas were new.
+
+33
+00:02:46,466 --> 00:02:52,453
+He said that the earth moved round the sun , and that it was not the center of everything.
+
+34
+00:02:53,480 --> 00:02:56,680
+He put these ideas into a book but he hid the book.
+
+35
+00:02:57,330 --> 00:03:00,320
+Nobody could read it until Copernicus died.
+
+36
+00:03:00,880 --> 00:03:04,133
+Many years later, Galileo read it and believed it.
+
+37
+00:03:04,613 --> 00:03:10,680
+He said that the earth was moving round the sun , and this made a lot of people angry .
+
+38
+00:03:11,213 --> 00:03:14,720
+They believed that the earth was too important to move .
+
+39
+00:03:15,240 --> 00:03:18,253
+They said that it must be the center of the universe.
+
+40
+00:03:18,946 --> 00:03:25,320
+Galileo got into trouble and he had to say that he was wrong, but he knew that he was right.
+
+41
+00:03:26,810 --> 00:03:31,680
+Galileo made many other experiments, but he also made some telescopes.
+
+42
+00:03:32,440 --> 00:03:36,466
+When he pointed a telescope at the moon, he saw some hills there.
+
+43
+00:03:37,173 --> 00:03:43,386
+He also saw some of the millions of stars in the universe -- more than anyone had ever seen.
+
+44
+00:03:44,560 --> 00:03:51,573
+In 1637 Galileo's eyes failed , and he could not see anything through his telescope.
+
+45
+00:03:52,710 --> 00:03:59,410
+Galileo return to Florence, where he spent his remaining years, becoming blind in 1637.
+
+46
+00:04:00,650 --> 00:04:05,260
+Five years later, he died . The world then lost a great man.
+

@@ -1,0 +1,420 @@
+﻿1
+00:00:00,344 --> 00:00:01,267
+PART 2
+
+2
+00:00:01,889 --> 00:00:02,713
+Directions:
+
+3
+00:00:03,335 --> 00:00:08,443
+You will hear a question or statement and three responses spoken in English. 
+
+4
+00:00:09,027 --> 00:00:13,723
+They will not be printed in your test book and will be spoken only one time.
+
+5
+00:00:14,340 --> 00:00:22,578
+Select the best response to the question or statement and mark the letter (A), (B), or (C) on your answer sheet.
+
+6
+00:00:29,932 --> 00:00:32,160
+What time does the movie start tonight?
+
+7
+00:00:34,184 --> 00:00:35,900
+we're moving on Saturday.
+
+8
+00:00:37,790 --> 00:00:39,070
+At seven o'clock.
+
+9
+00:00:40,960 --> 00:00:42,203
+It was in the theater.
+
+10
+00:00:48,732 --> 00:00:50,510
+Where is the furniture department?
+
+11
+00:00:52,480 --> 00:00:53,667
+On the tenth floor.
+
+12
+00:00:55,563 --> 00:00:57,187
+A sofa and two chairs.
+
+13
+00:00:59,076 --> 00:01:00,086
+I took it apart.
+
+14
+00:01:06,701 --> 00:01:09,180
+Who led the budget presentation yesterday?
+
+15
+00:01:11,076 --> 00:01:12,320
+Yes, I read it.
+
+16
+00:01:14,215 --> 00:01:15,815
+The main conference room.
+
+17
+00:01:17,698 --> 00:01:18,861
+Ms. Varma did.
+
+18
+00:01:25,470 --> 00:01:27,987
+Would you rather drive to the game or take the train?
+
+19
+00:01:29,938 --> 00:01:31,015
+Let's drive
+
+20
+00:01:32,904 --> 00:01:34,676
+On Thursday, I believe.
+
+21
+00:01:36,492 --> 00:01:37,926
+Please take it with you.
+
+22
+00:01:44,916 --> 00:01:47,538
+When are they announcing the winner of the competition?
+
+23
+00:01:49,470 --> 00:01:50,818
+At the radio station.
+
+24
+00:01:52,720 --> 00:01:53,944
+By the end of the week.
+
+25
+00:01:55,815 --> 00:01:56,929
+A gift certificate.
+
+26
+00:02:03,753 --> 00:02:07,015
+Would you like to make a donation to the arts council fund?
+
+27
+00:02:09,009 --> 00:02:10,732
+No thanks, I have some.
+
+28
+00:02:12,658 --> 00:02:14,055
+He's very generous.
+
+29
+00:02:16,018 --> 00:02:17,716
+Sure, here's five dollars.
+
+30
+00:02:24,750 --> 00:02:27,532
+Who chose the restaurant for the company banquet?
+
+31
+00:02:29,384 --> 00:02:31,224
+Maybe once last year.
+
+32
+00:02:33,144 --> 00:02:35,193
+Someone from Human Resources.
+
+33
+00:02:37,021 --> 00:02:38,480
+Next Friday evening.
+
+34
+00:02:45,427 --> 00:02:47,655
+Are you going to accept the management position?
+
+35
+00:02:49,507 --> 00:02:50,664
+Everyone else.
+
+36
+00:02:52,603 --> 00:02:53,926
+They’re in finance.
+
+37
+00:02:55,784 --> 00:02:57,876
+Yes, I start June first.
+
+38
+00:03:04,849 --> 00:03:07,895
+Which spaces are designated for visitor parking?
+
+39
+00:03:09,796 --> 00:03:11,440
+Only for two hours.
+
+40
+00:03:13,464 --> 00:03:15,513
+It's alright, I'il take the bus.
+
+41
+00:03:17,403 --> 00:03:19,280
+The ones with yellow signs.
+
+42
+00:03:26,338 --> 00:03:28,412
+Wouldn't you rather meet in a conference room?
+
+43
+00:03:30,344 --> 00:03:31,803
+It usually doesn't.
+
+44
+00:03:33,729 --> 00:03:35,249
+A three o'clock meeting.
+
+45
+00:03:37,095 --> 00:03:38,492
+It would be quieter.
+
+46
+00:03:45,655 --> 00:03:48,129
+Do you know who this jacket belongs to?
+
+47
+00:03:50,049 --> 00:03:51,784
+Yes, very expensive.
+
+48
+00:03:53,821 --> 00:03:55,316
+No, where did you find it?
+
+49
+00:03:57,267 --> 00:03:58,738
+It won't take too long.
+
+50
+00:04:05,735 --> 00:04:08,092
+Let's work through lunch to finish the project
+
+51
+00:04:10,030 --> 00:04:11,618
+A sandwich and an apple.
+
+52
+00:04:13,587 --> 00:04:15,661
+But I really need a break!
+
+53
+00:04:17,452 --> 00:04:18,836
+It was this morning.
+
+54
+00:04:25,987 --> 00:04:28,886
+Why does Dr Yang need another lab assistant?
+
+55
+00:04:30,836 --> 00:04:32,566
+I didn't know he requested one.
+
+56
+00:04:34,418 --> 00:04:36,203
+At least three years’ experience.
+
+57
+00:04:38,061 --> 00:04:39,790
+Yes, we visited the new lab.
+
+58
+00:04:46,380 --> 00:04:48,942
+Dr. Martinez will be free this afternoon.
+
+59
+00:04:50,849 --> 00:04:52,313
+I’ve been here before.
+
+60
+00:04:54,326 --> 00:04:55,760
+What about tomorrow morning?
+
+61
+00:04:57,661 --> 00:04:59,858
+The pharmacy is just downstairs.
+
+62
+00:05:06,996 --> 00:05:10,793
+Can I write an article on the festival for Tuesday’s newspaper?
+
+63
+00:05:12,584 --> 00:05:13,907
+You're right; it's too long.
+
+64
+00:05:15,852 --> 00:05:17,243
+The deadline has passed.
+
+65
+00:05:19,009 --> 00:05:20,418
+He's at the museum now.
+
+66
+00:05:27,581 --> 00:05:29,489
+Don’t you want to see the apartment?
+
+67
+00:05:31,372 --> 00:05:32,972
+West of Main Street.
+
+68
+00:05:34,904 --> 00:05:36,504
+We had to order a part.
+
+69
+00:05:38,369 --> 00:05:39,956
+I've found a place already.
+
+70
+00:05:47,335 --> 00:05:50,713
+Should I order the supplies now, or wait until next week?
+
+71
+00:05:52,701 --> 00:05:54,923
+A total of seventy-five dollars.
+
+72
+00:05:56,867 --> 00:05:59,175
+Actually, I already sent the order.
+
+73
+00:06:00,984 --> 00:06:02,590
+It's in the supply closet.
+
+74
+00:06:09,673 --> 00:06:11,507
+How should I store these photographs?
+
+75
+00:06:13,415 --> 00:06:15,458
+Mateo is responsible for that.
+
+76
+00:06:17,427 --> 00:06:18,947
+From the company picnic.
+
+77
+00:06:20,806 --> 00:06:23,033
+Yes, the staff is very helpful.
+
+78
+00:06:30,338 --> 00:06:32,793
+Where should I set up the equipment for the photo shoot?
+
+79
+00:06:34,670 --> 00:06:36,670
+That's scheduled for next week.
+
+80
+00:06:38,553 --> 00:06:40,547
+It was taken in Amsterdam.
+
+81
+00:06:42,381 --> 00:06:44,566
+I got it from the electronics store.
+
+82
+00:06:51,655 --> 00:06:54,049
+You haven't seen Jennifer today, have you?
+
+83
+00:06:55,883 --> 00:06:57,538
+I saw her a while ago.
+
+84
+00:06:59,446 --> 00:07:00,824
+I don't have any yet.
+
+85
+00:07:02,621 --> 00:07:04,480
+No, my name's Janet.
+
+86
+00:07:11,612 --> 00:07:14,030
+Could you help me find the Murphy Company file?
+
+87
+00:07:15,944 --> 00:07:17,126
+I'm fine, thanks.
+
+88
+00:07:19,156 --> 00:07:20,400
+He left a while ago.
+
+89
+00:07:22,301 --> 00:07:23,649
+I don't work on that account.
+
+90
+00:07:30,586 --> 00:07:32,782
+Why has the workshop been canceled?
+
+91
+00:07:34,800 --> 00:07:36,453
+About twenty minutes ago.
+
+92
+00:07:38,408 --> 00:07:39,840
+In Room Fourteen.
+
+93
+00:07:41,697 --> 00:07:43,831
+Because many people couldn't attend.
+
+94
+00:07:50,951 --> 00:07:52,897
+You've already signed the contract, haven't you?
+
+95
+00:07:54,880 --> 00:07:56,168
+I'Il do it right now.
+
+96
+00:07:58,124 --> 00:07:59,893
+Yes, I turned it off.
+
+97
+00:08:01,795 --> 00:08:03,404
+What does the sign say?
+
+98
+00:08:09,964 --> 00:08:12,773
+I thought the professional development training was really helpful.
+
+99
+00:08:14,657 --> 00:08:16,115
+I'd be happy to help.
+
+100
+00:08:18,044 --> 00:08:20,097
+That was my experience, too.
+
+101
+00:08:21,991 --> 00:08:23,431
+Sure, I'll take care of it.
+
+102
+00:08:30,488 --> 00:08:32,524
+Where did you make the dinner reservation?
+
+103
+00:08:34,497 --> 00:08:36,284
+Tomorrow at twelve-thirty.
+
+104
+00:08:38,204 --> 00:08:39,493
+Didn't you make it?
+
+105
+00:08:41,368 --> 00:08:42,835
+For fourteen people.
+
