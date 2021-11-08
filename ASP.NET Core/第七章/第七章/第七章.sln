@@ -29,7 +29,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "中间件MVC项目1", "中�
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Auth", "Auth", "{24D0E640-6921-424E-9FAA-63EDCB4B023F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityDemo1", "IdentityDemo1\IdentityDemo1.csproj", "{92048214-90ED-465C-9376-B783D3F43F0F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityDemo1", "IdentityDemo1\IdentityDemo1.csproj", "{92048214-90ED-465C-9376-B783D3F43F0F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JWTEncodeTest1", "JWTEncodeTest1\JWTEncodeTest1.csproj", "{F80832FD-E9BD-43E9-A540-65F670C999B8}"
 EndProject
@@ -49,7 +49,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRCoreTest2", "SignalR
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRCoreTest3", "SignalRCoreTest3\SignalRCoreTest3.csproj", "{FB334BD3-2088-4948-8F18-CDBEB1F34031}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{90CE5B78-56F5-4704-8964-02903BDD6443}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{90CE5B78-56F5-4704-8964-02903BDD6443}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Markdown中间件", "Markdown中间件\Markdown中间件.csproj", "{676A4746-0FBD-45F6-9544-45CB800AD060}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -133,6 +135,10 @@ Global
 		{90CE5B78-56F5-4704-8964-02903BDD6443}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90CE5B78-56F5-4704-8964-02903BDD6443}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90CE5B78-56F5-4704-8964-02903BDD6443}.Release|Any CPU.Build.0 = Release|Any CPU
+		{676A4746-0FBD-45F6-9544-45CB800AD060}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{676A4746-0FBD-45F6-9544-45CB800AD060}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{676A4746-0FBD-45F6-9544-45CB800AD060}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{676A4746-0FBD-45F6-9544-45CB800AD060}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -152,6 +158,7 @@ Global
 		{2E2F5B19-B615-4767-B9FB-E690DB903E5F} = {3EC29873-123E-47E5-BB6F-2988F20D9693}
 		{33E30E31-07A8-4E0A-AF1D-2DAAAB0ED8BF} = {3EC29873-123E-47E5-BB6F-2988F20D9693}
 		{FB334BD3-2088-4948-8F18-CDBEB1F34031} = {3EC29873-123E-47E5-BB6F-2988F20D9693}
+		{676A4746-0FBD-45F6-9544-45CB800AD060} = {750F6059-3284-48C7-B80B-954A141FA230}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1C781648-0B36-44AE-AFF9-D53AFB9A130D}
