@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "多配置源": {
+      "commandName": "Project",
+      "commandLineArgs": "UserName=yzk Port=25",
+      "environmentVariables": {
+        "Test1_UserName": "zack",
+        "Test1_Password": "abc123"
+      }
+    }
+  }
+}
