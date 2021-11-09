@@ -11,7 +11,7 @@
   </ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="xFFmpeg.NET" Version="6.0.0" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.0-rc.2.21480.5" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.0" />
 	</ItemGroup>
 	<ItemGroup>
 	  <None Update="ffmpeg.exe">

@@ -7,7 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="Opportunity.LrcParser" Version="1.0.4" />
-    <PackageReference Include="SubtitlesParser" Version="1.5.0" />
+    <PackageReference Include="SubtitlesParser" Version="1.5.1" />
   </ItemGroup>
 
   <ItemGroup>

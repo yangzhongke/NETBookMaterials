@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ConfigServices\ConfigServices.csproj" />
+    <ProjectReference Include="..\LogServices\LogServices.csproj" />
+    <ProjectReference Include="..\MailServices\MailServices.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,6 +1,0 @@
-﻿using MediatR;
-
-namespace 领域事件发布的时机1
-{
-    public record UserUpdatedEvent(Guid Id):INotification;
-}
