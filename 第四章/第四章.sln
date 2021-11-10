@@ -11,6 +11,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySQL版项目", "MySQL版�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostgreSQL版项目", "PostgreSQL版项目\PostgreSQL版项目.csproj", "{97596518-AD05-4B18-A343-A340C37A4700}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "关系配置", "关系配置", "{4CD861E3-AA7C-46FB-83E4-C10D593D2B81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "普通的一对多配置1", "普通的一对多配置1\普通的一对多配置1.csproj", "{55F27583-31C5-403E-A7E4-143CAE6E3FAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "单向导航机制", "单向导航机制\单向导航机制.csproj", "{3D9796F5-84CD-49B3-8FAA-5200F3BA0A61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "一对一关系", "一对一关系\一对一关系.csproj", "{966F6FEE-0C67-4035-A1C8-49D7375F19E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "多对多配置", "多对多配置\多对多配置.csproj", "{DB0DA52C-3097-4A80-83C3-EEFA07695703}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,9 +43,31 @@ Global
 		{97596518-AD05-4B18-A343-A340C37A4700}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97596518-AD05-4B18-A343-A340C37A4700}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97596518-AD05-4B18-A343-A340C37A4700}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55F27583-31C5-403E-A7E4-143CAE6E3FAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55F27583-31C5-403E-A7E4-143CAE6E3FAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55F27583-31C5-403E-A7E4-143CAE6E3FAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55F27583-31C5-403E-A7E4-143CAE6E3FAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D9796F5-84CD-49B3-8FAA-5200F3BA0A61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D9796F5-84CD-49B3-8FAA-5200F3BA0A61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D9796F5-84CD-49B3-8FAA-5200F3BA0A61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D9796F5-84CD-49B3-8FAA-5200F3BA0A61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{966F6FEE-0C67-4035-A1C8-49D7375F19E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{966F6FEE-0C67-4035-A1C8-49D7375F19E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{966F6FEE-0C67-4035-A1C8-49D7375F19E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{966F6FEE-0C67-4035-A1C8-49D7375F19E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB0DA52C-3097-4A80-83C3-EEFA07695703}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB0DA52C-3097-4A80-83C3-EEFA07695703}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB0DA52C-3097-4A80-83C3-EEFA07695703}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB0DA52C-3097-4A80-83C3-EEFA07695703}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{55F27583-31C5-403E-A7E4-143CAE6E3FAA} = {4CD861E3-AA7C-46FB-83E4-C10D593D2B81}
+		{3D9796F5-84CD-49B3-8FAA-5200F3BA0A61} = {4CD861E3-AA7C-46FB-83E4-C10D593D2B81}
+		{966F6FEE-0C67-4035-A1C8-49D7375F19E7} = {4CD861E3-AA7C-46FB-83E4-C10D593D2B81}
+		{DB0DA52C-3097-4A80-83C3-EEFA07695703} = {4CD861E3-AA7C-46FB-83E4-C10D593D2B81}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A91AAEA9-15AC-41AD-A1E4-A445447BE325}
