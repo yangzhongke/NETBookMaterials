@@ -3,7 +3,37 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "第一个EFCore项目", "第一个EFCore项目\第一个EFCore项目.csproj", "{2EE5AFB2-A5CB-40EF-B91F-A9659F0892D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCore实体配置DataAnnotations", "EFCore实体配置DataAnnotations\EFCore实体配置DataAnnotations.csproj", "{B934BDA7-2FC9-4C97-BD75-E8793F6DF0B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySQL版项目", "MySQL版项目\MySQL版项目.csproj", "{C54E6DDE-1412-41F8-B7AF-EF4A22FF4193}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostgreSQL版项目", "PostgreSQL版项目\PostgreSQL版项目.csproj", "{97596518-AD05-4B18-A343-A340C37A4700}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2EE5AFB2-A5CB-40EF-B91F-A9659F0892D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EE5AFB2-A5CB-40EF-B91F-A9659F0892D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EE5AFB2-A5CB-40EF-B91F-A9659F0892D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EE5AFB2-A5CB-40EF-B91F-A9659F0892D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B934BDA7-2FC9-4C97-BD75-E8793F6DF0B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B934BDA7-2FC9-4C97-BD75-E8793F6DF0B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B934BDA7-2FC9-4C97-BD75-E8793F6DF0B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B934BDA7-2FC9-4C97-BD75-E8793F6DF0B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C54E6DDE-1412-41F8-B7AF-EF4A22FF4193}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C54E6DDE-1412-41F8-B7AF-EF4A22FF4193}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C54E6DDE-1412-41F8-B7AF-EF4A22FF4193}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C54E6DDE-1412-41F8-B7AF-EF4A22FF4193}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97596518-AD05-4B18-A343-A340C37A4700}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97596518-AD05-4B18-A343-A340C37A4700}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97596518-AD05-4B18-A343-A340C37A4700}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97596518-AD05-4B18-A343-A340C37A4700}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
