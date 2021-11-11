@@ -3,7 +3,37 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC项目1", "MVC项目1\MVC项目1.csproj", "{21C2BE51-EACB-49F7-BA0B-3DBDF53A3C23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "第一个WebAPI项目", "第一个WebAPI项目\第一个WebAPI项目.csproj", "{3182D770-001D-4C61-A5CA-B15BC5A76D7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI的技术及选择1", "WebAPI的技术及选择1\WebAPI的技术及选择1.csproj", "{8B742AD7-9AF7-4764-A6CF-8617E2B93686}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "前后端分离的WebAPI", "前后端分离的WebAPI\前后端分离的WebAPI.csproj", "{32C702C6-4644-442F-A9A4-6E1010815E18}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{21C2BE51-EACB-49F7-BA0B-3DBDF53A3C23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21C2BE51-EACB-49F7-BA0B-3DBDF53A3C23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21C2BE51-EACB-49F7-BA0B-3DBDF53A3C23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21C2BE51-EACB-49F7-BA0B-3DBDF53A3C23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3182D770-001D-4C61-A5CA-B15BC5A76D7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3182D770-001D-4C61-A5CA-B15BC5A76D7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3182D770-001D-4C61-A5CA-B15BC5A76D7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3182D770-001D-4C61-A5CA-B15BC5A76D7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B742AD7-9AF7-4764-A6CF-8617E2B93686}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B742AD7-9AF7-4764-A6CF-8617E2B93686}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B742AD7-9AF7-4764-A6CF-8617E2B93686}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B742AD7-9AF7-4764-A6CF-8617E2B93686}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32C702C6-4644-442F-A9A4-6E1010815E18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32C702C6-4644-442F-A9A4-6E1010815E18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32C702C6-4644-442F-A9A4-6E1010815E18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32C702C6-4644-442F-A9A4-6E1010815E18}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
