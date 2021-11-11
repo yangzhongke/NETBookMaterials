@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\例子服务实现1\例子服务实现1.csproj" />
+    <ProjectReference Include="..\例子服务实现2\例子服务实现2.csproj" />
+    <ProjectReference Include="..\例子服务接口1\例子服务接口1.csproj" />
+    <ProjectReference Include="..\模块化服务注册框架\模块化服务注册框架.csproj" />
+  </ItemGroup>
+
+</Project>

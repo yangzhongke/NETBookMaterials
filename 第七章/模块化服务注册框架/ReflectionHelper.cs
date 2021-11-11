@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
 
-namespace Zack.Commons
+namespace 模块化服务注册框架
 {
     public static class ReflectionHelper
     {
@@ -97,7 +97,7 @@ namespace Zack.Commons
 
             public override int GetHashCode([DisallowNull] Assembly obj)
             {
-                return obj.GetName().GetHashCode();
+                return obj.GetName().FullName.GetHashCode();
             }
         }
     }
