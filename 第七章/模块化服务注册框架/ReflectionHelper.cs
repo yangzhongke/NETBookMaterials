@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-using System.IO;
-using System.Linq;
+﻿using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
 
 namespace Zack.Commons
@@ -101,7 +97,7 @@ namespace Zack.Commons
 
             public override int GetHashCode([DisallowNull] Assembly obj)
             {
-                return obj.GetName().FullName.GetHashCode();
+                return obj.GetName().GetHashCode();
             }
         }
     }
