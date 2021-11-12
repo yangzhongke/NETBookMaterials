@@ -7,7 +7,7 @@
     <Authors>Zack Yang</Authors>
     <PackageProjectUrl>https://github.com/yangzhongke/YouZack-VNext</PackageProjectUrl>
     <RepositoryUrl>https://github.com/yangzhongke/YouZack-VNext/tree/main/YouZack-VNext/Zack.EventBus</RepositoryUrl>
-    <Version>1.0.1</Version>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
