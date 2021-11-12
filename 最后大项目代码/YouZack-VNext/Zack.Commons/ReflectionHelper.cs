@@ -24,6 +24,11 @@ public static class ReflectionHelper
         }
     }
 
+    /// <summary>
+    /// 判断file这个文件是否是程序集
+    /// </summary>
+    /// <param name="file"></param>
+    /// <returns></returns>
     private static bool IsManagedAssembly(string file)
     {
         using var fs = File.OpenRead(file);
