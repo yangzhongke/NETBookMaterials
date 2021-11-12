@@ -15,7 +15,7 @@ class MediaEncodingStatusChangeIntegrationHandler : DynamicIntegrationEventHandl
     private readonly EncodingEpisodeHelper encHelper;
     private readonly IHubContext<EpisodeEncodingStatusHub> hubContext;
 
-    public MediaEncodingStatusChangeIntegrationHandler(ListeningDbContext dbContext, 
+    public MediaEncodingStatusChangeIntegrationHandler(ListeningDbContext dbContext,
         EncodingEpisodeHelper encHelper,
         IHubContext<EpisodeEncodingStatusHub> hubContext, IListeningRepository repository)
     {
@@ -60,7 +60,7 @@ class MediaEncodingStatusChangeIntegrationHandler : DynamicIntegrationEventHandl
                 Episode episode = Episode.Create(id, maxSeq.Value + 1, encodingEpisode.Name, albumId, outputUrl,
                     encodingEpisode.DurationInSecond, encodingEpisode.SubtitleType, encodingEpisode.Subtitle);*/
                 var builder = new Episode.Builder();
-                builder.Id(id).SequenceNumber(maxSeq+1).Name(encItem.Name)
+                builder.Id(id).SequenceNumber(maxSeq + 1).Name(encItem.Name)
                     .AlbumId(albumId).AudioUrl(outputUrl)
                     .DurationInSecond(encItem.DurationInSecond)
                     .SubtitleType(encItem.SubtitleType).Subtitle(encItem.Subtitle);

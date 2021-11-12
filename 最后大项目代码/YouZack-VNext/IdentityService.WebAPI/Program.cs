@@ -3,7 +3,6 @@ using Identity.Repository;
 using IdentityService.Domain;
 using IdentityService.Infrastructure;
 using IdentityService.Infrastructure.Services;
-using IdentityService.WebAPI.Controllers.Login;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
@@ -13,7 +12,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.ConfigureDbConfiguration();
-builder.ConfigureExtraServices(new InitializerOptions { StartupType = typeof(LoginController), LogFilePath = "e:/temp/IdentityService.log" });
+builder.ConfigureExtraServices(new InitializerOptions
+{
+    EventBusQueueName = "IdentityService.WebAPI",
+    LogFilePath = "e:/temp/IdentityService.log"
+});
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen(c =>
 {

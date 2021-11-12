@@ -36,14 +36,14 @@ namespace Zack.ASPNETCore
         }
 
         private static void InitCacheEntry(ICacheEntry entry, int baseExpireSeconds)
-        {            
+        {
             //过期时间.Random.Shared 是.NET6新增的
-            double sec = Random.Shared.Next(baseExpireSeconds,baseExpireSeconds*2);
+            double sec = Random.Shared.Next(baseExpireSeconds, baseExpireSeconds * 2);
             TimeSpan expiration = TimeSpan.FromSeconds(sec);
             entry.AbsoluteExpirationRelativeToNow = expiration;
         }
 
-        public TResult? GetOrCreate<TResult>(string cacheKey, Func<ICacheEntry,TResult?> valueFactory, int baseExpireSeconds = 60)
+        public TResult? GetOrCreate<TResult>(string cacheKey, Func<ICacheEntry, TResult?> valueFactory, int baseExpireSeconds = 60)
         {
             ValidateValueType<TResult>();
             //因为IMemoryCache保存的是一个CacheEntry，所以null值也认为是合法的，因此返回null不会有“缓存穿透”的问题

@@ -214,7 +214,7 @@ class RabbitMQEventBus : IEventBus, IDisposable
             {
                 //各自在不同的Scope中，避免DbContext等的共享造成如下问题：
                 //The instance of entity type cannot be tracked because another instance
-                using var scope = this._serviceProvider.CreateScope();                
+                using var scope = this._serviceProvider.CreateScope();
                 IIntegrationEventHandler? handler = scope.ServiceProvider.GetService(subscription) as IIntegrationEventHandler;
                 if (handler == null)
                 {

@@ -53,7 +53,7 @@ namespace Listening.Infrastructure
 
         public async Task<Episode?> GetEpisodeByIdAsync(Guid episodeId)
         {
-            return await dbCtx.Episodes.SingleOrDefaultAsync(e=>e.Id== episodeId);
+            return await dbCtx.Episodes.SingleOrDefaultAsync(e => e.Id == episodeId);
         }
 
         public async Task<int> GetMaxSeqOfEpisodesAsync(Guid albumId)
@@ -65,7 +65,7 @@ namespace Listening.Infrastructure
 
         public Task<Episode[]> GetEpisodesByAlbumIdAsync(Guid albumId)
         {
-            return dbCtx.Episodes.OrderBy(e=>e.SequenceNumber).Where(a => a.AlbumId == albumId).ToArrayAsync();
+            return dbCtx.Episodes.OrderBy(e => e.SequenceNumber).Where(a => a.AlbumId == albumId).ToArrayAsync();
         }
     }
 }

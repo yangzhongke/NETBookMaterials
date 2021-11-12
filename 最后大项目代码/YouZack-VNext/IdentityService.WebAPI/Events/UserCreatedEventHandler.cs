@@ -1,5 +1,4 @@
 ﻿using Identity.Repository;
-using Microsoft.Extensions.Logging;
 using Zack.EventBus;
 
 namespace IdentityService.WebAPI.Events

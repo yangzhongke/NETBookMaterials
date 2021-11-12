@@ -162,11 +162,11 @@ public class Episode : AggregateRootEntity, IAggregateRoot
         }
         public Episode Build()
         {
-            if(id==Guid.Empty)
+            if (id == Guid.Empty)
             {
                 throw new ArgumentOutOfRangeException(nameof(id));
             }
-            if (name==null)
+            if (name == null)
             {
                 throw new ArgumentNullException(nameof(name));
             }
@@ -178,7 +178,7 @@ public class Episode : AggregateRootEntity, IAggregateRoot
             {
                 throw new ArgumentNullException(nameof(audioUrl));
             }
-            if(durationInSecond<=0)
+            if (durationInSecond <= 0)
             {
                 throw new ArgumentOutOfRangeException(nameof(durationInSecond));
             }

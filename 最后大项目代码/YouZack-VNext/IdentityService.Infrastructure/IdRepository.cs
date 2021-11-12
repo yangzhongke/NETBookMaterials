@@ -6,7 +6,7 @@ using System.Text;
 
 namespace IdentityService.Infrastructure
 {
-    class IdRepository: IIdRepository
+    class IdRepository : IIdRepository
     {
         private readonly IdUserManager userManager;
         private readonly RoleManager<Role> roleManager;

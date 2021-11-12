@@ -12,8 +12,8 @@ namespace IdentityService.Infrastructure
         private readonly ITokenService tokenService;
         private readonly IOptions<JWTOptions> optJWT;
 
-        public IdDomainService(IIdRepository repository, 
-             ITokenService tokenService,IOptions<JWTOptions> optJWT)
+        public IdDomainService(IIdRepository repository,
+             ITokenService tokenService, IOptions<JWTOptions> optJWT)
         {
             this.repository = repository;
             this.tokenService = tokenService;
@@ -49,7 +49,7 @@ namespace IdentityService.Infrastructure
             {
                 var user = await repository.FindByPhoneNumberAsync(phoneNum);
                 string token = await BuildTokenAsync(user);
-                return (SignInResult.Success,token);
+                return (SignInResult.Success, token);
             }
             else
             {

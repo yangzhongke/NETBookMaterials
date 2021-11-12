@@ -16,7 +16,7 @@ public class LoginController : ControllerBase
     private readonly IIdRepository repository;
     private readonly IdDomainService idService;
 
-    public LoginController(IdDomainService idService,IIdRepository repository)
+    public LoginController(IdDomainService idService, IIdRepository repository)
     {
         this.idService = idService;
         this.repository = repository;
@@ -65,7 +65,7 @@ public class LoginController : ControllerBase
     {
         //todo：要通过行为验证码、图形验证码等形式来防止暴力破解
         (var checkResult, string? token) = await idService.LoginByPhoneAndPwdAsync(req.PhoneNum, req.Password);
-        if(checkResult.Succeeded)
+        if (checkResult.Succeeded)
         {
             return token;
         }
@@ -85,7 +85,7 @@ public class LoginController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<string>> LoginByUserNameAndPwd(LoginByUserNameAndPwdRequest req)
     {
-        (var checkResult,var token) = await idService.LoginByUserNameAndPwdAsync(req.UserName, req.Password);
+        (var checkResult, var token) = await idService.LoginByUserNameAndPwdAsync(req.UserName, req.Password);
         if (checkResult.Succeeded)
         {
             return token!;

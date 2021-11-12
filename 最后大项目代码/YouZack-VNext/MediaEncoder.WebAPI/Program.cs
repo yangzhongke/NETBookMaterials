@@ -12,7 +12,7 @@ builder.ConfigureDbConfiguration();
 builder.ConfigureExtraServices(new InitializerOptions
 {
     LogFilePath = "e:/temp/MediaEncoder.log",
-    StartupType = typeof(EncodingBgService)
+    EventBusQueueName = "MediaEncoder.WebAPI"
 });
 builder.Services.Configure<FileServiceOptions>(builder.Configuration.GetSection("FileService:Endpoint"));
 builder.Services.Configure<JWTOptions>(builder.Configuration.GetSection("JWT"));

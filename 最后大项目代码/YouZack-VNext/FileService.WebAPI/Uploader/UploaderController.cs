@@ -29,7 +29,7 @@ public class UploaderController : ControllerBase
     [HttpGet]
     public async Task<FileExistsResponse> FileExists(long fileSize, string sha256Hash)
     {
-        var item = await repository.FindFileAsync(fileSize,sha256Hash);
+        var item = await repository.FindFileAsync(fileSize, sha256Hash);
         if (item == null)
         {
             return new FileExistsResponse(false, null);

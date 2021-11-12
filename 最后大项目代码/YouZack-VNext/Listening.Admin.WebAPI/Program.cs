@@ -1,5 +1,4 @@
 using CommonInitializer;
-using Listening.Admin.WebAPI.Albums;
 using Listening.Admin.WebAPI.Hubs;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
@@ -10,7 +9,7 @@ builder.ConfigureDbConfiguration();
 builder.ConfigureExtraServices(new InitializerOptions
 {
     LogFilePath = "e:/temp/Listening.Admin.log",
-    StartupType = typeof(AlbumController)
+    EventBusQueueName = "Listening.Admin"
 });
 builder.Services.AddScoped<EncodingEpisodeHelper>();
 builder.Services.AddControllers();

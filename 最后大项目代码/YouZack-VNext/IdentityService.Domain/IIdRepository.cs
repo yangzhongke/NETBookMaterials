@@ -75,7 +75,7 @@ namespace IdentityService.Domain
         /// <param name="id"></param>
         /// <returns></returns>
         public Task<IdentityResult> RemoveUserAsync(Guid id);
-        
+
         /// <summary>
         /// 添加管理员
         /// </summary>

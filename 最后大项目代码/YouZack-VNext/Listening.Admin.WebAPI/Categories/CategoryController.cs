@@ -53,7 +53,7 @@ public class CategoryController : ControllerBase
     public async Task<ActionResult> Update([RequiredGuid] Guid id, CategoryUpdateRequest request)
     {
         var cat = await repository.GetCategoryByIdAsync(id);
-        if(cat==null)
+        if (cat == null)
         {
             return NotFound("id不存在");
         }

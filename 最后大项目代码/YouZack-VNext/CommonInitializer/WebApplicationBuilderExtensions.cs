@@ -34,11 +34,10 @@ namespace CommonInitializer
 
         public static void ConfigureExtraServices(this WebApplicationBuilder builder, InitializerOptions initOptions)
         {
-            var startupType = initOptions.StartupType;
-
             IServiceCollection services = builder.Services;
             IConfiguration configuration = builder.Configuration;
-            services.RunModuleInitializers(startupType);
+            var assemblies = ReflectionHelper.GetAllReferencedAssemblies();
+            services.RunModuleInitializers(assemblies);
             services.AddAllDbContexts(ctx =>
             {
                 //连接字符串如果放到appsettings.json中，会有泄密的风险
@@ -46,7 +45,7 @@ namespace CommonInitializer
                 //因此这里推荐放到环境变量中。
                 string connStr = configuration.GetValue<string>("DefaultDB:ConnStr");
                 ctx.UseSqlServer(connStr);
-            }, startupType);
+            }, assemblies);
 
             //开始:Authentication,Authorization
             //只要需要校验Authentication报文头的地方（非IdentityService.WebAPI项目）也需要启用这些
@@ -62,7 +61,7 @@ namespace CommonInitializer
             });
             //结束:Authentication,Authorization
 
-            services.AddMediatR(startupType);
+            services.AddMediatR(assemblies);
             //现在不用手动AddMVC了，因此把文档中的services.AddMvc(options =>{})改写成Configure<MvcOptions>(options=> {})这个问题很多都类似
             services.Configure<MvcOptions>(options =>
             {
@@ -94,13 +93,12 @@ namespace CommonInitializer
                 builder.AddSerilog();
             });
             services.AddFluentValidation(fv =>
-            {
-                var asms = ReflectionHelper.GetAllReferencedAssemblies(startupType.Assembly);
-                fv.RegisterValidatorsFromAssemblies(asms);
+            {                
+                fv.RegisterValidatorsFromAssemblies(assemblies);
             });
             services.Configure<JWTOptions>(configuration.GetSection("JWT"));
             services.Configure<IntegrationEventRabbitMQOptions>(configuration.GetSection("RabbitMQ"));
-            services.AddEventBus(initOptions.ApplicationName, startupType);
+            services.AddEventBus(initOptions.EventBusQueueName, assemblies);
 
             //Redis的配置
             string redisConnStr = configuration.GetValue<string>("Redis:ConnStr");
@@ -108,8 +106,7 @@ namespace CommonInitializer
             services.AddSingleton(typeof(IConnectionMultiplexer), redisConnMultiplexer);
             services.Configure<ForwardedHeadersOptions>(options =>
             {
-                options.ForwardedHeaders =
-                    ForwardedHeaders.All;
+                options.ForwardedHeaders = ForwardedHeaders.All;
             });
         }
     }

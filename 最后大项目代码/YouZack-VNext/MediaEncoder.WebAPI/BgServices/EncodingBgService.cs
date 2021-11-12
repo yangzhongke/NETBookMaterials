@@ -56,12 +56,12 @@ public class EncodingBgService : BackgroundService
     /// <param name="encItem"></param>
     /// <param name="ct"></param>
     /// <returns>ok表示是否下载成功，sourceFile为保存成功的本地文件</returns>
-    private async Task<(bool ok,FileInfo sourceFile)> DownloadSrcAsync(EncodingItem encItem, CancellationToken ct)
+    private async Task<(bool ok, FileInfo sourceFile)> DownloadSrcAsync(EncodingItem encItem, CancellationToken ct)
     {
         //开始下载源文件
         string tempDir = Path.Combine(Path.GetTempPath(), "MediaEncodingDir");
         //源文件的临时保存路径
-        string sourceFullPath = Path.Combine(tempDir, Guid.NewGuid() + "." 
+        string sourceFullPath = Path.Combine(tempDir, Guid.NewGuid() + "."
             + Path.GetExtension(encItem.Name));
         FileInfo sourceFile = new FileInfo(sourceFullPath);
         Guid id = encItem.Id;
@@ -73,7 +73,7 @@ public class EncodingBgService : BackgroundService
         {
             logger.LogInterpolatedWarning($"下载Id={id}，Url={encItem.SourceUrl}失败，{statusCode}");
             sourceFile.Delete();
-            return(false, sourceFile);
+            return (false, sourceFile);
         }
         else
         {
@@ -89,8 +89,8 @@ public class EncodingBgService : BackgroundService
     private Task<Uri> UploadFileAsync(FileInfo file, CancellationToken ct)
     {
         Uri urlRoot = optionFileService.Value.UrlRoot;
-        FileServiceClient fileService = new FileServiceClient(httpClientFactory, 
-                urlRoot,optionJWT.Value, tokenService);
+        FileServiceClient fileService = new FileServiceClient(httpClientFactory,
+                urlRoot, optionJWT.Value, tokenService);
         return fileService.UploadAsync(file, ct);
     }
 
@@ -128,7 +128,7 @@ public class EncodingBgService : BackgroundService
     /// <param name="outputFormat"></param>
     /// <param name="ct"></param>
     /// <returns>转码结果</returns>
-    private async Task<bool> EncodeAsync(FileInfo srcFile,FileInfo destFile, 
+    private async Task<bool> EncodeAsync(FileInfo srcFile, FileInfo destFile,
         string outputFormat, CancellationToken ct)
     {
         var encoder = encoderFactory.Create(outputFormat);
@@ -165,13 +165,13 @@ public class EncodingBgService : BackgroundService
         }
         encItem.Start();
         await dbContext.SaveChangesAsync(ct);//立即保存一下状态的修改
-                                                        //发出一次集成事件
+                                             //发出一次集成事件
         (var downloadOk, var srcFile) = await DownloadSrcAsync(encItem, ct);
         if (!downloadOk)
         {
             encItem.Fail($"下载失败");
             return;
-        }        
+        }
         FileInfo destFile = BuildDestFile(encItem);
         try
         {

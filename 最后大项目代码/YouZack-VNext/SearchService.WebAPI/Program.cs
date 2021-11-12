@@ -4,7 +4,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using Nest;
-using SearchService.WebAPI.Controllers;
 using SearchService.WebAPI.Options;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,7 +11,7 @@ builder.ConfigureDbConfiguration();
 builder.ConfigureExtraServices(new InitializerOptions
 {
     LogFilePath = "e:/temp/SearchService.log",
-    StartupType = typeof(SearchController)
+    EventBusQueueName = "SearchService.WebAPI"
 });
 // Add services to the container.
 

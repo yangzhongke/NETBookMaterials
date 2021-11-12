@@ -13,7 +13,7 @@ namespace Zack.DomainCommons.Models
             = new List<INotification>();*/
         //好像在.NET 5中，这个DomainEvents必须为public 属性+[NotMapped]，因为ChangeTracker跟踪的是一个拷贝，而不是本来这个对象
         //但是好像到了.NET6中，DomainEvents为字段也可以了
-        private List<INotification> domainEvents=new();
+        private List<INotification> domainEvents = new();
 
         public Guid Id { get; protected set; } = Guid.NewGuid();
 

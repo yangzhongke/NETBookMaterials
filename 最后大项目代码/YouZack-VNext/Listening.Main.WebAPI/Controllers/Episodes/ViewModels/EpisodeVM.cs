@@ -18,7 +18,7 @@ public record EpisodeVM(Guid Id, MultilingualString Name, Guid AlbumId, Uri Audi
             {
                 SentenceVM vm = new SentenceVM(s.StartTime.TotalSeconds, s.EndTime.TotalSeconds, s.Value);
                 sentenceVMs.Add(vm);
-            }            
+            }
         }
         return new EpisodeVM(e.Id, e.Name, e.AlbumId, e.AudioUrl, e.DurationInSecond, sentenceVMs);
     }

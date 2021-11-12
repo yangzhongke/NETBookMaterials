@@ -30,8 +30,8 @@ public class EpisodeController : ControllerBase
         //如果上传的是m4a，不用转码，直接存到数据库
         if (req.AudioUrl.ToString().EndsWith("m4a", StringComparison.OrdinalIgnoreCase))
         {
-            Episode episode = await domainService.AddEpisodeAsync(req.Name,req.AlbumId,
-                req.AudioUrl,req.DurationInSecond,req.SubtitleType,req.Subtitle);
+            Episode episode = await domainService.AddEpisodeAsync(req.Name, req.AlbumId,
+                req.AudioUrl, req.DurationInSecond, req.SubtitleType, req.Subtitle);
             dbContext.Add(episode);
             return episode.Id;
         }
@@ -54,7 +54,7 @@ public class EpisodeController : ControllerBase
     public async Task<ActionResult> Update([RequiredGuid] Guid id, EpisodeUpdateRequest request)
     {
         var episode = await repository.GetEpisodeByIdAsync(id);
-        if(episode==null)
+        if (episode == null)
         {
             return NotFound("id没找到");
         }

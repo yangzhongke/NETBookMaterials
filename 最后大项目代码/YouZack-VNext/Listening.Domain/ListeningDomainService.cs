@@ -17,10 +17,10 @@ namespace Listening.Domain
         {
             int maxSeq = await repository.GetMaxSeqOfAlbumsAsync(categoryId);
             var id = Guid.NewGuid();
-            return Album.Create(id, maxSeq+1, name,categoryId);
+            return Album.Create(id, maxSeq + 1, name, categoryId);
         }
 
-        public async Task SortAlbumsAsync(Guid categoryId,Guid[] sortedAlbumIds)
+        public async Task SortAlbumsAsync(Guid categoryId, Guid[] sortedAlbumIds)
         {
             var albums = await repository.GetAlbumsByCategoryIdAsync(categoryId);
             var idsInDB = albums.Select(a => a.Id);
@@ -43,7 +43,7 @@ namespace Listening.Domain
             }
         }
 
-        public async Task<Category> AddCategoryAsync(MultilingualString name,Uri coverUrl)
+        public async Task<Category> AddCategoryAsync(MultilingualString name, Uri coverUrl)
         {
             int maxSeq = await repository.GetMaxSeqOfCategoriesAsync();
             var id = Guid.NewGuid();
@@ -73,7 +73,7 @@ namespace Listening.Domain
         }
 
         public async Task<Episode> AddEpisodeAsync(MultilingualString name,
-            Guid albumId, Uri audioUrl,double durationInSecond,
+            Guid albumId, Uri audioUrl, double durationInSecond,
             string subtitleType, string subtitle)
         {
             int maxSeq = await repository.GetMaxSeqOfEpisodesAsync(albumId);

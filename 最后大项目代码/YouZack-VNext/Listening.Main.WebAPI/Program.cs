@@ -1,5 +1,4 @@
 using CommonInitializer;
-using Listening.Main.WebAPI.Controllers.Albums.ViewModels;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -9,7 +8,7 @@ builder.ConfigureDbConfiguration();
 builder.ConfigureExtraServices(new InitializerOptions
 {
     LogFilePath = "e:/temp/Listening.Main.log",
-    StartupType = typeof(AlbumVM)
+    EventBusQueueName = "Listening.Main"
 });
 // Add services to the container.
 //builder.Services.AddScoped<IListeningRepository, ListeningRepository>();

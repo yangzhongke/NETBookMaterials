@@ -45,7 +45,7 @@ public class UserAdminController : ControllerBase
     [HttpPost]
     public async Task<ActionResult> AddAdminUser(AddAdminUserRequest req)
     {
-        (var result,var user,var password) = await repository
+        (var result, var user, var password) = await repository
             .AddAdminUserAsync(req.UserName, req.PhoneNum);
         if (!result.Succeeded)
         {

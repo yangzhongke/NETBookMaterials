@@ -36,7 +36,7 @@ public class AlbumController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<Guid>> Add(AlbumAddRequest req)
     {
-        Album album = await domainService.AddAlbumAsync(req.CategoryId,req.Name);
+        Album album = await domainService.AddAlbumAsync(req.CategoryId, req.Name);
         dbCtx.Add(album);
         return album.Id;
     }
@@ -46,7 +46,7 @@ public class AlbumController : ControllerBase
     public async Task<ActionResult> Update([RequiredGuid] Guid id, AlbumUpdateRequest request)
     {
         var album = await repository.GetAlbumByIdAsync(id);
-        if(album==null)
+        if (album == null)
         {
             return NotFound("id没找到");
         }

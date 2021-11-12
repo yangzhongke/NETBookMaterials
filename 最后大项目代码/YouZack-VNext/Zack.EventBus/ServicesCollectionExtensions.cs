@@ -5,24 +5,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using Zack.Commons;
 
 namespace Zack.EventBus
 {
     public static class ServicesCollectionExtensions
     {
-        public static IServiceCollection AddEventBus(this IServiceCollection services, string queueName, Type rootType)
-        {
-            var asms = ReflectionHelper.GetAllReferencedAssemblies(rootType.Assembly);
-            return AddEventBus(services, queueName, asms);
-        }
 
-        public static IServiceCollection AddEventBus(this IServiceCollection services, string queueName, params Assembly[] assemblies)
-        {
-            return AddEventBus(services, queueName, assemblies.ToList());
-        }
-
-        public static IServiceCollection AddEventBus(this IServiceCollection services, string queueName, IEnumerable<Assembly> assemblies)
+        public static IServiceCollection AddEventBus(this IServiceCollection services, string queueName,
+            IEnumerable<Assembly> assemblies)
         {
             List<Type> eventHandlers = new List<Type>();
             foreach (var asm in assemblies)

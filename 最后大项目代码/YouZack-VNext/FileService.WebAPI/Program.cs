@@ -1,6 +1,5 @@
 using CommonInitializer;
 using FileService.Infrastructure.Services;
-using FileService.WebAPI.Uploader;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -10,7 +9,7 @@ builder.ConfigureDbConfiguration();
 builder.ConfigureExtraServices(new InitializerOptions
 {
     LogFilePath = "e:/temp/FileService.log",
-    StartupType = typeof(UploaderController)
+    EventBusQueueName = "FileService.WebAPI",
 });
 
 // Add services to the container.

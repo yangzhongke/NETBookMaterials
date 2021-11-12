@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "例子服务实现2", "例�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "模块化测试程序1", "模块化测试程序1\模块化测试程序1.csproj", "{6F80361E-CBEC-4DBC-8460-D4D6D5EBEF58}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "模块化MSTest", "模块化MSTest\模块化MSTest.csproj", "{09F49509-5764-40CF-910E-A1AC7EDBD24D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{6F80361E-CBEC-4DBC-8460-D4D6D5EBEF58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F80361E-CBEC-4DBC-8460-D4D6D5EBEF58}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F80361E-CBEC-4DBC-8460-D4D6D5EBEF58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09F49509-5764-40CF-910E-A1AC7EDBD24D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09F49509-5764-40CF-910E-A1AC7EDBD24D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09F49509-5764-40CF-910E-A1AC7EDBD24D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09F49509-5764-40CF-910E-A1AC7EDBD24D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,6 +63,7 @@ Global
 		{131A7661-2F59-4E10-B2BB-592E1287BB0A} = {7C7B90A4-0663-450C-8547-01D4E2764563}
 		{EECF27FC-B89F-41F6-AEA9-720C45F85607} = {7C7B90A4-0663-450C-8547-01D4E2764563}
 		{6F80361E-CBEC-4DBC-8460-D4D6D5EBEF58} = {7C7B90A4-0663-450C-8547-01D4E2764563}
+		{09F49509-5764-40CF-910E-A1AC7EDBD24D} = {7C7B90A4-0663-450C-8547-01D4E2764563}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A91AAEA9-15AC-41AD-A1E4-A445447BE325}
