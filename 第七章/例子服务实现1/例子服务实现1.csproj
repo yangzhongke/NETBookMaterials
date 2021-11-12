@@ -7,8 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Zack.Commons" Version="1.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\例子服务接口1\例子服务接口1.csproj" />
-    <ProjectReference Include="..\模块化服务注册框架\模块化服务注册框架.csproj" />
   </ItemGroup>
 
 </Project>

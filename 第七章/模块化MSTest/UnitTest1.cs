@@ -1,9 +1,8 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Linq;
-using System.Reflection;
+using Zack.Commons;
 using 例子服务接口1;
-using 模块化服务注册框架;
 
 namespace 模块化MSTest
 {
@@ -13,8 +12,9 @@ namespace 模块化MSTest
         [TestMethod]
         public void TestMethod1()
         {
+            var assemblies = ReflectionHelper.GetAllReferencedAssemblies();
             ServiceCollection services = new ServiceCollection();
-            ModuleHelper.RunModuleInitializers(services);
+            services.RunModuleInitializers(assemblies);
             using var sp = services.BuildServiceProvider();
             var items = sp.GetServices<IMyService>();
             Assert.AreEqual(items.Count(), 2);
