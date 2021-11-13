@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\index.html" />
+    <None Include="wwwroot\mvp.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MiniWebAPI\MiniWebAPI.csproj" />
+  </ItemGroup>
+
+</Project>
