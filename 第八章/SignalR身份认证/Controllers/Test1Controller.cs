@@ -14,7 +14,13 @@ namespace SignalRCoreTest1.Controllers
     [Route("[controller]/[action]")]
     public class Test1Controller : ControllerBase
     {
-        private static string BuildToken(IEnumerable<Claim> claims, JWTOptions options)
+		private readonly IHubContext<ChatRoomHub> hubContext;
+		public Test1Controller(IHubContext<ChatRoomHub> hubContext)
+		{
+			this.hubContext = hubContext;
+		}
+
+		private static string BuildToken(IEnumerable<Claim> claims, JWTOptions options)
 		{
 			DateTime expires = DateTime.Now.AddSeconds(options.ExpireSeconds);
 			byte[] keyBytes = Encoding.UTF8.GetBytes(options.SigningKey);
@@ -43,5 +49,14 @@ namespace SignalRCoreTest1.Controllers
 			string jwtToken = BuildToken(claims, jwtOptions.Value);
 			return Ok(jwtToken);
 		}
+
+		[HttpPost]
+		public async Task<IActionResult> AddUser(AddNewUserRequest req)
+		{
+			//这里省略执行用户注册的代码
+			await hubContext.Clients.All.SendAsync("UserAdded", req.UserName);
+			return Ok();
+		}
+
 	}
 }

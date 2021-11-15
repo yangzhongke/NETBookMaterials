@@ -27,13 +27,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "内置数据校验", "内�
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentValidation的基本使用", "FluentValidation的基本使用\FluentValidation的基本使用.csproj", "{14F92F25-5186-465F-83C5-6F8C1A8CCB20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentValidation中注入服务", "FluentValidation中注入服务\FluentValidation中注入服务.csproj", "{E68559EC-EBBF-4ADF-B1EE-356547284E5F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentValidation中注入服务", "FluentValidation中注入服务\FluentValidation中注入服务.csproj", "{E68559EC-EBBF-4ADF-B1EE-356547284E5F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SignalR", "SignalR", "{9C569CC1-996A-4EA1-8255-74F4056A5485}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalR基本使用", "SignalR基本使用\SignalR基本使用.csproj", "{71E8E70B-4B25-4D66-9F5F-0C369A888B24}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalR基本使用", "SignalR基本使用\SignalR基本使用.csproj", "{71E8E70B-4B25-4D66-9F5F-0C369A888B24}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalR身份认证", "SignalR身份认证\SignalR身份认证.csproj", "{432B33BE-8F86-4745-BCA7-9DA0EA5AF856}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalR身份认证", "SignalR身份认证\SignalR身份认证.csproj", "{432B33BE-8F86-4745-BCA7-9DA0EA5AF856}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "导入英汉词典", "导入英汉词典\导入英汉词典.csproj", "{83F3940C-E58A-42FC-94B3-64689B991214}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -89,6 +91,10 @@ Global
 		{432B33BE-8F86-4745-BCA7-9DA0EA5AF856}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{432B33BE-8F86-4745-BCA7-9DA0EA5AF856}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{432B33BE-8F86-4745-BCA7-9DA0EA5AF856}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83F3940C-E58A-42FC-94B3-64689B991214}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83F3940C-E58A-42FC-94B3-64689B991214}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83F3940C-E58A-42FC-94B3-64689B991214}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83F3940C-E58A-42FC-94B3-64689B991214}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -106,6 +112,7 @@ Global
 		{E68559EC-EBBF-4ADF-B1EE-356547284E5F} = {7887E222-3A29-41A7-9623-556FECB211BF}
 		{71E8E70B-4B25-4D66-9F5F-0C369A888B24} = {9C569CC1-996A-4EA1-8255-74F4056A5485}
 		{432B33BE-8F86-4745-BCA7-9DA0EA5AF856} = {9C569CC1-996A-4EA1-8255-74F4056A5485}
+		{83F3940C-E58A-42FC-94B3-64689B991214} = {9C569CC1-996A-4EA1-8255-74F4056A5485}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A91AAEA9-15AC-41AD-A1E4-A445447BE325}
