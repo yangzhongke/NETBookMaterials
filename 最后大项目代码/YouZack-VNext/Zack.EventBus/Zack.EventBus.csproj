@@ -5,8 +5,8 @@
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>Zack Yang</Authors>
-    <PackageProjectUrl>https://github.com/yangzhongke/YouZack-VNext</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/yangzhongke/YouZack-VNext/tree/main/YouZack-VNext/Zack.EventBus</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/yangzhongke/NETBookMaterials</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/yangzhongke/NETBookMaterials</RepositoryUrl>
     <Version>1.1.0</Version>
   </PropertyGroup>
 

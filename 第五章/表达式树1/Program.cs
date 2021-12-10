@@ -148,3 +148,19 @@ foreach(var b in books)
 {
     Console.WriteLine($"{b.Id},{b.Title},{b.Price}");
 }
+/*
+var books1 = ctx.Books.Where(IsOk).ToArray();
+foreach (var b in books1)
+{
+    Console.WriteLine(b);
+}
+bool IsOk(Book b)
+{
+	return b.Price>3;
+}*/
+/*
+var books1 = ctx.Books.Where(b => b.Title.PadLeft(5) == "hello");
+foreach (var b in books1)
+{
+	Console.WriteLine(b);
+}*/

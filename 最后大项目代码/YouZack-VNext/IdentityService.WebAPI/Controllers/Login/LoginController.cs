@@ -83,18 +83,13 @@ public class LoginController : ControllerBase
 
     [AllowAnonymous]
     [HttpPost]
-    public async Task<ActionResult<string>> LoginByUserNameAndPwd(LoginByUserNameAndPwdRequest req)
+    public async Task<ActionResult<string>> LoginByUserNameAndPwd(
+        LoginByUserNameAndPwdRequest req)
     {
         (var checkResult, var token) = await idService.LoginByUserNameAndPwdAsync(req.UserName, req.Password);
-        if (checkResult.Succeeded)
-        {
-            return token!;
-        }
-        else if (checkResult.IsLockedOut)
-        {
-            //尝试登录次数太多
+        if (checkResult.Succeeded) return token!;
+        else if (checkResult.IsLockedOut)//尝试登录次数太多
             return StatusCode((int)HttpStatusCode.Locked, "用户已经被锁定");
-        }
         else
         {
             string msg = checkResult.ToString();
