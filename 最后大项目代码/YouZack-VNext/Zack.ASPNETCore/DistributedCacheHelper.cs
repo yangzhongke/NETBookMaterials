@@ -3,6 +3,7 @@ using System;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using Zack.Commons;
 
 namespace Zack.ASPNETCore
 {
@@ -18,7 +19,7 @@ namespace Zack.ASPNETCore
         private static DistributedCacheEntryOptions CreateOptions(int baseExpireSeconds)
         {
             //过期时间.Random.Shared 是.NET6新增的
-            double sec = Random.Shared.Next(baseExpireSeconds, baseExpireSeconds * 2);
+            double sec = Random.Shared.NextDouble(baseExpireSeconds, baseExpireSeconds * 2);
             TimeSpan expiration = TimeSpan.FromSeconds(sec);
             DistributedCacheEntryOptions options = new DistributedCacheEntryOptions();
             options.AbsoluteExpirationRelativeToNow = expiration;

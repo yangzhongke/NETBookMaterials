@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Zack.Commons;
 
 namespace Zack.ASPNETCore
 {
@@ -38,7 +39,7 @@ namespace Zack.ASPNETCore
         private static void InitCacheEntry(ICacheEntry entry, int baseExpireSeconds)
         {
             //过期时间.Random.Shared 是.NET6新增的
-            double sec = Random.Shared.Next(baseExpireSeconds, baseExpireSeconds * 2);
+            double sec = Random.Shared.NextDouble(baseExpireSeconds, baseExpireSeconds * 2);
             TimeSpan expiration = TimeSpan.FromSeconds(sec);
             entry.AbsoluteExpirationRelativeToNow = expiration;
         }
