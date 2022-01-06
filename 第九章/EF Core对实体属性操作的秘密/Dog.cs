@@ -1,4 +1,5 @@
-﻿class Dog
+﻿/*
+class Dog
 {
     public long Id { get; set; }
     private string name;
@@ -15,8 +16,8 @@
             this.name = value;
         }
     }
-}
-/*
+}*/
+
 class Dog
 {
     public long Id { get; set; }
@@ -35,4 +36,3 @@ class Dog
         }
     }
 }
-*/

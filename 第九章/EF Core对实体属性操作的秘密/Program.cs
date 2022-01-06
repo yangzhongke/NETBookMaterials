@@ -14,7 +14,8 @@ Dog d1 = new Dog { Name = "goofy" };
 Console.WriteLine("Dog初始化完毕");
 ctx.Dogs.Add(d1);
 ctx.SaveChanges();
-Console.WriteLine("SaveChanges完毕");*/
+Console.WriteLine("SaveChanges完毕");
+*/
 Console.WriteLine("准备读取数据");
 Dog d2 = ctx.Dogs.First(d => d.Name == "goofy");
 Console.WriteLine("读取数据完毕");

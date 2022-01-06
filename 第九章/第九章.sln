@@ -15,13 +15,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "简化值对象的比较操
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "用MediatR实现领域事件", "用MediatR实现领域事件\用MediatR实现领域事件.csproj", "{FF212550-33AE-4D7B-A82C-39F97664C531}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF Core中发布领域事件的合适时机", "EF Core中发布领域事件的合适时机\EF Core中发布领域事件的合适时机.csproj", "{3B507B18-4DFD-4497-BC7B-57FCB34B2E40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EF Core中发布领域事件的合适时机", "EF Core中发布领域事件的合适时机\EF Core中发布领域事件的合适时机.csproj", "{3B507B18-4DFD-4497-BC7B-57FCB34B2E40}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RabbitMQ的基本使用", "RabbitMQ的基本使用", "{98229DB9-F81F-4A37-B6E2-61A957721717}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ发送端", "RabbitMQ发送端\RabbitMQ发送端.csproj", "{9C4378A4-6079-4A22-B926-10A152266774}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMQ发送端", "RabbitMQ发送端\RabbitMQ发送端.csproj", "{9C4378A4-6079-4A22-B926-10A152266774}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ消费端", "RabbitMQ消费端\RabbitMQ消费端.csproj", "{086D33C5-C2E6-4498-841D-3FF77B704A26}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMQ消费端", "RabbitMQ消费端\RabbitMQ消费端.csproj", "{086D33C5-C2E6-4498-841D-3FF77B704A26}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "使用Zack.EventBus", "使用Zack.EventBus", "{81D0D7C4-F7F7-49A4-AD57-2EB560FBE8AD}"
 EndProject
@@ -30,6 +30,12 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Infrastructure", "DDD案例实战_用户管理及登录\Users.Infrastructure\Users.Infrastructure.csproj", "{41A1FF71-0D58-4D58-BC7B-83B064B6D9A8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.WebAPI", "DDD案例实战_用户管理及登录\Users.WebAPI\Users.WebAPI.csproj", "{BD2F52E8-9FB9-4B45-92E7-B34C638F9135}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "发送集成事件", "发送集成事件\发送集成事件.csproj", "{1CFE6CB4-D328-48E6-BB6F-CCD140F5CC1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "接收集成事件", "接收集成事件\接收集成事件.csproj", "{527EEA4C-50F4-4E6E-AA22-DEF2997F09C5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "洋葱架构(整洁架构)", "洋葱架构(整洁架构)", "{8FD0D9F5-3B95-41DA-97EA-B9EB874C2289}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -85,6 +91,14 @@ Global
 		{BD2F52E8-9FB9-4B45-92E7-B34C638F9135}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD2F52E8-9FB9-4B45-92E7-B34C638F9135}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD2F52E8-9FB9-4B45-92E7-B34C638F9135}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CFE6CB4-D328-48E6-BB6F-CCD140F5CC1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CFE6CB4-D328-48E6-BB6F-CCD140F5CC1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CFE6CB4-D328-48E6-BB6F-CCD140F5CC1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CFE6CB4-D328-48E6-BB6F-CCD140F5CC1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{527EEA4C-50F4-4E6E-AA22-DEF2997F09C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{527EEA4C-50F4-4E6E-AA22-DEF2997F09C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{527EEA4C-50F4-4E6E-AA22-DEF2997F09C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{527EEA4C-50F4-4E6E-AA22-DEF2997F09C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -95,6 +109,8 @@ Global
 		{780175D2-7745-4345-9821-FF589C475E8F} = {81D0D7C4-F7F7-49A4-AD57-2EB560FBE8AD}
 		{41A1FF71-0D58-4D58-BC7B-83B064B6D9A8} = {81D0D7C4-F7F7-49A4-AD57-2EB560FBE8AD}
 		{BD2F52E8-9FB9-4B45-92E7-B34C638F9135} = {81D0D7C4-F7F7-49A4-AD57-2EB560FBE8AD}
+		{1CFE6CB4-D328-48E6-BB6F-CCD140F5CC1F} = {8FD0D9F5-3B95-41DA-97EA-B9EB874C2289}
+		{527EEA4C-50F4-4E6E-AA22-DEF2997F09C5} = {8FD0D9F5-3B95-41DA-97EA-B9EB874C2289}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A91AAEA9-15AC-41AD-A1E4-A445447BE325}
