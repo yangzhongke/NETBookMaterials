@@ -6,7 +6,10 @@ class TestDbContext : DbContext
     {
         string connStr = "Server=.;Database=demo1;Trusted_Connection=True";
         optionsBuilder.UseSqlServer(connStr);
-        optionsBuilder.LogTo(Console.WriteLine);
+        optionsBuilder.LogTo(msg => {
+            if(msg.Contains("CommandExecuted"))
+                Console.WriteLine(msg);
+        });
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

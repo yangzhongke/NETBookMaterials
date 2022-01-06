@@ -1,4 +1,4 @@
-﻿/*
+﻿
 using System.Text;
 
 string jwt = Console.ReadLine()!;
@@ -24,8 +24,9 @@ string JwtDecode(string s)
 	var bytes = Convert.FromBase64String(s);
 	return Encoding.UTF8.GetString(bytes);
 }
-*/
+
 //调用JwtSecurityTokenHandler类对JWT令牌进行解码
+/*
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -44,4 +45,4 @@ ClaimsPrincipal claimsPrincipal = tokenHandler.ValidateToken(jwt,
 foreach (var claim in claimsPrincipal.Claims)
 {
 	Console.WriteLine($"{claim.Type}={claim.Value}");
-}
+}*/

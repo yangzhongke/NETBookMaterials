@@ -13,7 +13,7 @@ namespace MiniWebAPI
         public ActionLocator(IServiceCollection services, Assembly assemblyWeb)
         {
             var controllerTypes = assemblyWeb.GetTypes().Where(IsControllerType);
-            foreach (var ctrlType in controllerTypes)
+            foreach (Type ctrlType in controllerTypes)
             {
                 services.AddScoped(ctrlType);
                 //去掉结尾的Controller

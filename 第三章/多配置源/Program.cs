@@ -8,5 +8,6 @@ string server = config["Server"];
 string userName = config["UserName"];
 string password = config["Password"];
 string port = config["Port"];
-Console.WriteLine($"server={server},port={port}");
-Console.WriteLine($"userName={userName},password={password}");
+//Console.WriteLine($"server={server},port={port}");
+//Console.WriteLine($"userName={userName},password={password}");
+Console.WriteLine(config.GetDebugView());

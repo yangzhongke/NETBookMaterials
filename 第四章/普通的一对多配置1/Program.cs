@@ -24,14 +24,14 @@ foreach (Comment c in a.Comments)
 	Console.WriteLine(c.Id + ":" + c.Message);
 }*/
 //不使用Include的代码
-/*
+
 using TestDbContext ctx = new TestDbContext();
 Article a = ctx.Articles.Single(a => a.Id == 1);
 Console.WriteLine(a.Title);
 foreach (Comment c in a.Comments)
 {
 	Console.WriteLine(c.Id + ":" + c.Message);
-}*/
+}
 //实体对象的关联追踪
 /*
 Article a1 = new Article();
@@ -66,10 +66,11 @@ foreach (var article in articles)
 	Console.WriteLine($"{article.Id},{article.Title}");
 }
 */
+/*
 TestDbContext ctx = new TestDbContext();
 var articles = ctx.Comments.Where(c => c.Message.Contains("微软"))
 	.Select(c => c.Article).Distinct();
 foreach (var article in articles)
 {
 	Console.WriteLine($"{article.Id},{article.Title}");
-}
+}*/

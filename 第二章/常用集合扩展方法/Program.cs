@@ -77,11 +77,11 @@ Console.WriteLine($"最小Id:{minId}");
 double avgSalary = list.Average(e => e.Salary);
 Console.WriteLine($"平均工资:{avgSalary}");
 int sumSalary = list.Sum(e => e.Salary);
-Console.WriteLine($"工资总和:{avgSalary}");
+Console.WriteLine($"工资总和:{sumSalary}");
 int count = list.Count();
 Console.WriteLine($"总条数:{count}");
-int maxSalary2 = list.Where(e => e.Age > 30).Min(e => e.Salary);
-Console.WriteLine($"大于30岁的人群中的最低工资:{maxSalary2}");
+int minSalary2 = list.Where(e => e.Age > 30).Min(e => e.Salary);
+Console.WriteLine($"大于30岁的人群中的最低工资:{minSalary2}");
 */
 /*
 int[] scores = { 61, 90, 100, 99, 18, 22, 38, 66, 80, 93, 55, 50, 89 };
@@ -139,15 +139,16 @@ foreach (var item in items)
     Console.WriteLine($"性别{item.Gender},人数{item.Count},平均工资{item.AvgSalary:F},最小年龄{item.MinAge}");
 }
 */
-/*
+
 var items = list.Where(e => e.Id > 2).GroupBy(e => e.Age).OrderBy(g => g.Key).Take(3)
     .Select(g => new { Age = g.Key, Count = g.Count(), AvgSalary = g.Average(e => e.Salary) });
 foreach (var item in items)
 {
     Console.WriteLine($"年龄:{item.Age},人数：{item.Count},平均工资:{item.AvgSalary}");
 }
-*/
+/*
 var items2 = from e in list
             where e.Salary > 3000
             orderby e.Age
             select new { e.Name, e.Age, Gender = e.Gender ? "男" : "女" };
+*/

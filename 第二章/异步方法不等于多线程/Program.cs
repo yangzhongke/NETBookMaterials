@@ -13,6 +13,7 @@ static async Task<decimal> CalcAsync(int n)
 	}
 	return result;
 }*/
+
 async Task<decimal> CalcAsync(int n)
 {
 	Console.WriteLine("CalcAsync:" + Thread.CurrentThread.ManagedThreadId);

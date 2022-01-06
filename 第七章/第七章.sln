@@ -45,13 +45,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "请求限流器", "请求�
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "中间件", "中间件", "{78586D28-A130-44A2-AD0A-0B64D79A304C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "中间件入门案例", "中间件入门案例\中间件入门案例.csproj", "{A1F1827B-7BF5-4237-8D1C-C899890E5956}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "中间件入门案例", "中间件入门案例\中间件入门案例.csproj", "{A1F1827B-7BF5-4237-8D1C-C899890E5956}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniWebAPI", "MiniWebAPI\MiniWebAPI.csproj", "{0E055E43-4E24-4BF2-A05F-5A3D15DF83C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniWebAPI", "MiniWebAPI\MiniWebAPI.csproj", "{0E055E43-4E24-4BF2-A05F-5A3D15DF83C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniWebAPIDemo1", "MiniWebAPIDemo1\MiniWebAPIDemo1.csproj", "{8683CDBC-3E94-4623-A230-C372D796D5C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniWebAPIDemo1", "MiniWebAPIDemo1\MiniWebAPIDemo1.csproj", "{8683CDBC-3E94-4623-A230-C372D796D5C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Markdown转换器中间件", "Markdown转换器中间件\Markdown转换器中间件.csproj", "{39F17E3C-0CDE-4C19-90AC-EFD1FCFCC561}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Markdown转换器中间件", "Markdown转换器中间件\Markdown转换器中间件.csproj", "{39F17E3C-0CDE-4C19-90AC-EFD1FCFCC561}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "内置中间件的顺序", "内置中间件的顺序\内置中间件的顺序.csproj", "{4434D11B-76E3-4286-8058-95DFEE2794D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -139,6 +141,10 @@ Global
 		{39F17E3C-0CDE-4C19-90AC-EFD1FCFCC561}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39F17E3C-0CDE-4C19-90AC-EFD1FCFCC561}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39F17E3C-0CDE-4C19-90AC-EFD1FCFCC561}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4434D11B-76E3-4286-8058-95DFEE2794D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4434D11B-76E3-4286-8058-95DFEE2794D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4434D11B-76E3-4286-8058-95DFEE2794D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4434D11B-76E3-4286-8058-95DFEE2794D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -162,6 +168,7 @@ Global
 		{0E055E43-4E24-4BF2-A05F-5A3D15DF83C5} = {78586D28-A130-44A2-AD0A-0B64D79A304C}
 		{8683CDBC-3E94-4623-A230-C372D796D5C8} = {78586D28-A130-44A2-AD0A-0B64D79A304C}
 		{39F17E3C-0CDE-4C19-90AC-EFD1FCFCC561} = {78586D28-A130-44A2-AD0A-0B64D79A304C}
+		{4434D11B-76E3-4286-8058-95DFEE2794D8} = {78586D28-A130-44A2-AD0A-0B64D79A304C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A91AAEA9-15AC-41AD-A1E4-A445447BE325}

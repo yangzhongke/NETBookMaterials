@@ -45,6 +45,10 @@ namespace MiniWebAPI
             Type controllerType = actionMethod.DeclaringType!;
             object controllerInstance = sp.GetRequiredService(controllerType);
             var paraValues = BindingHelper.GetParameterValues(context, actionMethod);
+            foreach(var filter in ActionFilters.Filters)
+            {
+                filter.Execute();
+            }
             var result = actionMethod.Invoke(controllerInstance, paraValues);
             //限定返回值只能是普通类型，不能是IActionResult等
             string jsonStr = JsonSerializer.Serialize(result);

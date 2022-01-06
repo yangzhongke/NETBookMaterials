@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 
-class MyDesignTimeDbContextFactory : IDesignTimeDbContextFactory<MyDbContext>
+class MyDesignTimeDbContextFactory:IDesignTimeDbContextFactory<MyDbContext>
 {
 	public MyDbContext CreateDbContext(string[] args)
 	{

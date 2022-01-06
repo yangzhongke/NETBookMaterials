@@ -28,10 +28,11 @@ foreach (var b in books)
 }
 Console.WriteLine("3、遍历IQueryable之后");
 */
-
 //拼接复杂的查询条件
+
+//QueryBooks("爱", true, true, 30);
 /*
-QueryBooks("爱", true, true, 30);
+QueryBooks("爱", false, false, 18);
 void QueryBooks(string searchWords, bool searchAll, bool orderByPrice, double upperPrice)
 {
 	using TestDbContext ctx = new TestDbContext();
@@ -200,4 +201,21 @@ b1.Title = "abc";
 EntityEntry entry1 = ctx.Entry(b1);
 Console.WriteLine(entry1.State);
 */
+/*
+using TestDbContext ctx = new TestDbContext();
+Book b1 = ctx.Books.Single(b => b.Id == 10);
+b1.Title = "yzk";
+ctx.SaveChanges();
+*/
+using TestDbContext ctx = new TestDbContext();
+/*
+Book b1 = new Book { Id = 10 };
+b1.Title = "yzk";
+var entry1 = ctx.Entry(b1);
+entry1.Property("Title").IsModified = true;
+Console.WriteLine(entry1.DebugView.LongView);
+ctx.SaveChanges();*/
+Book b1 = new Book { Id = 28 };
+ctx.Entry(b1).State = EntityState.Deleted;
+ctx.SaveChanges();
 

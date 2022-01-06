@@ -54,14 +54,14 @@ foreach (Book b in books)
     Console.WriteLine($"Id={b.Id},Title={b.Title},Price={b.Price}");
 }*/
 //GroupBy
-/*
+
 using TestDbContext ctx = new TestDbContext();
 var groups = ctx.Books.GroupBy(b => b.AuthorName)
     .Select(g => new { AuthorName = g.Key, BooksCount = g.Count(), MaxPrice = g.Max(b => b.Price) });
 foreach (var g in groups)
 {
-    Console.WriteLine($"作者:{g.AuthorName},著作数量:{g.BooksCount},最贵价格:{g.MaxPrice}");
-}*/
+    Console.WriteLine($"作者:{g.AuthorName},图书数量:{g.BooksCount},最高价格:{g.MaxPrice}");
+}
 //修改数据
 /*
 using TestDbContext ctx = new TestDbContext();
@@ -70,7 +70,21 @@ b.AuthorName = "Jun Wu";
 await ctx.SaveChangesAsync();
 */
 //删除数据
+/*
 using TestDbContext ctx = new TestDbContext();
 var b = ctx.Books.Single(b => b.Title == "数学之美");
 ctx.Remove(b);//也可以写成ctx.Books.Remove(b);
+await ctx.SaveChangesAsync();*/
+/*
+using TestDbContext ctx = new TestDbContext();
+Book b = new Book
+{
+    AuthorName = "Zack Yang",
+    Title = "Zack, Cool guy!",
+    Price = 9.9,
+    PubTime = new DateTime(2020, 12, 30)
+};
+ctx.Books.Add(b);
+Console.WriteLine($"保存前，Id={b.Id}");
 await ctx.SaveChangesAsync();
+Console.WriteLine($"保存后，Id={b.Id}");*/

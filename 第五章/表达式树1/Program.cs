@@ -1,7 +1,11 @@
-﻿/*
+﻿using static System.Linq.Expressions.Expression;
 using System.Linq.Expressions;
 using ExpressionTreeToString;
-using var ctx = new TestDbContext();*/
+using System.Reflection;
+
+using var ctx = new TestDbContext();
+
+
 /*
 Func<Book, bool> f1 = b => b.Price > 5 || b.AuthorName.Contains("杨中科");
 Expression<Func<Book, bool>> e = b => b.Price > 5 || b.AuthorName.Contains("杨中科");
@@ -139,15 +143,14 @@ Book[] QueryBooks(string title, double? lowerPrice, double? upperPrice, int orde
 	}
 	return source.ToArray();
 }*/
-using System.Linq.Dynamic.Core;
 
-using TestDbContext ctx = new TestDbContext();
+/*
 string word = "C语言";
 var books = ctx.Books.WhereInterpolated($"Price>8 or Title.Contains({word})");
 foreach(var b in books)
 {
     Console.WriteLine($"{b.Id},{b.Title},{b.Price}");
-}
+}*/
 /*
 var books1 = ctx.Books.Where(IsOk).ToArray();
 foreach (var b in books1)
@@ -164,3 +167,51 @@ foreach (var b in books1)
 {
 	Console.WriteLine(b);
 }*/
+
+//ctx.Books.Where(b => b.Price > 5);
+/*
+Func<Book, bool> f1 = b => b.Price > 5 || b.AuthorName.Contains("杨中科");
+Expression<Func<Book, bool>> e = b => b.Price > 5 || b.AuthorName.Contains("杨中科");
+Console.WriteLine(f1);
+Console.WriteLine(e);
+*/
+/*
+Expression<Func<Book, bool>> e = b => b.AuthorName.Contains("杨中科") || b.Price > 30;
+Console.WriteLine(e.ToString("Factory methods", "C#"));
+*/
+/*
+Expression<Func<Book, bool>> expr1 = b => b.Price == 5;
+Expression<Func<Book, bool>> expr2 = b => b.Title == "零基础趣学C语言";
+Console.WriteLine(RemoveEmptyLine(expr1.ToString("Factory methods", "C#")));
+Console.WriteLine(RemoveEmptyLine(expr2.ToString("Factory methods", "C#")));
+string RemoveEmptyLine(string s)
+{
+	var strs = s.Split("\r\n",StringSplitOptions.RemoveEmptyEntries);
+	return string.Join("\r\n", strs);
+}*/
+QueryBooks("Price", 18.0);
+QueryBooks("AuthorName", "杨中科");
+QueryBooks("Title", "零基础趣学C语言");
+IEnumerable<Book> QueryBooks(string propName, object value)
+{
+	Type type = typeof(Book);
+	PropertyInfo propInfo = type.GetProperty(propName);
+	Type propType = propInfo.PropertyType;
+	var b = Parameter(typeof(Book), "b");
+	Expression<Func<Book, bool>> expr;
+	if (propType.IsPrimitive)//如果是int、double等基本数据类型
+	{
+		expr = Lambda<Func<Book, bool>>(Equal(
+				MakeMemberAccess(b, typeof(Book).GetProperty(propName)),
+				Constant(value)), b);
+	}
+	else//如果是string等类型
+	{
+		expr = Lambda<Func<Book, bool>>(MakeBinary(ExpressionType.Equal,
+				MakeMemberAccess(b, typeof(Book).GetProperty(propName)),
+				Constant(value), false, propType.GetMethod("op_Equality")
+			), b);
+	}
+	TestDbContext ctx = new TestDbContext();
+	return ctx.Books.Where(expr).ToArray();
+}

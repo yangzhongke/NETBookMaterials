@@ -13,13 +13,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostgreSQL版项目", "Post
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "关系配置", "关系配置", "{4CD861E3-AA7C-46FB-83E4-C10D593D2B81}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "普通的一对多配置1", "普通的一对多配置1\普通的一对多配置1.csproj", "{55F27583-31C5-403E-A7E4-143CAE6E3FAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "普通的一对多配置1", "普通的一对多配置1\普通的一对多配置1.csproj", "{55F27583-31C5-403E-A7E4-143CAE6E3FAA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "单向导航机制", "单向导航机制\单向导航机制.csproj", "{3D9796F5-84CD-49B3-8FAA-5200F3BA0A61}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "一对一关系", "一对一关系\一对一关系.csproj", "{966F6FEE-0C67-4035-A1C8-49D7375F19E7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "多对多配置", "多对多配置\多对多配置.csproj", "{DB0DA52C-3097-4A80-83C3-EEFA07695703}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guid主键", "Guid主键\Guid主键.csproj", "{AD5EF368-75B5-46E7-B8AA-DF9B878CC38C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +61,10 @@ Global
 		{DB0DA52C-3097-4A80-83C3-EEFA07695703}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB0DA52C-3097-4A80-83C3-EEFA07695703}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB0DA52C-3097-4A80-83C3-EEFA07695703}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD5EF368-75B5-46E7-B8AA-DF9B878CC38C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD5EF368-75B5-46E7-B8AA-DF9B878CC38C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD5EF368-75B5-46E7-B8AA-DF9B878CC38C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD5EF368-75B5-46E7-B8AA-DF9B878CC38C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

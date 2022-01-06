@@ -1,6 +1,6 @@
-﻿Person p1 = new Person("Yang", "Zack");
-Person p2 = new Person("Yang", "Zack");
-Person p3 = new Person("Gates", "Bill");
+﻿Person p1 = new Person("Zack", "Yang");
+Person p2 = new Person("Zack", "Yang");
+Person p3 = new Person("Kim", "Yoo");
 Console.WriteLine(p1);
 Console.WriteLine(p1 == p2);
 Console.WriteLine(p1 == p3);
