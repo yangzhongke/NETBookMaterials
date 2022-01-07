@@ -6,9 +6,9 @@
   <el-table row-key='id'
     :data="state.users"
     style="width: 100%">  
-    <el-table-column prop="userName" label="用户名"></el-table-column>
-    <el-table-column prop="phoneNumber" label="手机号"></el-table-column>
-    <el-table-column prop="creationTime" label="创建时间"></el-table-column>
+    <el-table-column width="80px" prop="userName" label="用户名"></el-table-column>
+    <el-table-column prop="phoneNumber" label="手机号" width="120px" ></el-table-column>
+    <el-table-column prop="creationTime" label="创建时间" width="160px"></el-table-column>
     <el-table-column fixed="right" label="操作">
       <template #default="scope">
         <el-button type="text" size="small">

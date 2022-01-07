@@ -6,11 +6,11 @@
     <el-button type="primary" icon="el-icon-success" @click="saveSort" v-show="state.isInSortMode">保存排序</el-button>    
   </el-button-group> 
   <el-table row-key='id' :data="state.encodingEpisodes"  v-if="state.encodingEpisodes.length>0" style="width: 100%">
-    <el-table-column prop="name.chinese" label="中文标题"></el-table-column>
-    <el-table-column prop="name.english" label="英文标题"></el-table-column>
-    <el-table-column prop="durationInSecond" label="秒数"> 
+    <el-table-column prop="name.chinese" label="中文标题" width="200px"></el-table-column>
+    <el-table-column prop="name.english" label="英文标题" width="150px"></el-table-column>
+    <el-table-column prop="durationInSecond" width="60px" label="秒数"> 
     </el-table-column>     
-    <el-table-column label="转码状态">
+    <el-table-column label="转码状态" width="120px">
        <template #default="scope">
         {{renderEncodingStatus(scope.row.status)}}
       </template>       

@@ -18,7 +18,7 @@
             };
             onMounted(async function () {
                 connection = new signalR.HubConnectionBuilder()
-                    .withUrl('https://localhost:7112/Hubs/ChatRoomHub')
+                    .withUrl('https://localhost:44337/Hubs/ChatRoomHub')
                     .withAutomaticReconnect().build();
                 await connection.start();
                 connection.on('ReceivePublicMessage', msg => {

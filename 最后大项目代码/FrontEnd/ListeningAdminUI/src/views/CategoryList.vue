@@ -16,9 +16,9 @@
         </el-button>         
       </template>     
     </el-table-column>
-    <el-table-column prop="name.chinese" label="中文标题"></el-table-column>
-    <el-table-column prop="name.english" label="英文标题"></el-table-column>
-    <el-table-column prop="creationTime" label="创建时间"></el-table-column>
+    <el-table-column prop="name.chinese" label="中文标题"  width="150px"></el-table-column>
+    <el-table-column prop="name.english" label="英文标题" width="120px"></el-table-column>
+    <el-table-column prop="creationTime" label="创建时间" width="180px"></el-table-column>
     <el-table-column fixed="right" label="操作">
       <template #default="scope">
         <el-button type="text" size="small">
