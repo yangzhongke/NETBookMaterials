@@ -1,7 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
-using System;
+﻿using System;
 
-namespace Zack.Commons
+namespace Microsoft.Extensions.Logging
 {
     public static class LoggerExtensions
     {

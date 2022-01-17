@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Zack.Commons
+﻿namespace System
 {
     public static class RandomExtensions
     {
