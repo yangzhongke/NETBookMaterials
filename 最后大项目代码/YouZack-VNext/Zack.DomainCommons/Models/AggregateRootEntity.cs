@@ -2,7 +2,7 @@
 
 namespace Zack.DomainCommons.Models
 {
-    public class AggregateRootEntity : BaseEntity, IAggregateRoot, ISoftDelete, IHasCreationTime, IHasDeletionTime, IHasModificationTime
+    public record AggregateRootEntity : BaseEntity, IAggregateRoot, ISoftDelete, IHasCreationTime, IHasDeletionTime, IHasModificationTime
     {
         public bool IsDeleted { get; private set; }
         public DateTime CreationTime { get; private set; } = DateTime.Now;

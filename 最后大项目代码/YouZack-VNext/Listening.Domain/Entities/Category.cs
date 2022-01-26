@@ -2,7 +2,7 @@
 
 namespace Listening.Domain.Entities
 {
-    public class Category : AggregateRootEntity, IAggregateRoot
+    public record Category : AggregateRootEntity, IAggregateRoot
     {
         private Category() { }
         public int SequenceNumber { get; private set; }

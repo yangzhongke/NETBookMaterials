@@ -3,7 +3,7 @@ using Zack.DomainCommons.Models;
 
 namespace MediaEncoder.Domain.Entities
 {
-    public class EncodingItem : BaseEntity, IAggregateRoot, IHasCreationTime
+    public record EncodingItem : BaseEntity, IAggregateRoot, IHasCreationTime
     {
         public DateTime CreationTime { get; private set; }
         public string SourceSystem { get; private set; }

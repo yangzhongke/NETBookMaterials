@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Zack.DomainCommons.Models
 {
-    public class BaseEntity : IEntity, IDomainEvents
+    public record BaseEntity : IEntity, IDomainEvents
     {
 
         /*

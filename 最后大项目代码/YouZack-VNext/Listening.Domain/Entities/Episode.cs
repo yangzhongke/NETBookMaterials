@@ -7,7 +7,7 @@ namespace Listening.Domain.Entities;
 //EF Core中的实体和DDD的中的实体不一样。DDD中的实体是Data Object，是和数据库表以及字段一一对应的，EF Core中的实体更像领域模型，DO是藏在EF Core框架中的。
 //网站上线后，又提出来一个需求“非m4a文件上传后先转码再发布”，如果用面向数据库的开发，就要在Episode表搞一个字段“表示”是否已发布，在发布之前，AudioUrl等属性都是无效的
 //按照DDD的思想，就额外拆分出一个“待发布Episode”，转换完成后，再把“待发布Episode”的数据导入Episode，这样就不用对Episode实体做改变。
-public class Episode : AggregateRootEntity, IAggregateRoot
+public record Episode : AggregateRootEntity, IAggregateRoot
 {
     private Episode() { }
     public int SequenceNumber { get; private set; }//序号

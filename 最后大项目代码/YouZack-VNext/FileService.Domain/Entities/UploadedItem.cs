@@ -3,7 +3,7 @@ using Zack.DomainCommons.Models;
 
 namespace FileService.Domain.Entities
 {
-    public class UploadedItem : BaseEntity, IHasCreationTime
+    public record UploadedItem : BaseEntity, IHasCreationTime
     {
         public DateTime CreationTime { get; private set; }
 

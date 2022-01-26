@@ -7,7 +7,7 @@ namespace Listening.Domain.Entities
     /// ，而且Episode还可以移动到其他album。因此不能在这三个实体之间引用。
     /// 具体讨论见：https://developer.aliyun.com/article/53518
     /// </summary>
-    public class Album : AggregateRootEntity, IAggregateRoot
+    public record Album : AggregateRootEntity, IAggregateRoot
     {
         private Album() { }
 
