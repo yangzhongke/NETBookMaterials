@@ -112,7 +112,11 @@ public static class ReflectionHelper
             {
                 continue;
             }
-            Assembly asm = Assembly.Load(asmName);
+            Assembly asm = Assembly.LoadFile(asmPath);
+            if(!IsValid(asm))
+            {
+                continue;
+            }
             if (skipSystemAssemblies && IsSystemAssembly(asm))
             {
                 continue;
@@ -121,6 +125,20 @@ public static class ReflectionHelper
         }
         return returnAssemblies.ToArray();
     }
+
+    private static bool IsValid(Assembly asm)
+    {
+        try
+        {
+            asm.GetTypes();
+            return true;
+        }
+        catch(ReflectionTypeLoadException)
+        {
+            return false;
+        }
+    }
+
     class AssemblyEquality : EqualityComparer<Assembly>
     {
         public override bool Equals(Assembly? x, Assembly? y)
