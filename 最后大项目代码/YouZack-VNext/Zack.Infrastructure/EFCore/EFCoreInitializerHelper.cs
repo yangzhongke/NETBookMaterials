@@ -24,15 +24,7 @@ namespace Microsoft.EntityFrameworkCore
                 .GetMethod(nameof(EntityFrameworkServiceCollectionExtensions.AddDbContext), 1, types);
             foreach (var asmToLoad in assemblies)
             {
-                Type[] typesInAsm;
-                try
-                {
-                    typesInAsm = asmToLoad.GetTypes();
-                }
-                catch(ReflectionTypeLoadException)
-                {
-                    continue;
-                }
+                Type[] typesInAsm = asmToLoad.GetTypes();
                 //Register DbContext
                 //GetTypes() include public/protected ones
                 //GetExportedTypes only include public ones

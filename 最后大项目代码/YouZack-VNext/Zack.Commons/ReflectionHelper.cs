@@ -67,7 +67,10 @@ public static class ReflectionHelper
         assembliesToCheck.Enqueue(rootAssembly);
         if (skipSystemAssemblies && IsSystemAssembly(rootAssembly) != false)
         {
-            returnAssemblies.Add(rootAssembly);
+            if (IsValid(rootAssembly))
+            {
+                returnAssemblies.Add(rootAssembly);
+            }            
         }
         while (assembliesToCheck.Any())
         {
@@ -83,7 +86,10 @@ public static class ReflectionHelper
                     }
                     assembliesToCheck.Enqueue(assembly);
                     loadedAssemblies.Add(reference.FullName);
-                    returnAssemblies.Add(assembly);
+                    if (IsValid(rootAssembly))
+                    {
+                        returnAssemblies.Add(assembly);
+                    }                        
                 }
             }
         }

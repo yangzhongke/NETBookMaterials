@@ -18,15 +18,7 @@ namespace Microsoft.Extensions.DependencyInjection
 		{
 			foreach(var asm in assemblies)
             {
-				Type[] types;
-                try
-                {
-					types = asm.GetTypes();
-				}
-				catch(ReflectionTypeLoadException)
-                {
-					continue;
-                }
+				Type[] types = asm.GetTypes();
 				var moduleInitializerTypes = types.Where(t => !t.IsAbstract && typeof(IModuleInitializer).IsAssignableFrom(t));
 				foreach(var implType in moduleInitializerTypes)
                 {
