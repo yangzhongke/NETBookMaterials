@@ -3,6 +3,12 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Version>1.0.0</Version>
+    <Authors>Zack Yang</Authors>
+    <Company>Zack Yang</Company>
+    <PackageProjectUrl>https://github.com/yangzhongke/NETBookMaterials</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/yangzhongke/NETBookMaterials</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
