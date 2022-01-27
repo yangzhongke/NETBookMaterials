@@ -24,11 +24,20 @@ namespace Microsoft.EntityFrameworkCore
                 .GetMethod(nameof(EntityFrameworkServiceCollectionExtensions.AddDbContext), 1, types);
             foreach (var asmToLoad in assemblies)
             {
+                Type[] typesInAsm;
+                try
+                {
+                    typesInAsm = asmToLoad.GetTypes();
+                }
+                catch(ReflectionTypeLoadException)
+                {
+                    continue;
+                }
                 //Register DbContext
                 //GetTypes() include public/protected ones
                 //GetExportedTypes only include public ones
                 //so that XXDbContext in Agrregation can be internal to keep insulated
-                foreach (var dbCtxType in asmToLoad.GetTypes()
+                foreach (var dbCtxType in typesInAsm
                     .Where(t => !t.IsAbstract && typeof(DbContext).IsAssignableFrom(t)))
                 {
                     //similar to serviceCollection.AddDbContextPool<ECDictDbContext>(opt=>new DbContextOptionsBuilder(dbCtxOpt));
