@@ -1,3 +1,4 @@
+using MediatR;
 using Zack.Commons;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 var assemblies = ReflectionHelper.GetAllReferencedAssemblies();
 builder.Services.RunModuleInitializers(assemblies);
+builder.Services.AddMediatR(assemblies);
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -16,15 +16,27 @@ namespace Microsoft.Extensions.DependencyInjection
 		public static IServiceCollection RunModuleInitializers(this IServiceCollection services,
 		 IEnumerable<Assembly> assemblies)
 		{
-			foreach (var implType in assemblies.SelectMany(asm => asm.GetTypes())
-				.Where(t => !t.IsAbstract && typeof(IModuleInitializer).IsAssignableFrom(t)))
-			{
-				var initializer = (IModuleInitializer?)Activator.CreateInstance(implType);
-				if (initializer == null)
-				{
-					throw new ApplicationException("Cannot create " + implType);
+			foreach(var asm in assemblies)
+            {
+				Type[] types;
+                try
+                {
+					types = asm.GetTypes();
 				}
-				initializer.Initialize(services);
+				catch(ReflectionTypeLoadException)
+                {
+					continue;
+                }
+				var moduleInitializerTypes = types.Where(t => !t.IsAbstract && typeof(IModuleInitializer).IsAssignableFrom(t));
+				foreach(var implType in moduleInitializerTypes)
+                {
+					var initializer = (IModuleInitializer?)Activator.CreateInstance(implType);
+					if (initializer == null)
+					{
+						throw new ApplicationException($"Cannot create ${implType}");
+					}
+					initializer.Initialize(services);
+				}
 			}
 			return services;
 		}
