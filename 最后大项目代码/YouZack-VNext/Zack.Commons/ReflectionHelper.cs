@@ -33,8 +33,9 @@ public static class ReflectionHelper
     {
         using var fs = File.OpenRead(file);
         using PEReader peReader = new PEReader(fs);
-        var peHeaders = peReader.PEHeaders;
-        return peHeaders.CorHeader != null;
+        //var peHeaders = peReader.PEHeaders;
+        //return peHeaders.CorHeader != null;
+        return peReader.HasMetadata;
     }
 
     /// <summary>
@@ -94,7 +95,15 @@ public static class ReflectionHelper
             {
                 continue;
             }
-            Assembly asm = Assembly.LoadFile(asmPath);
+            Assembly asm;
+            try
+            {
+                asm = Assembly.LoadFile(asmPath);
+            }
+            catch(BadImageFormatException)
+            {
+                continue;
+            }
             //Assembly asm = Assembly.Load(asmName);
             if (!IsValid(asm))
             {

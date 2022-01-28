@@ -24,4 +24,10 @@
     <ProjectReference Include="..\BlazorWebAsm1\BlazorWebAsm1.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Microsoft.AspNetCore.Antiforgery.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

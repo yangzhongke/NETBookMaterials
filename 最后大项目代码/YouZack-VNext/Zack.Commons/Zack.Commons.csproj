@@ -7,7 +7,7 @@
 	  <Authors>Zack Yang</Authors>
 	  <PackageProjectUrl>https://github.com/yangzhongke/NETBookMaterials</PackageProjectUrl>
 	  <RepositoryUrl>https://github.com/yangzhongke/NETBookMaterials</RepositoryUrl>
-	  <Version>1.1.4</Version>
+	  <Version>1.1.5</Version>
   </PropertyGroup>
 
   <ItemGroup>
