@@ -17,7 +17,7 @@
 	  <PackageReference Include="Zack.ASPNETCore" Version="1.0.1" />
 	  <PackageReference Include="Zack.Commons" Version="1.1.1" />
 	  <PackageReference Include="Zack.EventBus" Version="1.1.1" />
-	  <PackageReference Include="Zack.Infrastructure" Version="1.1.1" />
+	  <PackageReference Include="Zack.Infrastructure" Version="1.1.2" />
 	  <PackageReference Include="Zack.JWT" Version="1.0.0" />	  
   </ItemGroup>
 
