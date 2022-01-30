@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
@@ -36,6 +37,40 @@ public static class ReflectionHelper
         //var peHeaders = peReader.PEHeaders;
         //return peHeaders.CorHeader != null;
         return peReader.HasMetadata;
+    }
+
+    private static Assembly? TryLoadAssembly(string asmPath)
+    {
+        AssemblyName asmName = AssemblyName.GetAssemblyName(asmPath);
+        Assembly? asm=null;
+        try
+        {
+            asm = Assembly.LoadFile(asmPath);
+        }
+        catch (BadImageFormatException ex)
+        {
+            Debug.WriteLine(ex);
+        }
+        catch (FileLoadException ex)
+        {
+            Debug.WriteLine(ex);
+        }
+        if (asm == null)
+        {
+            try
+            {
+                asm = Assembly.Load(asmName);
+            }
+            catch (BadImageFormatException ex)
+            {
+                Debug.WriteLine(ex);
+            }
+            catch (FileLoadException ex)
+            {
+                Debug.WriteLine(ex);
+            }
+        }            
+        return asm;
     }
 
     /// <summary>
@@ -95,12 +130,8 @@ public static class ReflectionHelper
             {
                 continue;
             }
-            Assembly asm;
-            try
-            {
-                asm = Assembly.LoadFile(asmPath);
-            }
-            catch(BadImageFormatException)
+            Assembly? asm = TryLoadAssembly(asmPath);
+            if(asm==null)
             {
                 continue;
             }
