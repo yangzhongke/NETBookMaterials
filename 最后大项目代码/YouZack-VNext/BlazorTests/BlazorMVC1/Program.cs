@@ -1,4 +1,8 @@
+using AsmResolver.DotNet;
+using AsmResolver.PE;
+using AsmResolver.PE.File;
 using MediatR;
+using System.Reflection;
 using Zack.Commons;
 
 var builder = WebApplication.CreateBuilder(args);

@@ -5,6 +5,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Reflection.Metadata;
 using System.Reflection.PortableExecutable;
 
 namespace Zack.Commons;
@@ -25,6 +26,27 @@ public static class ReflectionHelper
         }
     }
 
+    private static bool IsSystemAssembly(string asmPath)
+    {
+        var moduleDef = AsmResolver.DotNet.ModuleDefinition.FromFile(asmPath);
+        var assembly = moduleDef.Assembly;
+        if(assembly==null)
+        {
+            return false;
+        }
+        var asmCompanyAttr = assembly.CustomAttributes.FirstOrDefault(c => c.Constructor?.DeclaringType?.FullName == typeof(AssemblyCompanyAttribute).FullName);
+        if(asmCompanyAttr==null)
+        {
+            return false;
+        }
+        var companyName = ((AsmResolver.Utf8String?)asmCompanyAttr.Signature?.FixedArguments[0]?.Element)?.Value;
+        if(companyName==null)
+        {
+            return false;
+        }
+        return companyName.Contains("Microsoft");
+    }
+
     /// <summary>
     /// 判断file这个文件是否是程序集
     /// </summary>
@@ -34,9 +56,7 @@ public static class ReflectionHelper
     {
         using var fs = File.OpenRead(file);
         using PEReader peReader = new PEReader(fs);
-        //var peHeaders = peReader.PEHeaders;
-        //return peHeaders.CorHeader != null;
-        return peReader.HasMetadata;
+        return peReader.HasMetadata&&peReader.GetMetadataReader().IsAssembly;
     }
 
     private static Assembly? TryLoadAssembly(string asmPath)
@@ -45,7 +65,7 @@ public static class ReflectionHelper
         Assembly? asm=null;
         try
         {
-            asm = Assembly.LoadFile(asmPath);
+            asm = Assembly.Load(asmName);
         }
         catch (BadImageFormatException ex)
         {
@@ -55,11 +75,12 @@ public static class ReflectionHelper
         {
             Debug.WriteLine(ex);
         }
+        
         if (asm == null)
         {
             try
             {
-                asm = Assembly.Load(asmName);
+                asm = Assembly.LoadFile(asmPath);
             }
             catch (BadImageFormatException ex)
             {
@@ -123,10 +144,14 @@ public static class ReflectionHelper
             if (!IsManagedAssembly(asmPath))
             {
                 continue;
-            }
+            }            
             AssemblyName asmName = AssemblyName.GetAssemblyName(asmPath);
             //如果程序集已经加载过了就不再加载
             if (returnAssemblies.Any(x => AssemblyName.ReferenceMatchesDefinition(x.GetName(), asmName)))
+            {
+                continue;
+            }
+            if (skipSystemAssemblies && IsSystemAssembly(asmPath))
             {
                 continue;
             }

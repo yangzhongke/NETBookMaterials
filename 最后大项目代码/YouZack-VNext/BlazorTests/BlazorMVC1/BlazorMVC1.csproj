@@ -7,6 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AsmResolver.DotNet" Version="4.8.0" />
+    <PackageReference Include="AsmResolver.PE" Version="4.8.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="6.0.1" />
 	  <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="6.0.1" />
 	  <PackageReference Include="Serilog.AspNetCore" Version="4.1.1-dev-00250" />
