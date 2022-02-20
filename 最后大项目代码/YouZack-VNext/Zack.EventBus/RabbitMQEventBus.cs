@@ -157,8 +157,8 @@ class RabbitMQEventBus : IEventBus, IDisposable
 
     private async Task Consumer_Received(object sender, BasicDeliverEventArgs eventArgs)
     {
-        var eventName = eventArgs.RoutingKey;
-        var message = Encoding.UTF8.GetString(eventArgs.Body.Span);
+        var eventName = eventArgs.RoutingKey;//这个框架中，就是用eventName当RoutingKey
+        var message = Encoding.UTF8.GetString(eventArgs.Body.Span);//框架要求所有的消息都是字符串的json
         try
         {
             await ProcessEvent(eventName, message);
