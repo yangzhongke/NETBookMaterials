@@ -1,6 +1,4 @@
-﻿
-using Nest;
-using SearchService.WebAPI.IndexModels;
+﻿using SearchService.Domain;
 using Zack.EventBus;
 
 namespace SearchService.WebAPI.EventHandlers;
@@ -9,14 +7,14 @@ namespace SearchService.WebAPI.EventHandlers;
 [EventName("ListeningEpisode.Updated")]
 public class ListeningEpisodeUpsertEventHandler : DynamicIntegrationEventHandler
 {
-    private readonly IElasticClient elasticClient;
+    private readonly ISearchRepository repository;
 
-    public ListeningEpisodeUpsertEventHandler(IElasticClient elasticClient)
+    public ListeningEpisodeUpsertEventHandler(ISearchRepository repository)
     {
-        this.elasticClient = elasticClient;
+        this.repository = repository;
     }
 
-    public override async Task HandleDynamic(string eventName, dynamic eventData)
+    public override Task HandleDynamic(string eventName, dynamic eventData)
     {
         Guid id = Guid.Parse(eventData.Id);
         string cnName = eventData.Name.Chinese;
@@ -29,11 +27,6 @@ public class ListeningEpisodeUpsertEventHandler : DynamicIntegrationEventHandler
         }
         string plainSentences = string.Join("\r\n", sentences);
         Episode episode = new Episode(id, cnName, engName, plainSentences, albumId);
-        //设定Id，这样如果遇到同样Id的就更新，而不是插入。Index方法会自动Upsert
-        var response = await elasticClient.IndexAsync(episode, idx => idx.Index("episodes").Id(episode.Id));
-        if (!response.IsValid)
-        {
-            throw new ApplicationException(response.DebugInformation);
-        }
+        return repository.UpsertAsync(episode);
     }
 }

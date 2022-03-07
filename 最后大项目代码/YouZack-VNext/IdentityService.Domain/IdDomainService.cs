@@ -42,6 +42,7 @@ namespace IdentityService.Infrastructure
             return result;
         }
 
+        //<(SignInResult Result, string? Token)>  元组的语法
         public async Task<(SignInResult Result, string? Token)> LoginByPhoneAndPwdAsync(string phoneNum, string password)
         {
             var checkResult = await CheckPhoneNumAndPwdAsync(phoneNum, password);

@@ -45,7 +45,7 @@ public class UploaderController : ControllerBase
     //页面直传只能使用上传码上传一个文件，防止接口被恶意利用。应用服务器要控制发放上传码的频率。
     //todo：再提供一个非页面直传的接口，供服务器用
     [HttpPost]
-    [RequestSizeLimit(100_000_000)]
+    [RequestSizeLimit(60_000_000)]
     public async Task<ActionResult<Uri>> Upload([FromForm] UploadRequest request, CancellationToken cancellationToken = default)
     {
         var file = request.File;

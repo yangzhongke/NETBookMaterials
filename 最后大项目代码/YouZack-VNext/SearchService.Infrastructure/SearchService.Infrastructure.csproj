@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SearchService.Domain\SearchService.Domain.csproj" />
+    <ProjectReference Include="..\Zack.Infrastructure\Zack.Infrastructure.csproj" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="6.0.0" />
+	  <PackageReference Include="NEST" Version="7.16.0" />
+
+  </ItemGroup>
+
+</Project>

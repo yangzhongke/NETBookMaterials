@@ -4,6 +4,8 @@ using Zack.EventBus;
 
 namespace Listening.Admin.WebAPI.EventHandlers;
 
+//收听转码服务发出的集成事件
+//把状态通过SignalR推送给客户端，从而显示“转码进度”
 [EventName("MediaEncoding.Started")]
 [EventName("MediaEncoding.Failed")]
 [EventName("MediaEncoding.Duplicated")]
@@ -50,6 +52,7 @@ class MediaEncodingStatusChangeIntegrationHandler : DynamicIntegrationEventHandl
                 await hubContext.Clients.All.SendAsync("OnMediaEncodingCompleted", id);//通知前端刷新
                 break;
             case "MediaEncoding.Completed":
+                //转码完成，则从Redis中把暂存的Episode信息取出来，然后正式地插入Episode表中
                 await encHelper.UpdateEpisodeStatusAsync(id, "Completed");
                 Uri outputUrl = new Uri(eventData.OutputUrl);
                 var encItem = await encHelper.GetEncodingEpisodeAsync(id);
@@ -64,7 +67,8 @@ class MediaEncodingStatusChangeIntegrationHandler : DynamicIntegrationEventHandl
                     .AlbumId(albumId).AudioUrl(outputUrl)
                     .DurationInSecond(encItem.DurationInSecond)
                     .SubtitleType(encItem.SubtitleType).Subtitle(encItem.Subtitle);
-                dbContext.Add(builder.Build());
+                var episdoe = builder.Build();
+                dbContext.Add(episdoe);
                 await dbContext.SaveChangesAsync();
                 await hubContext.Clients.All.SendAsync("OnMediaEncodingCompleted", id);//通知前端刷新
                 break;

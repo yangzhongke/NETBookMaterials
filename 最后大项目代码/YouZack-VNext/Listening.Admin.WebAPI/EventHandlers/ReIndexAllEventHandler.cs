@@ -3,6 +3,7 @@
 namespace Listening.Admin.WebAPI.EventHandlers
 {
     [EventName("SearchService.ReIndexAll")]
+    //让搜索引擎服务器，重新收录所有的Episode
     public class ReIndexAllEventHandler : IIntegrationEventHandler
     {
         private readonly ListeningDbContext dbContext;

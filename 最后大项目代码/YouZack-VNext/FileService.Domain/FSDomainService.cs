@@ -23,6 +23,7 @@ public class FSDomainService
         this.remoteStorage = storageClients.First(c => c.StorageType == StorageType.Public);
     }
 
+    //领域服务只有抽象的业务逻辑
     public async Task<UploadedItem> UploadAsync(Stream stream, string fileName,
         CancellationToken cancellationToken)
     {
@@ -47,6 +48,8 @@ public class FSDomainService
         Uri remoteUrl = await remoteStorage.SaveAsync(key, stream, cancellationToken);//保存到生产的存储系统
         stream.Position = 0;
         Guid id = Guid.NewGuid();
+        //领域服务并不会真正的执行数据库插入，只是把实体对象生成，然后由应用服务和基础设施配合来真正的插入数据库！
+        //DDD中尽量避免直接在领域服务中执行数据库的修改（包含删除、新增）操作。
         return UploadedItem.Create(id, fileSize, fileName, hash, backupUrl, remoteUrl);
     }
 }

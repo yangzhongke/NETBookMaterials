@@ -3,6 +3,9 @@ using Microsoft.Extensions.Options;
 
 namespace FileService.Infrastructure.Services
 {
+    /// <summary>
+    /// 用局域网内共享文件夹或者本机磁盘当备份服务器的实现类
+    /// </summary>
     class SMBStorageClient : IStorageClient
     {
         private IOptionsSnapshot<SMBStorageOptions> options;

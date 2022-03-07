@@ -7,7 +7,7 @@ namespace IdentityService.Domain
         Task<User?> FindByIdAsync(Guid userId);//根据Id获取用户
         Task<User?> FindByNameAsync(string userName);//根据用户名获取用户
         Task<User?> FindByPhoneNumberAsync(string phoneNum);//根据手机号获取用户
-        Task<IdentityResult> CreateAsync(User user, string password);//创建管理员
+        Task<IdentityResult> CreateAsync(User user, string password);//创建用户
         Task<IdentityResult> AccessFailedAsync(User user);//记录一次登陆失败
 
         /// <summary>

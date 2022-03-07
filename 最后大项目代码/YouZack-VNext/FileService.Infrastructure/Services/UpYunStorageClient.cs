@@ -6,6 +6,9 @@ using Zack.Commons;
 
 namespace FileService.Infrastructure.Services
 {
+    /// <summary>
+    /// 又拍云存储服务
+    /// </summary>
     class UpYunStorageClient : IStorageClient
     {
         private IOptionsSnapshot<UpYunStorageOptions> options;

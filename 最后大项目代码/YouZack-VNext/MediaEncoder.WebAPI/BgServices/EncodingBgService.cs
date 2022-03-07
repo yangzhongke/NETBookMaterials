@@ -99,7 +99,7 @@ public class EncodingBgService : BackgroundService
     /// </summary>
     /// <param name="encItem"></param>
     /// <returns></returns>
-    private static FileInfo BuildDestFile(EncodingItem encItem)
+    private static FileInfo BuildDestFileInfo(EncodingItem encItem)
     {
         string outputFormat = encItem.OutputFormat;
         string tempDir = Path.GetTempPath();
@@ -153,6 +153,7 @@ public class EncodingBgService : BackgroundService
     {
         Guid id = encItem.Id;
         var expiry = TimeSpan.FromSeconds(30);
+        //Redis分布式锁来避免两个转码服务器处理同一个转码任务的问题
         var redlockFactory = RedLockFactory.Create(redLockMultiplexerList);
         string lockKey = $"MediaEncoder.EncodingItem.{id}";
         //用RedLock分布式锁，锁定对EncodingItem的访问
@@ -172,7 +173,7 @@ public class EncodingBgService : BackgroundService
             encItem.Fail($"下载失败");
             return;
         }
-        FileInfo destFile = BuildDestFile(encItem);
+        FileInfo destFile = BuildDestFileInfo(encItem);
         try
         {
             logger.LogInterpolatedInformation($"下载Id={id}成功，开始计算Hash值");

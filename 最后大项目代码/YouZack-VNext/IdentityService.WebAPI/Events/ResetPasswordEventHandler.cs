@@ -18,7 +18,7 @@ namespace IdentityService.WebAPI.Events
 
         public override Task HandleJson(string eventName, ResetPasswordEvent? eventData)
         {
-            //发送初始密码给被创建用户的手机
+            //发送密码给被用户的手机
             return smsSender.SendAsync(eventData.PhoneNum, eventData.Password);
         }
     }

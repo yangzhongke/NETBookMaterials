@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Nest;
+using SearchService.Domain;
 using SearchService.WebAPI.Controllers.Request;
-using SearchService.WebAPI.Controllers.Response;
-using SearchService.WebAPI.IndexModels;
 using Zack.EventBus;
 
 namespace SearchService.WebAPI.Controllers;
@@ -10,46 +8,20 @@ namespace SearchService.WebAPI.Controllers;
 [Route("[controller]/[action]")]
 public class SearchController : ControllerBase
 {
-    private readonly IElasticClient elasticClient;
+
+    private readonly ISearchRepository repository;
     private readonly IEventBus eventBus;
 
-    public SearchController(IElasticClient elasticClient, IEventBus eventBus)
+    public SearchController(ISearchRepository repository, IEventBus eventBus)
     {
-        this.elasticClient = elasticClient;
+        this.repository = repository;
         this.eventBus = eventBus;
     }
 
     [HttpGet]
-    public async Task<SearchEpisodesResponse> SearchEpisodes([FromQuery] SearchEpisodesRequest req)
+    public Task<SearchEpisodesResponse> SearchEpisodes([FromQuery] SearchEpisodesRequest req)
     {
-        //页号从1开始
-        int from = req.PageSize * (req.PageIndex - 1);
-        string kw = req.Keyword;
-        Func<QueryContainerDescriptor<Episode>, QueryContainer> query = (q) =>
-                      q.Match(mq => mq.Field(f => f.CnName).Query(kw))
-                      || q.Match(mq => mq.Field(f => f.EngName).Query(kw))
-                      || q.Match(mq => mq.Field(f => f.PlainSubtitle).Query(kw));
-        Func<HighlightDescriptor<Episode>, IHighlight> highlightSelector = h => h
-            .Fields(fs => fs.Field(f => f.PlainSubtitle));
-        var result = await this.elasticClient.SearchAsync<Episode>(s => s.Index("episodes").From(from)
-            .Size(req.PageSize).Query(query).Highlight(highlightSelector));
-        List<Episode> episodes = new List<Episode>();
-        foreach (var hit in result.Hits)
-        {
-            string highlightedSubtitle;
-            //如果没有预览内容，则显示前50个字
-            if (hit.Highlight.ContainsKey("plainSubtitle"))
-            {
-                highlightedSubtitle = string.Join("\r\n", hit.Highlight["plainSubtitle"]);
-            }
-            else
-            {
-                highlightedSubtitle = hit.Source.PlainSubtitle.Cut(50);
-            }
-            var episode = hit.Source with { PlainSubtitle = highlightedSubtitle };
-            episodes.Add(episode);
-        }
-        return new SearchEpisodesResponse(episodes, result.Total);
+        return repository.SearchEpisodes(req.Keyword, req.PageIndex, req.PageSize);
     }
 
     [HttpPut]

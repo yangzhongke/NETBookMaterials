@@ -54,6 +54,7 @@ public class LoginController : ControllerBase
             return NotFound();
         }
         //出于安全考虑，不要机密信息传递到客户端
+        //除非确认没问题，否则尽量不要直接把实体类对象返回给前端
         return new UserResponse(user.Id, user.PhoneNumber, user.CreationTime);
     }
 

@@ -4,6 +4,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using Nest;
+using SearchService.Domain;
+using SearchService.Infrastructure;
 using SearchService.WebAPI.Options;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,13 +18,6 @@ builder.ConfigureExtraServices(new InitializerOptions
 // Add services to the container.
 
 builder.Services.Configure<ElasticSearchOptions>(builder.Configuration.GetSection("ElasticSearch"));
-builder.Services.AddHttpClient();
-builder.Services.AddScoped<IElasticClient>(sp =>
-{
-    var option = sp.GetRequiredService<IOptions<ElasticSearchOptions>>();
-    var settings = new ConnectionSettings(option.Value.Url);
-    return new ElasticClient(settings);
-});
 
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen(c =>
