@@ -17,4 +17,11 @@
 
 4. [在Youtube观看](https://www.youtube.com/watch?v=0HcIQOaqBwE&list=PL9sJKk6XPMxehYCui7OysUV6trlBbJ4T_)
 
+源代码的离线下载地址：
+1. [百度网盘下载地址](https://pan.baidu.com/s/1q6hFdB6ETjNgUCD7sDQ3pg?pwd=y4o8)
+2. [坚果云下载地址](https://www.jianguoyun.com/p/DceYyGIQ9de1BhiVmMkEIAA)
+3. [备用下载地址](https://static2.youzack.com/formybooks/NETCoreNeiMu.zip)
+4. [Google Drive 下载地址](https://drive.google.com/file/d/1iKgxffaZauUmpt9Vc-hzAkgSwvIuWClX/view?usp=sharing)
+5. [OneDrive 下载地址](https://1drv.ms/u/s!ArtUX5uRoj_cml7h1nwia5aFpuK9?e=J94t4w)
+
 学习过程中有任何问题，请给我发邮件 yangzhongke8@gmail.com
