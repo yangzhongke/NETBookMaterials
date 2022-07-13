@@ -10,7 +10,7 @@
     <ProjectReference Include="..\Zack.Infrastructure\Zack.Infrastructure.csproj" />
   </ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="xFFmpeg.NET" Version="7.0.1" />
+		<PackageReference Include="xFFmpeg.NET" Version="7.1.3" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.1" />
 	</ItemGroup>
 	<ItemGroup>

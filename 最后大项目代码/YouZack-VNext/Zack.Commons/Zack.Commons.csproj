@@ -7,14 +7,14 @@
 	  <Authors>Zack Yang</Authors>
 	  <PackageProjectUrl>https://github.com/yangzhongke/NETBookMaterials</PackageProjectUrl>
 	  <RepositoryUrl>https://github.com/yangzhongke/NETBookMaterials</RepositoryUrl>
-	  <Version>1.1.9</Version>
+	  <Version>1.1.10</Version>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="FluentValidation" Version="10.3.6" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.0" />
-	<PackageReference Include="AsmResolver.DotNet" Version="4.8.0" />
+	<PackageReference Include="AsmResolver.DotNet" Version="4.11.2" />
   </ItemGroup>
 
 </Project>
