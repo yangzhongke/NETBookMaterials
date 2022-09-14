@@ -11,6 +11,26 @@ using System.Reflection.PortableExecutable;
 namespace Zack.Commons;
 public static class ReflectionHelper
 {
+    //增加一个根据产品名称获取assembly的方法getasms
+    public static List<Assembly>? Getasms(string ProductName)
+		{
+			var asms = new List<Assembly>();
+			var assm = AppDomain.CurrentDomain.GetAssemblies();
+			foreach (var assa in assm)
+			{
+
+				var asmCompanyAtt = assa.GetCustomAttribute<AssemblyProductAttribute>();
+				if (asmCompanyAtt != null)
+				{
+					if (asmCompanyAtt.Product == ProductName) {
+						asms.Add(assa);					   
+					}
+				}
+
+			}
+					
+			return asms;
+		}
     //是否是微软等的官方Assembly
     private static bool IsSystemAssembly(Assembly asm)
     {
