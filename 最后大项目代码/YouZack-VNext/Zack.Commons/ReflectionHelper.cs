@@ -11,26 +11,24 @@ using System.Reflection.PortableExecutable;
 namespace Zack.Commons;
 public static class ReflectionHelper
 {
-   //增加一个根据产品名称获取assembly的方法GetAssembliesByProductName
-    public static List<Assembly>? GetAssembliesByProductName(string ProductName)
-		{
-			var asms = new List<Assembly>();
-			var assm = AppDomain.CurrentDomain.GetAssemblies();
-			foreach (var assa in assm)
-			{
 
-				var asmCompanyAtt = assa.GetCustomAttribute<AssemblyProductAttribute>();
-				if (asmCompanyAtt != null)
-				{
-					if (asmCompanyAtt.Product == ProductName) {
-						asms.Add(assa);					   
-					}
-				}
-
-			}
-					
-			return asms;
-		}
+    /// <summary>
+    /// 据产品名称获取程序集
+    /// </summary>
+    /// <param name="productName"></param>
+    /// <returns></returns>
+    public static IEnumerable<Assembly> GetAssembliesByProductName(string productName)
+	{
+		var asms = AppDomain.CurrentDomain.GetAssemblies();
+        foreach (var asm in asms)
+        {
+            var asmCompanyAttr = asm.GetCustomAttribute<AssemblyProductAttribute>();
+            if (asmCompanyAttr != null&& asmCompanyAttr.Product == productName)
+            {
+                yield return asm;
+            }
+        }
+	}
     //是否是微软等的官方Assembly
     private static bool IsSystemAssembly(Assembly asm)
     {
