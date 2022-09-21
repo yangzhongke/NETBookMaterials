@@ -53,10 +53,17 @@ namespace Zack.EventBus
                 var factory = new ConnectionFactory()
                 {
                     HostName = optionMQ.HostName,
-                    UserName=optionMQ.UserName,
-                    Password=optionMQ.Password,
+
                     DispatchConsumersAsync = true
                 };
+                if(optionMQ.UserName!=null)
+                {
+                    factory.UserName = optionMQ.UserName;
+                }
+                if (optionMQ.Password != null)
+                {
+                    factory.Password = optionMQ.Password;
+                }
                 //eventBus归DI管理，释放的时候会调用Dispose
                 //eventbus的Dispose中会销毁RabbitMQConnection
                 RabbitMQConnection mqConnection = new RabbitMQConnection(factory);
