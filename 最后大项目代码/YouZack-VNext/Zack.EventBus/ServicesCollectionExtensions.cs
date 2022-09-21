@@ -53,6 +53,8 @@ namespace Zack.EventBus
                 var factory = new ConnectionFactory()
                 {
                     HostName = optionMQ.HostName,
+                    UserName=optionMQ.UserName,
+                    Password=optionMQ.Password,
                     DispatchConsumersAsync = true
                 };
                 //eventBus归DI管理，释放的时候会调用Dispose
