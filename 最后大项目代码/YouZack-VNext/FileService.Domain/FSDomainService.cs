@@ -42,6 +42,7 @@ public class FSDomainService
         {
             return oldUploadItem;
         }
+        stream.Position = 0;
         //backupStorage实现很稳定、速度很快，一般都使用本地存储（文件共享或者NAS）
         Uri backupUrl = await backupStorage.SaveAsync(key, stream, cancellationToken);//保存到本地备份
         stream.Position = 0;
