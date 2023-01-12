@@ -4,7 +4,7 @@
 
 本源代码对应的图书《ASP.NET Core技术内幕与项目实战》已经出版，请在京东、淘宝等购物平台搜索《ASP.NET Core技术内幕与项目实战》。
 
-1. 京东推荐购买链接：[https://u.jd.com/cK7bF4B)
+1. 京东推荐购买链接：[https://u.jd.com/cK7bF4B](https://u.jd.com/cK7bF4B)
 2. 淘宝推荐购买链接：[https://detail.tmall.com/item.htm?id=676743268875](https://detail.tmall.com/item.htm?id=676743268875)
 
 配套视频教程：
