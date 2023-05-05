@@ -1,0 +1,236 @@
+﻿1
+00:00:00,210 --> 00:00:01,270
+Test 2
+
+2
+00:00:02,610 --> 00:00:05,120
+This is the IELTS listening test.
+
+3
+00:00:06,490 --> 00:00:12,770
+You will hear a number of different recordings and you will have to answer questions on what you hear.
+
+4
+00:00:14,150 --> 00:00:20,880
+There will be time for you to read the instructions and questions and you will have a chance to check your work.
+
+5
+00:00:22,330 --> 00:00:25,550
+All the recordings will be played once only.
+
+6
+00:00:27,020 --> 00:00:29,210
+The test is in four parts.
+
+7
+00:00:30,710 --> 00:00:36,990
+At the end of the test you will be given 10 minutes to transfer your answers to the answer sheet.
+
+8
+00:00:38,430 --> 00:00:40,370
+Not turn to part one.
+
+9
+00:00:45,570 --> 00:00:46,340
+Part one
+
+10
+00:00:47,760 --> 00:00:53,220
+You will hear a woman calling a tourist information office to ask about her festival.
+
+11
+00:00:54,580 --> 00:00:58,700
+First, you have some time to look at questions one to four.
+
+12
+00:01:19,000 --> 00:01:23,180
+Now listen carefully and answer questions one to four.
+
+13
+00:01:26,350 --> 00:01:31,880
+Good morning, your through to the tourist information office. Tim speaking. How can I help you?
+
+14
+00:01:32,020 --> 00:01:37,320
+Oh hello, could you give me some information about next month's festival please?
+
+15
+00:01:37,500 --> 00:01:40,620
+My family and I will be staying in the town that week.
+
+16
+00:01:40,700 --> 00:01:46,560
+Of course, well, it starts with a concert on the afternoon of the 17th.
+
+17
+00:01:46,660 --> 00:01:53,550
+Oh. I heard about that. The orchestra and singers come from the USA, don't they? They are from Canada?
+
+18
+00:01:54,280 --> 00:01:56,360
+They're very popular over there.
+
+19
+00:01:56,580 --> 00:02:02,480
+They're going to perform a number of well-known pieces that will appeal to children as well as adults.
+
+20
+00:02:02,580 --> 00:02:06,520
+That sounds good. My whole family are interested in music.
+
+21
+00:02:06,600 --> 00:02:13,500
+The next day the 18th. There's a performance by a ballet company called EUSTATIS.
+
+22
+00:02:13,720 --> 00:02:22,180
+Sorry, the name is spelled EUSTATIS.
+
+23
+00:02:22,420 --> 00:02:25,940
+They appeared in last year's festival and went down very well.
+
+24
+00:02:26,100 --> 00:02:32,440
+Again, their program is designed for all ages. Good, I expect we'll go to that.
+
+25
+00:02:33,060 --> 00:02:38,260
+I hope there's going to be a play during the festival, a comedy, ideally.
+
+26
+00:02:38,280 --> 00:02:50,940
+You're in luck. On the 19th and 20th, a local Amateur group are performing one written by a member of the group. it's called Jemima. That'll be on in the town Hall.
+
+27
+00:02:51,100 --> 00:03:02,710
+They've already performed it two or three times. I haven't seen it myself, but the review in the local paper was very good. And is it suitable for children? Yes.
+
+28
+00:03:02,920 --> 00:03:09,500
+In fact, it's aimed more at children than adults, so both performances are in the afternoon.
+
+29
+00:03:09,600 --> 00:03:17,540
+And what about dance? Will there be any performances? Yes. Also on the 20th, but in the evening.
+
+30
+00:03:17,680 --> 00:03:25,820
+A professional company is putting on a show of modern pieces with electronic music by young composes.
+
+31
+00:03:26,020 --> 00:03:35,060
+The show is about how people communicate or failed to communicate with each other, so it's got the rather strange name: Chat.
+
+32
+00:03:35,280 --> 00:03:42,080
+ I suppose that's because that's something we do both face to face and online. That's right.
+
+33
+00:03:45,270 --> 00:03:51,490
+Before you hear the rest of the conversation, you have some time to look at questions 5 to 10.
+
+34
+00:04:21,710 --> 00:04:25,350
+Now listen and answer questions 5 to 10.
+
+35
+00:04:28,530 --> 00:04:35,380
+Now there are also some workshops and other activities. They'll all take place at least once every day.
+
+36
+00:04:35,500 --> 00:04:38,440
+So everyone who wants to take part will have a chance.
+
+37
+00:04:38,500 --> 00:04:45,960
+Good, We're particularly interested in cookery. You don't happen to have a cookery workshop, do you?
+
+38
+00:04:46,040 --> 00:04:52,120
+We suddenly do, it's going to focus on how to make food part of a healthy lifestyle,
+
+39
+00:04:52,400 --> 00:04:59,720
+and it'll show that even sweet things like cakes can contain much less sugar than they usually do.
+
+40
+00:04:59,880 --> 00:05:05,460
+That might be worth going to. We're trying to encourage our children to cook.
+
+41
+00:05:05,520 --> 00:05:13,360
+Another workshop is just for children, and that's on creating posters to reflect the history of the town.
+
+42
+00:05:13,780 --> 00:05:21,620
+The aim is to make children aware of how both the town and people's lives have changed over the centuries.
+
+43
+00:05:22,040 --> 00:05:25,070
+The results will be exhibited in the Community Center.
+
+44
+00:05:25,790 --> 00:05:31,340
+Then the other workshop is in toy making, and that's for adults only.
+
+45
+00:05:31,440 --> 00:05:39,280
+Oh, Why is that? Because it involves carpentry, participants will be making toys out of wood,
+
+46
+00:05:39,680 --> 00:05:43,800
+so they'll be a lot of sharp chisels and other tools around it.
+
+47
+00:05:43,940 --> 00:05:47,820
+Makes sense to keep children away from it exactly.
+
+48
+00:05:48,120 --> 00:05:57,050
+Now let me tell you about some of the outdoor activities. They'll be supervised wild swimming. wild swimming?
+
+49
+00:05:57,250 --> 00:06:06,240
+What's that? It just means swimming in natural waters rather than a swimming pool. Oh, OK. In a Lake, for instance.
+
+50
+00:06:06,300 --> 00:06:12,360
+Yes, there's a beautiful one just outside the town, and that will be the venue for the swimming.
+
+51
+00:06:12,760 --> 00:06:17,160
+They'll be lifeguards on duty, so it's suitable for all ages.
+
+52
+00:06:17,220 --> 00:06:22,620
+And finally, they'll be a walk in some nearby Woods every day.
+
+53
+00:06:22,880 --> 00:06:31,440
+The leader is an expert on insects. He'll show some that live in the Woods, and how important they are for the environment.
+
+54
+00:06:31,620 --> 00:06:38,160
+So there are going to be all sorts of different things to do during the festival. There certainly are!
+
+55
+00:06:38,220 --> 00:06:45,110
+If you'd like to read about how the preparations for the festival of going, the festival organizer is keeping a blog.
+
+56
+00:06:45,690 --> 00:06:50,140
+Just search online for the festival website and you'll find it.
+
+57
+00:06:50,400 --> 00:06:56,270
+Well. Thank you very much for all the information you're welcome. Goodbye goodbye.
+
+58
+00:06:59,390 --> 00:07:01,370
+That is the end of part one.
+
+59
+00:07:02,710 --> 00:07:06,750
+You now have one minute to check your answers to part one.
+

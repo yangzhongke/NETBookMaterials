@@ -1,0 +1,228 @@
+﻿1
+00:00:00,160 --> 00:00:01,070
+Test 4
+
+2
+00:00:02,420 --> 00:00:04,940
+This is the IELTS listening test.
+
+3
+00:00:06,310 --> 00:00:12,590
+You will hear a number of different recordings and you will have to answer questions on what you hear.
+
+4
+00:00:13,960 --> 00:00:20,700
+There will be time for you to read the instructions and questions and you will have a chance to check your work.
+
+5
+00:00:22,140 --> 00:00:25,360
+All the recordings will be played once only.
+
+6
+00:00:26,830 --> 00:00:29,020
+The test is in four parts.
+
+7
+00:00:30,520 --> 00:00:36,810
+At the end of the test you will be given 10 minutes to transfer your answers to the answer sheet.
+
+8
+00:00:38,250 --> 00:00:40,190
+Now, turn to part one.
+
+9
+00:00:45,370 --> 00:00:46,170
+Part one
+
+10
+00:00:47,630 --> 00:00:53,430
+You will hear a representative from a train company, talking to a woman about her train journey.
+
+11
+00:00:54,900 --> 00:00:58,770
+First, you have some time to look at questions one to six.
+
+12
+00:01:29,000 --> 00:01:33,240
+Now listen carefully and answer questions one to six.
+
+13
+00:01:36,380 --> 00:01:43,080
+Hello, do you mind if I ask you some questions about your journey today, we're doing a customer satisfaction survey.
+
+14
+00:01:43,730 --> 00:01:49,020
+Yes, OK. I've got about 10 minutes before my train home leaves. I'm on a day trip.
+
+15
+00:01:49,080 --> 00:01:55,540
+Great, thank you. So, first of all, could you tell me your name? It's Sophie Bird.
+
+16
+00:01:55,660 --> 00:01:59,220
+thank you. And would you mind telling me what you do?
+
+17
+00:01:59,280 --> 00:02:02,940
+I'm a journalist. Really? That must be interesting.
+
+18
+00:02:03,120 --> 00:02:08,240
+Yes, it is. So what's the reason for your visit here to the work.
+
+19
+00:02:08,460 --> 00:02:13,220
+Actually it's my day off. I came here to do some shopping. Oh, right.
+
+20
+00:02:13,520 --> 00:02:22,480
+But I do sometimes come here for work. OK. now, I'd like to ask some questions about your journey today. Is that OK? yes, no problem.
+
+21
+00:02:22,520 --> 00:02:28,960
+right, So can you tell me which station you're traveling back to? STAUNFIRTH where I live.
+
+22
+00:02:29,460 --> 00:02:39,770
+Uh, can I just check the spelling? STAUNFIRTH, That's right.
+
+23
+00:02:40,870 --> 00:02:45,490
+And you traveled from there this morning. Yes, OK, good.
+
+24
+00:02:46,050 --> 00:02:52,500
+Next, can I ask what kind of ticket you bought? I assume it wasn't a season ticket as you don't travel everyday.
+
+25
+00:02:52,560 --> 00:02:57,140
+That's right, no, I just got a normal return ticket.
+
+26
+00:02:57,360 --> 00:03:04,000
+I don't have a railcard, so I didn't get any discount. I keep meaning to get one because it's a lot cheaper.
+
+27
+00:03:04,040 --> 00:03:13,220
+Yes, you deceived 20% on your ticket today, so you paid the full price for your ticket. I paid 23.70 pounds.
+
+28
+00:03:13,260 --> 00:03:16,120
+OK. Do you think that's good value for money?
+
+29
+00:03:16,170 --> 00:03:20,620
+Not really, I think it's too much for a journey that only takes 45 minutes.
+
+30
+00:03:20,640 --> 00:03:26,340
+Yes, that's one of the main complaints we get, so you didn't buy your ticket in advance.
+
+31
+00:03:26,360 --> 00:03:31,600
+No, I know it's cheaper if you buy a week in advance, but I didn't know I was coming then.
+
+32
+00:03:31,680 --> 00:03:34,580
+I know you can't always plan ahead.
+
+33
+00:03:34,640 --> 00:03:43,600
+So did you buy it this morning? No, it was yesterday. right. And do you usually buy your tickets at the station?
+
+34
+00:03:43,720 --> 00:03:49,430
+Well, I do usually,but the ticket office closes early, and I hate using ticket machines.
+
+35
+00:03:50,050 --> 00:03:56,440
+I think ticket offices should be open for longer hours. There's always a queue for the machines and they're often out of order.
+
+36
+00:03:56,500 --> 00:04:01,180
+A lot of customers are seeing the same thing.
+
+37
+00:04:01,440 --> 00:04:04,150
+So to answer your question, I got an E ticket online.
+
+38
+00:04:07,380 --> 00:04:13,490
+Before you hear the rest of the conversation, you have some time to look at questions 7 to 10.
+
+39
+00:04:34,280 --> 00:04:37,340
+And  answer questions 7 to 10.
+
+40
+00:04:40,510 --> 00:04:46,510
+OK, thank you, now. I'd like to ask you about your satisfaction with your journey.
+
+41
+00:04:47,090 --> 00:04:50,210
+So what would you say you were most satisfied with today?
+
+42
+00:04:50,800 --> 00:04:58,560
+Well, I like the Wi-Fi on the train. It's improved a lot. It makes it easier for me to work if I want to.
+
+43
+00:04:58,640 --> 00:05:08,320
+That's the first time today anyone's mentioned that. it's good to get some positive feedback on that. And is there anything you weren't satisfied with?
+
+44
+00:05:08,960 --> 00:05:15,580
+Well, normally the trains run on time and pretty reliable, but today there was a delay.
+
+45
+00:05:15,920 --> 00:05:19,520
+The train was about 15 minutes behind schedule.
+
+46
+00:05:20,750 --> 00:05:25,980
+That down! now, I'd also like to ask about the facilities at the station.
+
+47
+00:05:26,220 --> 00:05:32,360
+You probably notice that the whole stations been upgraded. What are you most satisfied with?
+
+48
+00:05:33,230 --> 00:05:42,700
+Oh, I think the best thing is that they've improved the amount of information about train times etc. That's given to passengers is much clearer.
+
+49
+00:05:42,780 --> 00:05:52,500
+Before there was only one board, and I couldn't always see it properly, which was frustrating. That's good. And is there anything you're not satisfied with?
+
+50
+00:05:52,660 --> 00:06:01,810
+let's say, I think things have generally improved a lot. The trains are much more modern and I like the new cafe.
+
+51
+00:06:02,360 --> 00:06:07,760
+But one thing is that there aren't enough places to sit down, especially on the platforms.
+
+52
+00:06:07,800 --> 00:06:14,700
+OK, so I'll put sitting down. Shall I ask the thing you're least satisfied with? Yes, OK?
+
+53
+00:06:15,520 --> 00:06:27,220
+Can I ask your opinion about some of the other facilities? We'd like feedback on whether people are satisfied, dissatisfied, or neither satisfied nor dissatisfied, OK?
+
+54
+00:06:27,800 --> 00:06:30,350
+But what about the parking at the station?
+
+55
+00:06:31,120 --> 00:06:43,820
+Well, to be honest, I don't really have an opinion as I never use it, so neither satisfied nor dissatisfied for that then. yes, I suppose so. OK, and what about these?
+
+56
+00:06:46,980 --> 00:06:48,980
+That is the end of part one.
+
+57
+00:06:50,330 --> 00:06:54,370
+You now have one minute to check your answers to part one.
+
