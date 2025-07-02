@@ -1,0 +1,83 @@
+services:
+  # Nginx 服务
+  nginx:
+    image: nginx:1.28.0 # 使用 Nginx 稳定版本
+    container_name: netcore_nginx # Nginx 容器名称
+    ports:
+      - "80:80" # 宿主机 80 端口映射到容器 80 端口。如果修改了这个端口，FrontEnd相关前端项目代码，也需要修改
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro # 挂载 Nginx 配置文件
+    restart: always # 容器停止后自动重启
+
+  # RabbitMQ 服务 (消息队列)
+  rabbitmq:
+    image: rabbitmq:4.1.1-management # 使用包含管理界面的 RabbitMQ 镜像
+    container_name: rabbitmq_mq # RabbitMQ 容器名称
+    ports:
+      - "45672:5672" # AMQP 端口，用于应用程序连接
+      - "55672:15672" # 管理界面端口 (访问 http://localhost:55672，默认用户/密码: guest/guest)
+    environment:
+      RABBITMQ_DEFAULT_USER: "guest" # 默认用户名
+      RABBITMQ_DEFAULT_PASS: "guest" # 默认密码
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq # 持久化 RabbitMQ 数据
+    restart: always # 容器停止后自动重启
+
+  # Redis 服务 (内存数据结构存储/缓存)
+  redis:
+    image: redis:7.4.4 # 推荐使用最新的稳定版本
+    container_name: redis_cache # Redis 容器名称
+    ports:
+      - "46379:6379" # 宿主机 46379 端口映射到容器 6379 端口
+    volumes:
+      - redis_data:/data # 持久化 Redis 数据
+    restart: always # 容器停止后自动重启
+
+  # Elasticsearch 服务 (分布式搜索和分析引擎)
+  elasticsearch:
+    image: elasticsearch:8.18.2 # 推荐使用最新的稳定版本（注意与Kibana兼容）
+    container_name: elasticsearch_es # Elasticsearch 容器名称
+    ports:
+      - "49200:9200" # REST API 端口
+      - "49300:9300" # 节点间通信端口（集群内部使用）
+    environment:
+      discovery.type: single-node # 重要：开发环境设置为单节点模式，避免集群发现问题
+      ES_JAVA_OPTS: "-Xms1g -Xmx1g" # 调整 JVM 内存。根据您的 Mac 内存情况调整，避免容器启动失败。
+      xpack.security.enabled: "false" # 禁用安全认证（开发环境方便，生产环境强烈建议开启并配置）
+      # ELASTIC_PASSWORD: "YourElasticPassword!123" # 如果开启安全认证，需要设置密码
+    volumes:
+      - elasticsearch_data:/usr/share/elasticsearch/data # 持久化 Elasticsearch 数据
+    healthcheck: # 健康检查，确保 Elasticsearch 完全启动后再被应用连接
+      test: ["CMD-SHELL", "curl -f http://localhost:9200 || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s # 增加启动预热期，给ES足够时间初始化
+    restart: always # 容器停止后自动重启
+
+  # SQL Server for Linux 服务 (数据库)
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest # 推荐使用最新稳定版
+    container_name: sqlserver_db # SQL Server 容器名称
+    ports:
+      - "1433:1433" # 宿主机 1433 端口映射到容器 1433 端口（SQL Server 默认端口）
+    environment:
+      SA_PASSWORD: "YourStrongPassword!123" # **重要：请替换为您的强密码！**
+      ACCEPT_EULA: "Y" # 接受 SQL Server 许可条款
+    volumes:
+      - sqlserver_data:/var/opt/mssql # 持久化数据库数据
+      # - ./sqlserver/setup.sql:/usr/config/setup.sql # 如果需要初始化脚本，可以取消注释并创建此文件
+    healthcheck: # 健康检查，确保 SQL Server 数据库已准备好接受连接
+      # 修正：必须以 CMD 或 CMD-SHELL 开始。使用 CMD-SHELL 更灵活。
+      test: ["CMD-SHELL", "/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P \"YourStrongPassword!123\" -Q \"SELECT 1\" || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s # 增加启动预热期
+    restart: always # 容器停止后自动重启
+
+volumes:
+  rabbitmq_data: # 定义一个命名卷来持久化 RabbitMQ 的数据
+  redis_data: # 定义一个命名卷来持久化 Redis 的数据
+  elasticsearch_data: # 定义一个命名卷来持久化 Elasticsearch 的数据
+  sqlserver_data: # 定义一个命名卷来持久化 SQL Server 的数据
