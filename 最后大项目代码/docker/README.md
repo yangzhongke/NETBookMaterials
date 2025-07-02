@@ -24,7 +24,7 @@ docker compose down # 关闭容器集合
 ```yml
   - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro # 挂载 Nginx 配置文件
 ```
-由于nginx是运行在docker容器中，server指向的ip地址，需要使用运行后端程序的VS Code所在主机的IP地址，例如，192.168.88.6 这样，nginx才能将收到的请求，路由转发到VS Code启动的后端程序中。
+由于nginx是运行在docker容器中，server指向的ip地址，需要使用运行后端程序的VS Code所在主机的IP地址，例如，192.168.88.6  这样，nginx才能将收到的请求，路由转发到VS Code启动的后端程序中。
 ```yml
   server 192.168.88.6:50401; 
 ```
@@ -56,12 +56,13 @@ dotnet ef database update --project ./FileService.Infrastructure  --startup-proj
 dotnet ef database update --project ./Listening.Infrastructure  --startup-project ./Listening.Admin.WebAPI 
 ```
 数据库迁移指令，全部执行成功之后，会生成14张数据库，如下图所示
+
 ![dbtable.jpg](Resources/dbtable.jpg)
 
 ## 2. 执行create world，新建admin用户
 通过VS Code，启动后端程序 IdentityService.WebAPI 项目。
 
-通过浏览器，访问URL `http://localhost:50402/swagger/index.html` 在页面上，execute执行 /Login/CreateWorld。如果正常执行，会在数据库T_Users表中，新建admin用户。
+通过浏览器，访问URL `http://localhost:50402/swagger/index.html` 在页面上，Execute执行 /Login/CreateWorld。如果正常执行，就会在数据库T_Users表中，新建admin用户。
 
 至此，后端程序已经可以正常和数据库通信。
 
@@ -72,7 +73,7 @@ dotnet ef database update --project ./Listening.Infrastructure  --startup-projec
 
 通过VS Code，启动后端程序 Listening.Admin.WebAPI 项目。
 
-通过浏览器，访问URL `http://localhost:3000/` 使用用户 admin 密码 123456 ，进行登录。再到 管理员管理，进行手机号修改。
+通过浏览器，访问URL `http://localhost:3000/` 以用户 admin 密码 123456 ，进行登录。再到 管理员管理，进行手机号修改。
 
 如果，修改的手机号能够保存成功，至此，前端程序已经可以通过nginx正常和后端程序通信。
 
@@ -83,7 +84,7 @@ dotnet ef database update --project ./Listening.Infrastructure  --startup-projec
 
 通过VS Code，启动后端程序 Listening.Main.WebAPI、FileService.WebAPI、MediaEncoder.WebAPI、SearchService.WebAPI 项目。
 
-通过浏览器，访问URL `http://localhost:3000/` 使用用户 admin 密码 123456 ，进行登录。再到 听力管理，创建音频 并上传一个mp3格式的音频。
+通过浏览器，访问URL `http://localhost:3000/` 以用户 admin 密码 123456 ，进行登录。再到 听力管理，创建音频 并上传一个mp3格式的音频。
 
 在Listening.Admin.WebAPI项目，Episodes/EpisodeController.cs文件，Add方法，会判断音频文件是否为m4a格式，如果不是m4a格式，就通过 eventBus.Publish "MediaEncoding.Created" 通过发送MQ消息，通知转码服务进行音频转码。
 
